@@ -1,0 +1,2 @@
+export type Job = { id: string; slug: string; title: string; summary: string; location: string; country: string; jobType: string; sponsorshipAvailable: boolean; organization: { name: string; slug: string; verified: boolean }; visaEligibleCitizenships: string[] };
+export type Organization = { id: string; slug: string; name: string; description: string; country: string; focusAreas: string[]; verified: boolean; website?: string };

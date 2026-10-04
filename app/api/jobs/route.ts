@@ -1,0 +1,3 @@
+import { jobs } from "@/lib/data";
+import { jobQuerySchema } from "@/lib/validators";
+export async function GET(request: Request) { const { searchParams } = new URL(request.url); const input = jobQuerySchema.parse(Object.fromEntries(searchParams)); const q = input.q?.toLowerCase(); const result = jobs.filter(job => (!q || `${job.title} ${job.summary}`.toLowerCase().includes(q)) && (!input.country || job.country === input.country) && (!input.type || job.jobType === input.type) && (!input.visa || job.sponsorshipAvailable)); return Response.json({ data: result, meta: { total: result.length, source: "demo" } }); }

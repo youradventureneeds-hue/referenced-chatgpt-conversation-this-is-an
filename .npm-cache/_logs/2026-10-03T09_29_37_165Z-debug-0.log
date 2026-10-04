@@ -1,0 +1,23 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@11.19.0
+2 info using node@v24.21.0
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\Himanshu\Documents\Codex\2026-09-12\referenced-chatgpt-conversation-this-is-an\.npmrc
+5 silly config load:file:C:\Users\Himanshu\.npmrc
+6 silly config load:file:C:\Users\Himanshu\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm exec vercel whoami --debug
+8 verbose argv "exec" "--yes" "--cache" ".npm-cache" "--" "vercel" "whoami" "--debug"
+9 verbose logfile logs-max:10 dir:C:\Users\Himanshu\Documents\Codex\2026-09-12\referenced-chatgpt-conversation-this-is-an\.npm-cache\_logs\2026-10-03T09_29_37_165Z-
+10 verbose logfile C:\Users\Himanshu\Documents\Codex\2026-09-12\referenced-chatgpt-conversation-this-is-an\.npm-cache\_logs\2026-10-03T09_29_37_165Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
+13 http fetch GET 200 https://registry.npmjs.org/vercel 179ms (cache revalidated)
+14 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
+15 verbose Could not read global path C:\Users\Himanshu\AppData\Roaming\npm, ignoring
+16 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
+17 verbose cwd C:\Users\Himanshu\Documents\Codex\2026-09-12\referenced-chatgpt-conversation-this-is-an
+18 verbose os Windows_NT 10.0.22621
+19 verbose node v24.21.0
+20 verbose npm  v11.19.0
+21 verbose exit 1
+22 verbose code 1

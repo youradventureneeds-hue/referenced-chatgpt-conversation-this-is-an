@@ -1,0 +1,205 @@
+// 1. Prisma Client Generator
+generator client {
+  provider = "prisma-client-js"
+}
+
+// 2. Database Connection (Supabase PostgreSQL with connection pooling & direct migration URL)
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+// 3. User Roles
+enum Role {
+  CANDIDATE
+  EMPLOYER
+  ADMIN
+}
+
+// 4. Job Lifecycle & Publication Status
+enum JobStatus {
+  DRAFT
+  PENDING_REVIEW
+  PUBLISHED
+  ARCHIVED
+}
+
+// 5. Work Types
+enum WorkType {
+  FULL_TIME
+  PART_TIME
+  SEASONAL
+  INTERNSHIP
+  VOLUNTEER
+  GAP_YEAR
+}
+
+// 6. Application Status
+enum ApplicationStatus {
+  SUBMITTED
+  UNDER_REVIEW
+  SHORTLISTED
+  REJECTED
+  ACCEPTED
+}
+
+enum IntakeSourceType {
+  INSTAGRAM
+  YOUTUBE
+  WEBSITE
+  NEWSLETTER
+  JOB_BOARD
+  CREATOR_SUBMISSION
+  EMPLOYER_SUBMISSION
+}
+
+enum IntakeStatus {
+  RECEIVED
+  EXTRACTED
+  DUPLICATE
+  NEEDS_REVIEW
+  APPROVED
+  REJECTED
+}
+
+// 7. Core User Account
+model User {
+  id            String         @id @default(cuid())
+  email         String         @unique
+  name          String?
+  role          Role           @default(CANDIDATE)
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+
+  candidateProfile CandidateProfile?
+  memberships      OrganizationMember[]
+  applications     Application[]
+
+  @@map("users")
+}
+
+// 8. Candidate Profile
+model CandidateProfile {
+  id             String    @id @default(cuid())
+  userId         String    @unique
+  user           User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  headline       String?
+  bio            String?
+  location       String?
+  nationality    String?
+  resumeUrl      String?
+  skills         String[]
+  certifications String[]
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  @@map("candidate_profiles")
+}
+
+// 9. Outdoor Organizations / Employers
+model Organization {
+  id          String   @id @default(cuid())
+  name        String
+  slug        String   @unique
+  description String?
+  website     String?
+  logoUrl     String?
+  country     String
+  region      String?
+  verified    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  members OrganizationMember[]
+  jobs    Job[]
+
+  @@map("organizations")
+}
+
+// 10. Organization Memberships (Links Users to Organizations)
+model OrganizationMember {
+  id             String       @id @default(cuid())
+  userId         String
+  organizationId String
+  user           User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  role           String       @default("MEMBER") // e.g. OWNER, ADMIN, HIRING_MANAGER
+  createdAt      DateTime     @default(now())
+
+  @@unique([userId, organizationId])
+  @@map("organization_members")
+}
+
+// 11. Outdoor Career & Gap-Year Opportunities
+model Job {
+  id                  String       @id @default(cuid())
+  organizationId      String
+  organization        Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  title               String
+  slug                String       @unique
+  description         String
+  workType            WorkType     @default(FULL_TIME)
+  status              JobStatus    @default(DRAFT)
+  
+  // Location & Visa fields
+  country             String
+  region              String?
+  visaSponsorship     Boolean      @default(false)
+  visaEligibilityNote String?
+
+  // Compensation
+  salaryMin           Int?
+  salaryMax           Int?
+  currency            String       @default("INR")
+  isUnpaid            Boolean      @default(false)
+
+  // Intake pipeline tracking
+  sourceChannel       String?      // e.g. "INSTAGRAM", "EMPLOYER_PORTAL", "NEWSLETTER"
+  reviewedByAdmin     Boolean      @default(false)
+
+  createdAt           DateTime     @default(now())
+  updatedAt           DateTime     @updatedAt
+
+  applications        Application[]
+
+  @@map("jobs")
+}
+
+// Raw opportunity content is kept separately from public jobs. Nothing is
+// published until an administrator approves the extracted record.
+model OpportunityIntake {
+  id               String           @id @default(cuid())
+  sourceType       IntakeSourceType
+  sourceUrl        String?
+  submittedByEmail String?
+  rawText          String           @db.Text
+  fingerprint      String           @unique
+  extraction       Json
+  status           IntakeStatus     @default(NEEDS_REVIEW)
+  reviewNotes      String?          @db.Text
+  approvedJobId    String?          @unique
+  reviewedAt       DateTime?
+  createdAt        DateTime         @default(now())
+  updatedAt        DateTime         @updatedAt
+
+  @@index([status, createdAt])
+  @@map("opportunity_intakes")
+}
+
+// 12. Candidate Applications
+model Application {
+  id          String            @id @default(cuid())
+  jobId       String
+  userId      String
+  job         Job               @relation(fields: [jobId], references: [id], onDelete: Cascade)
+  user        User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  status      ApplicationStatus @default(SUBMITTED)
+  coverLetter String?
+  resumeUrl   String?
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+
+  @@unique([jobId, userId])
+  @@map("applications")
+}

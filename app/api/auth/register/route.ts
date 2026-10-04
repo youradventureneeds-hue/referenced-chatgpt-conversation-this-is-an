@@ -1,0 +1,2 @@
+import { registerSchema } from "@/lib/validators";
+export async function POST(request: Request) { const parsed = registerSchema.safeParse(await request.json()); if (!parsed.success) return Response.json({ error: "Invalid registration details", issues: parsed.error.flatten() }, { status: 400 }); return Response.json({ data: { id: "demo-user", email: parsed.data.email, role: parsed.data.role }, message: "Registration validated. Connect this endpoint to Prisma and your session provider to persist accounts." }, { status: 201 }); }

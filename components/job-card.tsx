@@ -1,0 +1,3 @@
+import Link from "next/link";
+import type { Job } from "@/lib/types";
+export function JobCard({ job }: { job: Job }) { return <article className="card job-card"><div className="job-card-top"><div className="eyebrow">{job.organization.verified ? "✓ Verified organization" : "Organization"}</div><span className="card-arrow">↗</span></div><h3><Link href={`/jobs/${job.slug}`}>{job.title}</Link></h3><p className="muted">{job.organization.name} · {job.location}</p><p>{job.summary}</p><div className="tags"><span>{job.jobType.replace("_", " ")}</span>{job.sponsorshipAvailable && <span>Visa sponsorship</span>}</div></article>; }

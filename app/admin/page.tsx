@@ -1,0 +1,3 @@
+import { IntakeQueue } from "@/components/intake-queue";
+import "./intake.css";
+export default function AdminPage() { return <main className="section"><p className="eyebrow">ADMIN PREVIEW</p><h1>Platform operations</h1><div className="stats"><div><strong>3</strong><span>Organizations</span></div><div><strong>3</strong><span>Published jobs</span></div><div><strong>2</strong><span>Opportunities to review</span></div></div><IntakeQueue /><article className="card"><h2>Automation safety</h2><p>Every source is extracted and checked for duplicates, but no listing goes live without a human approval. Once approved, the next production step is creating a published job from the verified opportunity.</p></article></main>; }
