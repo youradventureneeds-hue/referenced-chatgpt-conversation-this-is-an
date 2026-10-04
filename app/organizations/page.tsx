@@ -73,6 +73,17 @@ export default async function OrganizationsPage() {
                 </a>
               )}
             </div>
+            {organizations.map((org) => (
+  <Link 
+    key={org.id} 
+    href={`/organizations/${org.slug}`} 
+    style={{ textDecoration: "none", color: "inherit" }}
+  >
+    <article style={{ border: "1px solid #e5e7eb", borderRadius: "12px", padding: "2rem", height: "100%", background: "#fff" }}>
+      {/* Card content here */}
+    </article>
+  </Link>
+))}
           </article>
         ))}
       </div>
