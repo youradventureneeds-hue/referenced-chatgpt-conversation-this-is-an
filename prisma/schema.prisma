@@ -108,6 +108,8 @@ model Organization {
   country     String
   region      String?
   verified    Boolean  @default(false)
+  careersUrl  String?
+  openJobs    String?
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 

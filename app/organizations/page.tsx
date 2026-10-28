@@ -31,24 +31,37 @@ export default async function OrganizationsPage() {
 
       <div className="grid">
         {organizations.map((org) => (
-          <article key={org.id} className="card">
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                marginBottom: "0.5rem",
-              }}
-            >
-              <span className="eyebrow">
-                {org.verified ? "✓ Verified Partner" : "Organization"}
-              </span>
-              <span>{org.country}</span>
-            </div>
-            <h3>
-              <Link href={`/organizations/${org.slug}`} className="text-link">
-                {org.name}
-              </Link>
-            </h3>
+  <Link 
+    key={org.id} 
+    href={`/organizations/${org.slug}`} 
+    style={{ textDecoration: "none", color: "inherit", display: "block" }}
+  >
+    <article className="card">
+      
+      {org.logoUrl && (
+        <img 
+          src={org.logoUrl} 
+          alt={org.name} 
+          style={{ width: "100%", height: "200px", objectFit: "cover", borderRadius: "8px", marginBottom: "1rem" }} 
+        />
+      )}
+
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          marginBottom: "0.5rem",
+        }}
+      >
+        <span className="eyebrow">
+          {org.verified ? "✓ Verified Partner" : "Organization"}
+        </span>
+        <span>{org.country}</span>
+      </div>
+      
+      <h3 style={{ margin: "0" }}>
+        {org.name}
+      </h3>
             <p className="muted" style={{ margin: "0.5rem 0 1rem" }}>
               {org.description}
             </p>
@@ -73,20 +86,11 @@ export default async function OrganizationsPage() {
                 </a>
               )}
             </div>
-            {organizations.map((org) => (
-  <Link 
-    key={org.id} 
-    href={`/organizations/${org.slug}`} 
-    style={{ textDecoration: "none", color: "inherit" }}
-  >
-    <article style={{ border: "1px solid #e5e7eb", borderRadius: "12px", padding: "2rem", height: "100%", background: "#fff" }}>
-      {/* Card content here */}
-    </article>
-  </Link>
-))}
-          </article>
-        ))}
-      </div>
-    </main>
+           
+           </article>
+      </Link>
+    ))}
+  </div>
+</main>
   );
 }

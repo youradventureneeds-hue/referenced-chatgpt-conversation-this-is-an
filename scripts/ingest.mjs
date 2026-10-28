@@ -62,7 +62,7 @@ function cleanHtmlText(text) {
 }
 
 function extractFullProfile(html, fallbackUrl) {
-  if (!html) return { description: "Experiential outdoor and wilderness organisation.", bannerUrl: null };
+  if (!html) return { description: "Experiential outdoor and wilderness organisation.", bannerUrl: null, careersUrl: null };
 
   // 1. Extract Hero/Banner image from OpenGraph
   const ogImageMatch =
@@ -80,7 +80,7 @@ function extractFullProfile(html, fallbackUrl) {
   const meaningfulParagraphs = paragraphMatches
     .map(cleanHtmlText)
     .filter((p) => p.length > 80 && !p.toLowerCase().includes("cookie") && !p.toLowerCase().includes("copyright"))
-    .slice(0, 4); // Take the top 3-4 substantive paragraphs
+    .slice(0, 3); // Take the top 3 substantive paragraphs
 
   let fullDescription = meaningfulParagraphs.join("\n\n");
 
@@ -92,12 +92,62 @@ function extractFullProfile(html, fallbackUrl) {
     fullDescription = metaDesc ? metaDesc[1] : "Experiential outdoor organization leading wilderness expeditions.";
   }
 
+  // 3. Hunt for a Careers Page link
+  const careerLinkMatch = html.match(/<a[^>]*href=["']([^"']*(?:careers?|jobs?|work-with-us|vacancies)[^"']*)["'][^>]*>/i);
+  let careersUrl = null;
+  if (careerLinkMatch) {
+    careersUrl = careerLinkMatch[1];
+    if (!careersUrl.startsWith("http")) {
+      const parsed = new URL(fallbackUrl);
+      careersUrl = `${parsed.protocol}//${parsed.host}${careersUrl.startsWith("/") ? "" : "/"}${careersUrl}`;
+    }
+  }
+
   return {
     description: fullDescription,
     bannerUrl,
+    careersUrl
   };
 }
 
+function extractJobsFromHtml(html) {
+  if (!html) return null;
+  
+  const listItems = html.match(/<li[^>]*>([\s\S]*?)<\/li>/gi) || [];
+  
+  // A wide net of keywords specific to outdoor education, conservation, and expeditions
+  const jobKeywords = [
+    // Exact Titles & Phrases
+    "camp counsellor", "camp counselor", "trek leader", "trekking guide", "hiking guide", "tour guide", "trip leader",
+    // Core & Education
+    "guide", "instructor", "educator", "teacher", "facilitator", "leader", "counselor", "counsellor", "coach", "trainer",
+    // Field & Expedition
+    "expedition", "trek", "trekking", "hike", "hiking", "camp", "basecamp", "outdoor", "wilderness", "climbing", "mountaineering", "rafting", "kayak", "ski",
+    // Conservation & Science
+    "conservation", "environment", "environmental", "ecology", "ecologist", "researcher", "field", "wildlife", "sustainability", "naturalist",
+    // Safety & Logistics
+    "safety", "rescue", "medic", "medical", "wfr", "logistics", "operations", "chef", "cook", "driver", "gear", "equipment",
+    // Admin & Management
+    "manager", "coordinator", "intern", "specialist", "director", "staff", "assistant", "head", "officer", "admin", "photographer", "videographer"
+  ];
+
+  const potentialJobs = listItems
+    .map(cleanHtmlText)
+    .filter(text => {
+      const lowerText = text.toLowerCase();
+      // 1. Must be a reasonable length for a job title
+      const isRightLength = text.length > 5 && text.length < 80;
+      // 2. Must contain at least one job-related keyword
+      const hasJobKeyword = jobKeywords.some(kw => lowerText.includes(kw));
+      // 3. Exclude obvious menu links
+      const notMenuJunk = !lowerText.includes("blog") && !lowerText.includes("contact") && !lowerText.includes("login") && !lowerText.includes("cart") && !lowerText.includes("home");
+
+      return isRightLength && hasJobKeyword && notMenuJunk;
+    })
+    .slice(0, 10); 
+
+  return potentialJobs.length > 0 ? potentialJobs.join(" | ") : "No explicit job listings found on page.";
+}
 async function run() {
   const csvPath = path.join(process.cwd(), "data", "organizations.csv");
 
@@ -110,19 +160,30 @@ async function run() {
   const lines = raw.split(/\r?\n/).filter((l) => l.trim().length > 0);
   const rows = lines.slice(1);
 
-  console.log(`\nFound ${rows.length} organizations. Scraping deep profile data...\n`);
+  console.log(`\nFound ${rows.length} organizations. Starting deep web crawl...\n`);
 
   for (const line of rows) {
     const [name, websiteUrl, aboutUrl, region, country] = line.split(",").map((s) => s?.trim());
     if (!websiteUrl) continue;
 
     const targetScrapeUrl = aboutUrl || websiteUrl;
-    console.log(`📡 Fetching profile story for ${name} from: ${targetScrapeUrl}`);
+    console.log(`📡 Fetching base profile for: ${name}`);
 
+    // Step 1: Scrape the main profile
     const html = await fetchHtml(targetScrapeUrl);
     const profile = extractFullProfile(html, targetScrapeUrl);
+    
+    // Step 2: Scrape the career page if we found one
+    let jobsText = null;
+    if (profile.careersUrl) {
+      console.log(`   ↳ Found career portal: ${profile.careersUrl}. Extracting jobs...`);
+      const careersHtml = await fetchHtml(profile.careersUrl);
+      jobsText = extractJobsFromHtml(careersHtml);
+    }
+
     const slug = slugify(name);
 
+    // Step 3: Push to Database
     await prisma.organization.upsert({
       where: { slug: slug },
       update: {
@@ -131,6 +192,8 @@ async function run() {
         region: region || "Himalayan Region",
         country: country || "India",
         logoUrl: profile.bannerUrl,
+        careersUrl: profile.careersUrl, // NEW FIELD
+        openJobs: jobsText              // NEW FIELD
       },
       create: {
         name: name,
@@ -140,14 +203,16 @@ async function run() {
         website: websiteUrl,
         description: profile.description,
         logoUrl: profile.bannerUrl,
+        careersUrl: profile.careersUrl, // NEW FIELD
+        openJobs: jobsText,             // NEW FIELD
         verified: true,
       },
     });
 
-    console.log(`✅ Saved complete showcase for: ${name}`);
+    console.log(`✅ Saved complete showcase & jobs for: ${name}\n`);
   }
 
-  console.log("\n All organization showcases are saved in Supabase!\n");
+  console.log("\n All organization data synced to Supabase!\n");
 }
 
 run()
