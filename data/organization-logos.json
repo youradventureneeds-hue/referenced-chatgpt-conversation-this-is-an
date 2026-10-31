@@ -910,5 +910,957 @@
     "website": "https://www.lakeowego.com/",
     "checkedAt": "2026-10-31T19:46:57.635Z",
     "darkBackground": false
+  },
+  "rockley": {
+    "src": "/organization-logos/rockley.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=rockley.org&sz=128",
+    "website": "https://rockley.org/",
+    "checkedAt": "2026-10-31T20:30:27.745Z",
+    "darkBackground": false
+  },
+  "horizons-unlimited": {
+    "src": "/organization-logos/horizons-unlimited.webp",
+    "kind": "official-icon",
+    "sourceUrl": "https://static.wixstatic.com/media/021421_f60c7d9ffd99454e8322ebb27fdb3768%7Emv2.png/v1/fill/w_180%2Ch_180%2Clg_1%2Cusm_0.66_1.00_0.01/021421_f60c7d9ffd99454e8322ebb27fdb3768%7Emv2.png",
+    "website": "https://www.horizons.co.nz/",
+    "checkedAt": "2026-10-31T20:30:29.137Z",
+    "darkBackground": false
+  },
+  "adventure-specialties-trust": {
+    "src": "/organization-logos/adventure-specialties-trust.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.adventurespecialties.co.nz/wp-content/uploads/2019/08/Logo_White.png",
+    "website": "https://www.adventurespecialties.co.nz/",
+    "checkedAt": "2026-10-31T20:30:30.116Z",
+    "darkBackground": true
+  },
+  "cumulus-outdoors": {
+    "src": "/organization-logos/cumulus-outdoors.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.cumulusoutdoors.com/wp-content/themes/cumulus-theme/assets/images/cumulus-outdoors-logo.svg",
+    "website": "https://www.cumulusoutdoors.com/",
+    "checkedAt": "2026-10-31T20:30:30.122Z",
+    "darkBackground": true
+  },
+  "asia-pacific-adventure": {
+    "src": "/organization-logos/asia-pacific-adventure.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.asiapacificadventure.com/wp-content/uploads/white-behind-apa-logo-01-2.png",
+    "website": "https://www.asiapacificadventure.com/",
+    "checkedAt": "2026-10-31T20:30:30.470Z",
+    "darkBackground": true
+  },
+  "treasure-island-group": {
+    "src": "/organization-logos/treasure-island-group.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.treasureislandhk.com/cdn/shop/files/TIG_Primary_RGB_Whiteout.png?v=1788938329&width=500",
+    "website": "https://www.treasureislandhk.com/",
+    "checkedAt": "2026-10-31T20:30:30.512Z",
+    "darkBackground": true
+  },
+  "camp-challenge": {
+    "src": "/organization-logos/camp-challenge.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.camp-challenge.com/wp-content/uploads/2025/01/cc-2025.png",
+    "website": "https://www.camp-challenge.com/",
+    "checkedAt": "2026-10-31T20:30:31.307Z",
+    "darkBackground": false
+  },
+  "innotrek": {
+    "src": "/organization-logos/innotrek.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://static.wixstatic.com/media/474ad5_a2f13cfb9917423d923331335c8334c9~mv2.png/v1/fill/w_225,h_65,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/innotrek%20logo%20color%202019.png",
+    "website": "https://www.innotrek.rocks/",
+    "checkedAt": "2026-10-31T20:30:31.524Z",
+    "darkBackground": false
+  },
+  "alive-outdoors": {
+    "src": "/organization-logos/alive-outdoors.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.aliveoutdoors.com/wp-content/uploads/2021/03/ALIVE-Logo-Blue-Transparent-Background.png",
+    "website": "https://www.aliveoutdoors.com/",
+    "checkedAt": "2026-10-31T20:30:31.989Z",
+    "darkBackground": false
+  },
+  "outward-bound-canada": {
+    "src": "/organization-logos/outward-bound-canada.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.outwardbound.ca/wp-content/uploads/2025/07/Favicon.svg",
+    "website": "https://www.outwardbound.ca/",
+    "checkedAt": "2026-10-31T20:30:32.418Z",
+    "darkBackground": false
+  },
+  "hillary-outdoors": {
+    "src": "/organization-logos/hillary-outdoors.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.hillaryoutdoors.co.nz/wp-content/uploads/2022/05/hillary_logo_menu.svg",
+    "website": "https://www.hillaryoutdoors.co.nz/",
+    "checkedAt": "2026-10-31T20:30:32.737Z",
+    "darkBackground": false
+  },
+  "the-outward-bound-trust": {
+    "src": "/organization-logos/the-outward-bound-trust.webp",
+    "kind": "official-icon",
+    "sourceUrl": "https://www.outwardbound.org.uk/apple-touch-icon.png",
+    "website": "https://www.outwardbound.org.uk/",
+    "checkedAt": "2026-10-31T20:30:32.952Z",
+    "darkBackground": true
+  },
+  "outward-bound-australia": {
+    "src": "/organization-logos/outward-bound-australia.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=www.outwardbound.org.au&sz=128",
+    "website": "https://www.outwardbound.org.au/",
+    "checkedAt": "2026-10-31T20:34:29.013Z",
+    "darkBackground": false
+  },
+  "outward-bound-singapore": {
+    "src": "/organization-logos/outward-bound-singapore.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://isomer-user-content.by.gov.sg/140/eb0d4e5f-3efa-4aaf-8a35-f3135bb2d659/OBSLogo_3_ColorLogo_OrangeBlurb_GreenSlogan_WebRes3500px%20-%20Copy_0.png",
+    "website": "https://obs.nyc.gov.sg/",
+    "checkedAt": "2026-10-31T20:30:34.457Z",
+    "darkBackground": false
+  },
+  "ministry-of-sports": {
+    "src": "/organization-logos/ministry-of-sports.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6958256f45ee08070fc58655/656dfa824_moslogo.png",
+    "website": "https://ministryofsports.com.sg/",
+    "checkedAt": "2026-10-31T20:30:34.982Z",
+    "darkBackground": false
+  },
+  "outward-bound-new-zealand": {
+    "src": "/organization-logos/outward-bound-new-zealand.webp",
+    "kind": "official-icon",
+    "sourceUrl": "https://www.outwardbound.co.nz/apple-touch-icon.png",
+    "website": "https://www.outwardbound.co.nz/",
+    "checkedAt": "2026-10-31T20:30:36.127Z",
+    "darkBackground": false
+  },
+  "go-ape": {
+    "src": "/organization-logos/go-ape.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://goape.co.uk/_astro/logo.DEkQB9ZX.svg",
+    "website": "https://goape.co.uk/",
+    "checkedAt": "2026-10-31T20:30:37.339Z",
+    "darkBackground": false
+  },
+  "boe-formerly-the-outdoor-education-group": {
+    "src": "/organization-logos/boe-formerly-the-outdoor-education-group.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://boe.com.au/wp-content/uploads/2026/04/original-logo-jw.png",
+    "website": "https://boe.com.au/",
+    "checkedAt": "2026-10-31T20:30:38.204Z",
+    "darkBackground": false
+  },
+  "field-studies-council": {
+    "src": "/organization-logos/field-studies-council.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=www.field-studies-council.org&sz=128",
+    "website": "https://www.field-studies-council.org/",
+    "checkedAt": "2026-10-31T20:30:38.475Z",
+    "darkBackground": false
+  },
+  "manor-adventure": {
+    "src": "/organization-logos/manor-adventure.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://manoradventure.com/wp-content/uploads/2025/06/logo.svg",
+    "website": "https://manoradventure.com/",
+    "checkedAt": "2026-10-31T20:30:39.778Z",
+    "darkBackground": true
+  },
+  "tanagh-outdoor-education-and-training-centre": {
+    "src": "/organization-logos/tanagh-outdoor-education-and-training-centre.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://tanaghoutdooreducation.com/site/themes/tanaghoutdooreducation.com/images/logo.png",
+    "website": "https://tanaghoutdooreducation.com/",
+    "checkedAt": "2026-10-31T20:30:40.282Z",
+    "darkBackground": false
+  },
+  "active-ireland": {
+    "src": "/organization-logos/active-ireland.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://activeireland.ie/wp-content/uploads/2025/01/Frame-2.png",
+    "website": "https://activeireland.ie/",
+    "checkedAt": "2026-10-31T20:30:42.519Z",
+    "darkBackground": true
+  },
+  "carlingford-adventure-centre": {
+    "src": "/organization-logos/carlingford-adventure-centre.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://carlingfordadventure.com/wp-content/uploads/2022/05/cac_logo.png",
+    "website": "https://carlingfordadventure.com/",
+    "checkedAt": "2026-10-31T20:30:43.186Z",
+    "darkBackground": true
+  },
+  "les-elfes-international": {
+    "src": "/organization-logos/les-elfes-international.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://cdn.leselfes.com/wp-content/uploads/2022/03/leselfes-logo.png",
+    "website": "https://www.leselfes.com/",
+    "checkedAt": "2026-10-31T20:30:43.982Z",
+    "darkBackground": false
+  },
+  "outdoor-switzerland": {
+    "src": "/organization-logos/outdoor-switzerland.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.outdoor.ch/favicon.svg",
+    "website": "https://www.outdoor.ch/",
+    "checkedAt": "2026-10-31T20:30:44.513Z",
+    "darkBackground": false
+  },
+  "outward-bound-south-africa": {
+    "src": "/organization-logos/outward-bound-south-africa.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://outwardbound.co.za/wp-content/uploads/2026/09/outward-bound-south-africa-logo-square.png",
+    "website": "https://outwardbound.co.za/",
+    "checkedAt": "2026-10-31T20:30:44.583Z",
+    "darkBackground": true
+  },
+  "trolltunga-active": {
+    "src": "/organization-logos/trolltunga-active.webp",
+    "kind": "official-icon",
+    "sourceUrl": "https://cdn.prod.website-files.com/6924501cce2573790eeaf992/694136bfb77394737bdb7bf3_Frame%201000001186.png",
+    "website": "https://www.trolltunga-active.com/",
+    "checkedAt": "2026-10-31T20:30:45.604Z",
+    "darkBackground": false
+  },
+  "camp-suisse": {
+    "src": "/organization-logos/camp-suisse.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.campsuisse.com/wp-content/themes/campsuisse/img/camp_suisse_summer_camp_logo.gif",
+    "website": "https://www.campsuisse.com/",
+    "checkedAt": "2026-10-31T20:30:45.631Z",
+    "darkBackground": false
+  },
+  "arctic-adventures": {
+    "src": "/organization-logos/arctic-adventures.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://adventures.is/media/238627/aa-logo-color.svg",
+    "website": "https://adventures.is/",
+    "checkedAt": "2026-10-31T20:30:46.146Z",
+    "darkBackground": false
+  },
+  "uteguiden": {
+    "src": "/organization-logos/uteguiden.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://cdn.prod.website-files.com/66c32b742770a38e34e19fde/69329efae482522bfc8cc2e8_UG_Logo_Verical_Blue.svg",
+    "website": "https://uteguiden.com/",
+    "checkedAt": "2026-10-31T20:30:46.457Z",
+    "darkBackground": false
+  },
+  "njord-kayak-centre": {
+    "src": "/organization-logos/njord-kayak-centre.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://static.wixstatic.com/media/db73a1_ebae95db5731418eb14cd0208f2e7deb~mv2.png/v1/fill/w_167,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo%20(1).png",
+    "website": "https://www.seakayaknorway.com/",
+    "checkedAt": "2026-10-31T20:30:47.127Z",
+    "darkBackground": true
+  },
+  "young-explorers-club": {
+    "src": "/organization-logos/young-explorers-club.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://youngexplorersclub.ch/wp-content/uploads/2025/10/Logo-Cropped-150x58.webp",
+    "website": "https://youngexplorersclub.ch/",
+    "checkedAt": "2026-10-31T20:30:47.138Z",
+    "darkBackground": false
+  },
+  "oslo-hiking-tours": {
+    "src": "/organization-logos/oslo-hiking-tours.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.oslohikingtours.no/images/logo2.png",
+    "website": "https://www.oslohikingtours.no/",
+    "checkedAt": "2026-10-31T20:30:48.357Z",
+    "darkBackground": true
+  },
+  "adrenalinconzeptz": {
+    "src": "/organization-logos/adrenalinconzeptz.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=adrenalinconzeptz.de&sz=128",
+    "website": "https://adrenalinconzeptz.de/",
+    "checkedAt": "2026-10-31T20:30:48.884Z",
+    "darkBackground": false
+  },
+  "uksa": {
+    "src": "/organization-logos/uksa.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://uksa.org/wp-content/uploads/2025/03/UKSA_logo_250x113.png",
+    "website": "https://uksa.org/",
+    "checkedAt": "2026-10-31T20:30:49.833Z",
+    "darkBackground": false
+  },
+  "aventerra": {
+    "src": "/organization-logos/aventerra.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.aventerra.de/themes/custom/ivory/logo.png",
+    "website": "https://www.aventerra.de/",
+    "checkedAt": "2026-10-31T20:30:50.190Z",
+    "darkBackground": false
+  },
+  "adventure-vikings": {
+    "src": "/organization-logos/adventure-vikings.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://adventurevikings.is/wp-content/uploads/2015/02/adventure-vikings.jpg",
+    "website": "https://adventurevikings.is/",
+    "checkedAt": "2026-10-31T20:30:51.027Z",
+    "darkBackground": true
+  },
+  "simply-outdoor": {
+    "src": "/organization-logos/simply-outdoor.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.simply-outdoor.de/wp-content/uploads/2022/01/so_logo_trans.png.webp",
+    "website": "https://www.simply-outdoor.de/",
+    "checkedAt": "2026-10-31T20:30:52.545Z",
+    "darkBackground": false
+  },
+  "newpa": {
+    "src": "/organization-logos/newpa.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://newpa.es/wp-content/uploads/2021/02/inmersiones-linguisticas-ingles-newpa-logo.png",
+    "website": "https://newpa.es/",
+    "checkedAt": "2026-10-31T20:30:52.985Z",
+    "darkBackground": true
+  },
+  "tu-campamento": {
+    "src": "/organization-logos/tu-campamento.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://tucampamento.es/favicon.svg",
+    "website": "https://tucampamento.es/",
+    "checkedAt": "2026-10-31T20:30:54.629Z",
+    "darkBackground": false
+  },
+  "transparenz-nrw": {
+    "src": "/organization-logos/transparenz-nrw.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://transparenz.nrw/wp-content/uploads/2019/09/Logo-original.png",
+    "website": "https://transparenz.nrw/",
+    "checkedAt": "2026-10-31T20:30:55.344Z",
+    "darkBackground": false
+  },
+  "harriniva-hotels-and-safaris": {
+    "src": "/organization-logos/harriniva-hotels-and-safaris.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://harriniva.fi/wp-content/uploads/2025/09/Harriniva_hotelssafaris_green.png",
+    "website": "https://harriniva.fi/",
+    "checkedAt": "2026-10-31T20:30:56.024Z",
+    "darkBackground": false
+  },
+  "event-nature": {
+    "src": "/organization-logos/event-nature.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://eventnature.de/wp-content/uploads/2020/01/EN-Logo-3d-grell-freigestellt.png",
+    "website": "https://eventnature.de/",
+    "checkedAt": "2026-10-31T20:30:56.391Z",
+    "darkBackground": false
+  },
+  "camp-manitou-maine": {
+    "src": "/organization-logos/camp-manitou-maine.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=campmanitou.com&sz=128",
+    "website": "https://campmanitou.com/",
+    "checkedAt": "2026-10-31T20:30:56.716Z",
+    "darkBackground": false
+  },
+  "ymca-camp-pine-crest": {
+    "src": "/organization-logos/ymca-camp-pine-crest.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.ymcagta.org/files/images/pages/pine-crest/Shine-ON_Camp%20Pine%20Crest-1050x423_Logo-Feb20.svg",
+    "website": "https://www.ymcagta.org/camp-pine-crest",
+    "checkedAt": "2026-10-31T20:30:57.491Z",
+    "darkBackground": true
+  },
+  "ucpa": {
+    "src": "/organization-logos/ucpa.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://media.ucpa.com/image/upload/f_auto/LOGOS/logo-horizon-solo.svg",
+    "website": "https://www.ucpa.com/",
+    "checkedAt": "2026-10-31T20:30:57.926Z",
+    "darkBackground": false
+  },
+  "camp-tamakwa": {
+    "src": "/organization-logos/camp-tamakwa.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://tamakwa.com/wp-content/uploads/2021/04/camp_tamakwa_logo.jpg",
+    "website": "https://tamakwa.com/",
+    "checkedAt": "2026-10-31T20:30:59.547Z",
+    "darkBackground": false
+  },
+  "ymca-wanakita": {
+    "src": "/organization-logos/ymca-wanakita.webp",
+    "kind": "official-icon",
+    "sourceUrl": "https://www.ymcahbb.ca/themes/custom/yhbb_carnation/img/favicons/apple-touch-icon.png",
+    "website": "https://www.ymcahbb.ca/camps/ymca-wanakita",
+    "checkedAt": "2026-10-31T20:31:00.317Z",
+    "darkBackground": false
+  },
+  "camp-kandalore": {
+    "src": "/organization-logos/camp-kandalore.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.kandalore.com/wp-content/themes/bootstrap-on-wordpress-theme-master/img/home-loader.gif",
+    "website": "https://www.kandalore.com/",
+    "checkedAt": "2026-10-31T20:31:01.558Z",
+    "darkBackground": false
+  },
+  "camp-arowhon": {
+    "src": "/organization-logos/camp-arowhon.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://xrb.uqc.mybluehost.me/website_244cd33c/wp-content/uploads/2025/05/camp_arowhon_pos_logo.svg",
+    "website": "https://camparowhon.com/",
+    "checkedAt": "2026-10-31T20:31:01.889Z",
+    "darkBackground": false
+  },
+  "rustic-pathways": {
+    "src": "/organization-logos/rustic-pathways.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://rusticpathways.com/img/logo.svg",
+    "website": "https://rusticpathways.com/",
+    "checkedAt": "2026-10-31T20:31:02.067Z",
+    "darkBackground": false
+  },
+  "pacific-discovery": {
+    "src": "/organization-logos/pacific-discovery.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.pacificdiscovery.org/graphics/logo.png",
+    "website": "https://www.pacificdiscovery.org/",
+    "checkedAt": "2026-10-31T20:31:02.843Z",
+    "darkBackground": false
+  },
+  "wilderness-adventure-at-eagle-landing": {
+    "src": "/organization-logos/wilderness-adventure-at-eagle-landing.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.wilderness-adventure.com/assets/img/wael-white-logo.png",
+    "website": "https://www.wilderness-adventure.com/",
+    "checkedAt": "2026-10-31T20:31:03.385Z",
+    "darkBackground": true
+  },
+  "wilderness-adventures": {
+    "src": "/organization-logos/wilderness-adventures.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://media.wildernessadventures.com/wp-content/uploads/2024/03/13235731/50-Year-Logo-208x208.png",
+    "website": "https://www.wildernessadventures.com/",
+    "checkedAt": "2026-10-31T20:31:03.489Z",
+    "darkBackground": false
+  },
+  "broadreach": {
+    "src": "/organization-logos/broadreach.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.gobroadreach.com/wp-content/uploads/2020/08/2020_logo_color.png",
+    "website": "https://www.gobroadreach.com/",
+    "checkedAt": "2026-10-31T20:31:04.233Z",
+    "darkBackground": false
+  },
+  "camp-tanamakoon": {
+    "src": "/organization-logos/camp-tanamakoon.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://tanamakoon.com/wp-content/uploads/2023/11/Tanamakoon-100th-FINAL-white_text.png",
+    "website": "https://tanamakoon.com/",
+    "checkedAt": "2026-10-31T20:31:04.550Z",
+    "darkBackground": true
+  },
+  "adventure-treks": {
+    "src": "/organization-logos/adventure-treks.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://d52gwxhjtzjcm.cloudfront.net/2025/02/AT-logo-white-NEW.png",
+    "website": "https://www.adventuretreks.com/",
+    "checkedAt": "2026-10-31T20:31:05.162Z",
+    "darkBackground": true
+  },
+  "intrepid-travel": {
+    "src": "/organization-logos/intrepid-travel.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.intrepidtravel.com/files/images/logos/intrepid-logo-small.svg",
+    "website": "https://www.intrepidtravel.com/",
+    "checkedAt": "2026-10-31T20:31:05.286Z",
+    "darkBackground": false
+  },
+  "backroads": {
+    "src": "/organization-logos/backroads.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.backroads.com/themes/custom/backroads_2018/images/logo.svg?1793032820",
+    "website": "https://www.backroads.com/",
+    "checkedAt": "2026-10-31T20:31:05.917Z",
+    "darkBackground": true
+  },
+  "g-adventures": {
+    "src": "/organization-logos/g-adventures.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://images.ctfassets.net/xt1eyv33iu7n/9NP6tILVrFuAD2vMKJlBc/3809e0a04417572e689575d304a72f9a/g-logo.svg",
+    "website": "https://www.gadventures.com/",
+    "checkedAt": "2026-10-31T20:31:06.438Z",
+    "darkBackground": true
+  },
+  "camp-somerset-queensland": {
+    "src": "/organization-logos/camp-somerset-queensland.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://static.wixstatic.com/media/919a3a_3405706e5b244b8b83b4d5f471495810~mv2.png/v1/fill/w_106,h_68,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/180822_FF_SOTT3334_LogoRedraw_CampSomerset_CMYK_Transparent.png",
+    "website": "https://www.campsomerset.org.au/",
+    "checkedAt": "2026-10-31T20:31:07.282Z",
+    "darkBackground": false
+  },
+  "bindaree-outdoor-education": {
+    "src": "/organization-logos/bindaree-outdoor-education.webp",
+    "kind": "official-icon",
+    "sourceUrl": "https://cdn.prod.website-files.com/64ae0a2febfc0bb4e9cdc958/64ae0c92b628eb7f188629c2_Bindaree-Logo-Webart.png",
+    "website": "https://www.bindareeoutdooreducation.com.au/",
+    "checkedAt": "2026-10-31T20:31:07.892Z",
+    "darkBackground": false
+  },
+  "somerset-outdoor-learning": {
+    "src": "/organization-logos/somerset-outdoor-learning.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=www.campsomerset.com.au&sz=128",
+    "website": "https://www.campsomerset.com.au/",
+    "checkedAt": "2026-10-31T20:31:09.512Z",
+    "darkBackground": false
+  },
+  "shamwari-private-game-reserve": {
+    "src": "/organization-logos/shamwari-private-game-reserve.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.shamwari.com/wp-content/uploads/2026/04/shamwari-main-logo_2026.svg",
+    "website": "https://www.shamwari.com/",
+    "checkedAt": "2026-10-31T20:31:09.548Z",
+    "darkBackground": false
+  },
+  "wildlife-tanganyika": {
+    "src": "/organization-logos/wildlife-tanganyika.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://wildlifetanganyika.com/wp-content/uploads/2026/10/New-Project-31-1.png",
+    "website": "https://wildlifetanganyika.com/",
+    "checkedAt": "2026-10-31T20:31:10.573Z",
+    "darkBackground": false
+  },
+  "places-of-africa-safaris": {
+    "src": "/organization-logos/places-of-africa-safaris.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://placesofafricasafaris.com/wp-content/uploads/2026/09/places-of-africa-safaris-logo-512-150x150.png",
+    "website": "https://placesofafricasafaris.com/",
+    "checkedAt": "2026-10-31T20:31:11.438Z",
+    "darkBackground": false
+  },
+  "explora": {
+    "src": "/organization-logos/explora.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.explora.com/app/uploads/2021/07/exploraBLACK2-1.png",
+    "website": "https://www.explora.com/",
+    "checkedAt": "2026-10-31T20:31:13.287Z",
+    "darkBackground": false
+  },
+  "southbound-adventures": {
+    "src": "/organization-logos/southbound-adventures.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://southbound.com.au/wp-content/uploads/2019/08/SBA-Logo-344-Land.png",
+    "website": "https://southbound.com.au/",
+    "checkedAt": "2026-10-31T20:31:14.549Z",
+    "darkBackground": true
+  },
+  "auscamp": {
+    "src": "/organization-logos/auscamp.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=www.auscamp.com.au&sz=128",
+    "website": "https://www.auscamp.com.au/",
+    "checkedAt": "2026-10-31T20:31:15.099Z",
+    "darkBackground": false
+  },
+  "ride-expeditions": {
+    "src": "/organization-logos/ride-expeditions.webp",
+    "kind": "official-logo",
+    "sourceUrl": "http://rideexpeditions.com/wp-content/uploads/2019/12/cropped-RideExpeditions-Logo-Final_Version_3_Main_3000x968px.png",
+    "website": "https://rideexpeditions.com/",
+    "checkedAt": "2026-10-31T20:31:15.109Z",
+    "darkBackground": false
+  },
+  "the-learning-project-asia": {
+    "src": "/organization-logos/the-learning-project-asia.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://thelearningproject.asia/wp-content/uploads/2019/01/Learning-Project-Logo-1-420x300.png",
+    "website": "https://thelearningproject.asia/",
+    "checkedAt": "2026-10-31T20:31:15.973Z",
+    "darkBackground": true
+  },
+  "naturemind-ed": {
+    "src": "/organization-logos/naturemind-ed.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://naturemind-ed.com/wp-content/uploads/2023/11/cropped-NMLong-transparency2.png",
+    "website": "https://naturemind-ed.com/",
+    "checkedAt": "2026-10-31T20:31:16.530Z",
+    "darkBackground": false
+  },
+  "outward-bound-costa-rica": {
+    "src": "/organization-logos/outward-bound-costa-rica.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://outwardboundcostarica.org/wp-content/uploads/2018/06/OBCR-Vert-Logo-Web-Blue.png",
+    "website": "https://outwardboundcostarica.org/",
+    "checkedAt": "2026-10-31T20:31:17.309Z",
+    "darkBackground": false
+  },
+  "jump-foundation": {
+    "src": "/organization-logos/jump-foundation.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://jumpfoundation.org/wp-content/uploads/2024/08/logo.svg",
+    "website": "https://jumpfoundation.org/",
+    "checkedAt": "2026-10-31T20:31:17.336Z",
+    "darkBackground": false
+  },
+  "evergreen-outdoor-center": {
+    "src": "/organization-logos/evergreen-outdoor-center.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.evergreen-hakuba.com/wp-content/uploads/2016/11/EOC_Logo-top.jpg",
+    "website": "https://www.evergreen-hakuba.com/",
+    "checkedAt": "2026-10-31T20:31:18.674Z",
+    "darkBackground": true
+  },
+  "green-camp-bali": {
+    "src": "/organization-logos/green-camp-bali.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://greencampbali.com/wp-content/uploads/2026/05/Green-Camp-Bali-t-1080.png",
+    "website": "https://greencampbali.com/",
+    "checkedAt": "2026-10-31T20:31:18.846Z",
+    "darkBackground": false
+  },
+  "the-mountain-tribe": {
+    "src": "/organization-logos/the-mountain-tribe.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://themountaintribe.vn/wp-content/uploads/2024/04/TMT-logo-Circle-150x150.png",
+    "website": "https://themountaintribe.vn/",
+    "checkedAt": "2026-10-31T20:31:19.554Z",
+    "darkBackground": false
+  },
+  "eco-field-trips": {
+    "src": "/organization-logos/eco-field-trips.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://ecofieldtrips.com/wp-content/uploads/2026/07/EFT-LOGO-WHITE-150x150.png",
+    "website": "https://ecofieldtrips.com/",
+    "checkedAt": "2026-10-31T20:31:20.069Z",
+    "darkBackground": true
+  },
+  "fuze-ecoteer": {
+    "src": "/organization-logos/fuze-ecoteer.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.fuze-ecoteer.com/wp-content/uploads/2019/11/FE-LOGO-2018_STACKED-2-e1586427407253.png",
+    "website": "https://www.fuze-ecoteer.com/",
+    "checkedAt": "2026-10-31T20:31:20.740Z",
+    "darkBackground": false
+  },
+  "insight-adventures": {
+    "src": "/organization-logos/insight-adventures.webp",
+    "kind": "official-icon",
+    "sourceUrl": "https://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,h_64,w_64/409177/favicon_iasrhf.png",
+    "website": "https://www.insight-adventures.com/",
+    "checkedAt": "2026-10-31T20:31:21.725Z",
+    "darkBackground": false
+  },
+  "nomad-adventure": {
+    "src": "/organization-logos/nomad-adventure.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://nomadadventure.com/wp-content/uploads/2019/07/Nomad-logo-blackfont-v1.png",
+    "website": "https://nomadadventure.com/",
+    "checkedAt": "2026-10-31T20:31:22.681Z",
+    "darkBackground": false
+  },
+  "trek-the-himalayas": {
+    "src": "/organization-logos/trek-the-himalayas.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=trekthehimalayas.com&sz=128",
+    "website": "https://trekthehimalayas.com/",
+    "checkedAt": "2026-10-31T20:31:23.372Z",
+    "darkBackground": false
+  },
+  "coastline-algarve": {
+    "src": "/organization-logos/coastline-algarve.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.coastlinealgarve.com/wp-content/uploads/sites/6537/2023/05/COASTLINE-logo-FINAL.png?w=1000&h=1000&zoom=2",
+    "website": "https://www.coastlinealgarve.com/",
+    "checkedAt": "2026-10-31T20:31:23.393Z",
+    "darkBackground": false
+  },
+  "the-adventure-centre-uae": {
+    "src": "/organization-logos/the-adventure-centre-uae.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://theadventurecentre.ae/wp-content/uploads/2023/06/residential-tent-logo.png",
+    "website": "https://theadventurecentre.ae/",
+    "checkedAt": "2026-10-31T20:31:23.690Z",
+    "darkBackground": true
+  },
+  "himalayan-hikers": {
+    "src": "/organization-logos/himalayan-hikers.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://himalayanhikers.in/assets/img/logo.webp",
+    "website": "https://himalayanhikers.in/",
+    "checkedAt": "2026-10-31T20:31:24.305Z",
+    "darkBackground": false
+  },
+  "treks-and-trails-india": {
+    "src": "/organization-logos/treks-and-trails-india.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://vl-prod-static.b-cdn.net/system/images/000/674/500/234d3ffefc871e0328930ca9160bca8d/original/Treks_and_Trails__1_.png",
+    "website": "https://www.treksandtrails.org/",
+    "checkedAt": "2026-10-31T20:31:24.755Z",
+    "darkBackground": true
+  },
+  "joyful-eco-treks": {
+    "src": "/organization-logos/joyful-eco-treks.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=www.joyfulecotreks.com&sz=128",
+    "website": "https://www.joyfulecotreks.com/",
+    "checkedAt": "2026-10-31T20:34:29.120Z",
+    "darkBackground": false
+  },
+  "gs-tours-chania": {
+    "src": "/organization-logos/gs-tours-chania.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.gstours.gr/wp-content/uploads/2025/05/GS-TOURS-LOGO-1FINAL.png",
+    "website": "https://www.gstours.gr/",
+    "checkedAt": "2026-10-31T20:31:25.517Z",
+    "darkBackground": false
+  },
+  "outward-bound-oman": {
+    "src": "/organization-logos/outward-bound-oman.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://outwardboundoman.com/wp-content/uploads/logo600.jpg",
+    "website": "https://outwardboundoman.com/",
+    "checkedAt": "2026-10-31T20:31:26.196Z",
+    "darkBackground": true
+  },
+  "unique-adventure-international": {
+    "src": "/organization-logos/unique-adventure-international.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://uniquetreks.com/logo/unique.svg",
+    "website": "https://uniquetreks.com/",
+    "checkedAt": "2026-10-31T20:31:27.032Z",
+    "darkBackground": false
+  },
+  "higher-ground-australia": {
+    "src": "/organization-logos/higher-ground-australia.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=www.higherground.com.au&sz=128",
+    "website": "https://www.higherground.com.au/",
+    "checkedAt": "2026-10-31T20:34:28.844Z",
+    "darkBackground": false
+  },
+  "trekadviser": {
+    "src": "/organization-logos/trekadviser.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.trekadviser.com/_next/image?url=%2Flogo-nobg.png&w=3840&q=75",
+    "website": "https://www.trekadviser.com/",
+    "checkedAt": "2026-10-31T20:31:27.278Z",
+    "darkBackground": false
+  },
+  "boyle-river-outdoor-education-centre": {
+    "src": "/organization-logos/boyle-river-outdoor-education-centre.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://static.wixstatic.com/media/a0d2c7_8ad4465e74cb42e9be9690661319fea7~mv2.png/v1/fill/w_197,h_40,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo2.png",
+    "website": "https://www.boyle.org.nz/",
+    "checkedAt": "2026-10-31T20:31:27.537Z",
+    "darkBackground": false
+  },
+  "blue-mountain-adventure-centre": {
+    "src": "/organization-logos/blue-mountain-adventure-centre.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=bluemountainadventure.org.nz&sz=128",
+    "website": "https://bluemountainadventure.org.nz/",
+    "checkedAt": "2026-10-31T20:34:28.659Z",
+    "darkBackground": false
+  },
+  "adventure-hub-nepal": {
+    "src": "/organization-logos/adventure-hub-nepal.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://adventurehubnepal.com/public/new/assets/images/Adventure_hub_nepal_logo.png",
+    "website": "https://adventurehubnepal.com/",
+    "checkedAt": "2026-10-31T20:31:28.981Z",
+    "darkBackground": false
+  },
+  "gondwana-collection-namibia": {
+    "src": "/organization-logos/gondwana-collection-namibia.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://gondwana-collection.com/hs-fs/hubfs/Gondwana-Collection-Logo-1.png?width=252&height=64&name=Gondwana-Collection-Logo-1.png",
+    "website": "https://gondwana-collection.com/",
+    "checkedAt": "2026-10-31T20:31:29.304Z",
+    "darkBackground": false
+  },
+  "cascada-expediciones-and-ecocamp-patagonia": {
+    "src": "/organization-logos/cascada-expediciones-and-ecocamp-patagonia.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.cascada.travel/hs-fs/hubfs/img/logo-cascada-w.png?width=250&height=46&name=logo-cascada-w.png",
+    "website": "https://www.cascada.travel/",
+    "checkedAt": "2026-10-31T20:31:29.340Z",
+    "darkBackground": true
+  },
+  "the-y-nsw-outdoor-education": {
+    "src": "/organization-logos/the-y-nsw-outdoor-education.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://d2zvqky3pkh4r9.cloudfront.net/images/img/logo.svg",
+    "website": "https://www.ymcansw.org.au/",
+    "checkedAt": "2026-10-31T20:31:30.799Z",
+    "darkBackground": false
+  },
+  "outward-bound-brasil": {
+    "src": "/organization-logos/outward-bound-brasil.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://outwardbound.org.br/wp-content/uploads/2024/09/Logomarca-OBB-branco-335x80-1.png",
+    "website": "https://outwardbound.org.br/",
+    "checkedAt": "2026-10-31T20:31:31.245Z",
+    "darkBackground": true
+  },
+  "outback-abisko": {
+    "src": "/organization-logos/outback-abisko.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://outbackabisko.com/wp-content/uploads/2025/05/Outback-Abisko_Logo_Original-JPG-300ppi-scaled.jpg",
+    "website": "https://outbackabisko.com/",
+    "checkedAt": "2026-10-31T20:31:31.847Z",
+    "darkBackground": false
+  },
+  "adventure-lapland": {
+    "src": "/organization-logos/adventure-lapland.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://adventurelapland.se/wp-content/uploads/2023/01/logo-horizontal-white.svg",
+    "website": "https://adventurelapland.se/",
+    "checkedAt": "2026-10-31T20:31:31.948Z",
+    "darkBackground": true
+  },
+  "abisko-adventure": {
+    "src": "/organization-logos/abisko-adventure.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.abiskoadventure.com/wp-content/uploads/2024/06/share-image.png",
+    "website": "https://www.abiskoadventure.com/",
+    "checkedAt": "2026-10-31T20:31:32.910Z",
+    "darkBackground": false
+  },
+  "kokoda-youth-foundation": {
+    "src": "/organization-logos/kokoda-youth-foundation.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://kokodayouthfoundation.com/wp-content/uploads/2021/12/uico-top-navi-logo.png",
+    "website": "https://kokodayouthfoundation.com/",
+    "checkedAt": "2026-10-31T20:31:33.364Z",
+    "darkBackground": false
+  },
+  "camps-international": {
+    "src": "/organization-logos/camps-international.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.campsinternational.com/wp-content/themes/camps-international/public/dist/images/logo-black-2023.png?v=20",
+    "website": "https://www.campsinternational.com/",
+    "checkedAt": "2026-10-31T20:31:34.216Z",
+    "darkBackground": false
+  },
+  "world-challenge": {
+    "src": "/organization-logos/world-challenge.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://weareworldchallenge.com/wp-content/uploads/2021/04/World-Challenge-logo.svg",
+    "website": "https://weareworldchallenge.com/",
+    "checkedAt": "2026-10-31T20:31:34.517Z",
+    "darkBackground": false
+  },
+  "arctic-range-adventure": {
+    "src": "/organization-logos/arctic-range-adventure.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.arcticrange.com/sites/default/files/ARA-logo-new-cmyk-neg-490px.png",
+    "website": "https://www.arcticrange.com/",
+    "checkedAt": "2026-10-31T20:31:34.579Z",
+    "darkBackground": true
+  },
+  "wildland-trekking": {
+    "src": "/organization-logos/wildland-trekking.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=wildlandtrekking.com&sz=128",
+    "website": "https://wildlandtrekking.com/",
+    "checkedAt": "2026-10-31T20:31:34.595Z",
+    "darkBackground": false
+  },
+  "butterfield-and-robinson": {
+    "src": "/organization-logos/butterfield-and-robinson.webp",
+    "kind": "official-icon",
+    "sourceUrl": "https://www.butterfield.com/images/icons/favicon-32x32.png",
+    "website": "https://www.butterfield.com/",
+    "checkedAt": "2026-10-31T20:31:35.365Z",
+    "darkBackground": false
+  },
+  "world-expeditions-travel-group": {
+    "src": "/organization-logos/world-expeditions-travel-group.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=www.worldexpeditionstravelgroup.com&sz=128",
+    "website": "https://www.worldexpeditionstravelgroup.com/",
+    "checkedAt": "2026-10-31T20:31:35.988Z",
+    "darkBackground": false
+  },
+  "lindblad-expeditions": {
+    "src": "/organization-logos/lindblad-expeditions.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.expeditions.com/Images/frontend/lindblad-expeditions-logo.svg",
+    "website": "https://www.expeditions.com/",
+    "checkedAt": "2026-10-31T20:31:37.284Z",
+    "darkBackground": false
+  },
+  "adventure-canada": {
+    "src": "/organization-logos/adventure-canada.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://s3.ca-central-1.amazonaws.com/adventurecanada.com-assets2/content/logos/ac-logos/_600x600_fit_center-center_82_none/Adventure-Canada-logo-horizontal.png?mtime=1780516234",
+    "website": "https://www.adventurecanada.com/",
+    "checkedAt": "2026-10-31T20:31:37.789Z",
+    "darkBackground": false
+  },
+  "wild-society": {
+    "src": "/organization-logos/wild-society.webp",
+    "kind": "official-icon",
+    "sourceUrl": "https://www.wildsociety.org/wp-content/uploads/2017/03/cropped-WS-avatar-v01-180x180.png",
+    "website": "https://www.wildsociety.org/",
+    "checkedAt": "2026-10-31T20:31:38.307Z",
+    "darkBackground": false
+  },
+  "trek-travel": {
+    "src": "/organization-logos/trek-travel.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://trektravel.com/wp-content/uploads/2022/08/trek-travel-vector-logo.png",
+    "website": "https://trektravel.com/",
+    "checkedAt": "2026-10-31T20:31:38.449Z",
+    "darkBackground": false
+  },
+  "moondance-adventures": {
+    "src": "/organization-logos/moondance-adventures.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://moondanceadventures.com/wp-content/uploads/2020/07/Lockup_2ConDark_VERTSM.png",
+    "website": "https://moondanceadventures.com/",
+    "checkedAt": "2026-10-31T20:31:38.488Z",
+    "darkBackground": false
+  },
+  "discover-adventure": {
+    "src": "/organization-logos/discover-adventure.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.discoveradventure.com/images/logo.png",
+    "website": "https://www.discoveradventure.com/",
+    "checkedAt": "2026-10-31T20:31:39.158Z",
+    "darkBackground": false
+  },
+  "outlook-expeditions": {
+    "src": "/organization-logos/outlook-expeditions.webp",
+    "kind": "official-icon",
+    "sourceUrl": "https://outlookexpeditions.com/apple-touch-icon.png",
+    "website": "https://outlookexpeditions.com/",
+    "checkedAt": "2026-10-31T20:31:39.865Z",
+    "darkBackground": false
+  },
+  "inka-expediciones": {
+    "src": "/organization-logos/inka-expediciones.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://inkaexpediciones.com/wp-content/uploads/2020/03/inka-logo-footer.png",
+    "website": "https://inkaexpediciones.com/",
+    "checkedAt": "2026-10-31T20:31:42.153Z",
+    "darkBackground": false
+  },
+  "alpaca-expeditions": {
+    "src": "/organization-logos/alpaca-expeditions.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://alpacaexpe1stg.wpenginepowered.com/wp-content/uploads/Logo-Alpaca-Expeditions-Peru.png",
+    "website": "https://www.alpacaexpeditions.com/",
+    "checkedAt": "2026-10-31T20:31:42.296Z",
+    "darkBackground": false
+  },
+  "pgl": {
+    "src": "/organization-logos/pgl.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.pgl.co.uk/Files/Templates/Designs/PGLCore/res/img/themes/core/header/Logo-HomePage.svg",
+    "website": "https://www.pgl.co.uk/",
+    "darkBackground": true,
+    "checkedAt": "2026-10-31T20:34:29.785Z"
   }
 }

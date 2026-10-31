@@ -88,5 +88,20 @@
   "lake-owego-camp": {
     "url": "https://www.lakeowego.com/work-at-camp/",
     "evidenceUrl": "https://www.lakeowego.com/"
+  },
+  "outward-bound-south-africa": {
+    "enabled": false,
+    "reason": "Relevant employer roles verified, but no public recruitment page is confirmed",
+    "evidenceUrl": "https://outwardbound.co.za/our-team/"
+  },
+  "outward-bound-oman": {
+    "enabled": false,
+    "reason": "Relevant employer roles verified, but no public recruitment page is confirmed",
+    "evidenceUrl": "https://outwardboundoman.com/about-outward-bound-oman/"
+  },
+  "alpaca-expeditions": {
+    "enabled": false,
+    "reason": "Relevant employer roles verified, but no public recruitment page is confirmed",
+    "evidenceUrl": "https://www.alpacaexpeditions.com/our-guides/"
   }
 }

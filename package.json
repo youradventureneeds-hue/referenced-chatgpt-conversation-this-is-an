@@ -14,6 +14,7 @@
     "scrape:excel": "node scripts/seedFromExcel.mjs",
     "test:scraper": "node --test scripts/seedFromExcel.test.mjs",
     "db:about": "node scripts/updateOrganizationAbout.mjs",
+    "db:global": "node scripts/importGlobalOrganizations.mjs",
     "jobs:sync": "node scripts/syncJobs.mjs",
     "test:jobs": "node --test scripts/jobScraper.test.mjs"
   },

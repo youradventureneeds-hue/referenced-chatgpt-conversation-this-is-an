@@ -6,7 +6,9 @@ import {createClient,crawlOrganization,assess,IMPORT_CHANNEL} from '../lib/job-s
 import {persistCandidate,reconcileMissing} from '../lib/job-sync.mjs';
 
 const root=fileURLToPath(new URL('../',import.meta.url));
-const {values}=parseArgs({options:{write:{type:'boolean',default:false},org:{type:'string'},limit:{type:'string'},report:{type:'string'}}});
+const {values}=parseArgs({options:{write:{type:'boolean',default:false},org:{type:'string'},catalog:{type:'string'},limit:{type:'string'},report:{type:'string'}}});
+const catalog=values.catalog?JSON.parse(fs.readFileSync(path.resolve(root,values.catalog),'utf8')):null;
+if(catalog&&(!Array.isArray(catalog)||catalog.some(r=>typeof r.slug!=='string')))throw Error('Catalog must be an organization array with slugs');
 const limit=values.limit===undefined?undefined:Number(values.limit);
 if(limit!==undefined&&(!Number.isInteger(limit)||limit<1))throw new Error('--limit must be a positive integer');
 for(const name of ['.env','.env.local']){const file=path.join(root,name);if(fs.existsSync(file))process.loadEnvFile(file);}
@@ -17,7 +19,7 @@ const prisma=new PrismaClient({adapter:new PrismaPg({connectionString:process.en
 const report={startedAt:new Date().toISOString(),mode:values.write?'write':'preview',summary:{organizations:0,sourceErrors:0,skipped:0,candidates:0,validated:0,created:0,updated:0,needs_review:0,expired:0,archived:0},sources:[]};
 const reportPath=path.resolve(values.report||path.join(root,'work/weekly-jobs-report.json'));
 try{
- const organizations=await prisma.organization.findMany({where:values.org?{slug:values.org}:{},orderBy:{name:'asc'},...(limit?{take:limit}:{})});
+ const organizations=await prisma.organization.findMany({where:{AND:[...(values.org?[{slug:values.org}]:[]),...(catalog?[{slug:{in:catalog.map(r=>r.slug)}}]:[])]},orderBy:{name:'asc'},...(limit?{take:limit}:{})});
  if(!organizations.length)throw new Error('No organizations matched');
  report.summary.organizations=organizations.length;
  const overrides=JSON.parse(fs.readFileSync(path.join(root,'data/job-sources.json'),'utf8'));

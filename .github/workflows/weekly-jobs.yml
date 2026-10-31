@@ -14,6 +14,13 @@ on:
         description: 'Optional organization slug; leave blank for the whole directory'
         type: string
         default: ''
+      scope:
+        description: 'Directory sources to scan'
+        type: choice
+        options:
+          - all
+          - global
+        default: all
 
 permissions:
   contents: read
@@ -25,7 +32,7 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 90
     env:
       DATABASE_URL: ${{ secrets.DATABASE_URL }}
       DIRECT_URL: ${{ secrets.DIRECT_URL || secrets.DATABASE_URL }}
@@ -51,11 +58,13 @@ jobs:
           EVENT_NAME: ${{ github.event_name }}
           PREVIEW_ONLY: ${{ inputs.preview_only }}
           ORGANIZATION: ${{ inputs.organization }}
+          SCOPE: ${{ inputs.scope }}
         shell: bash
         run: |
           args=(--report work/weekly-jobs-report.json)
           if [[ "$EVENT_NAME" == "schedule" || "$PREVIEW_ONLY" == "false" ]]; then args+=(--write); fi
           if [[ -n "$ORGANIZATION" ]]; then args+=(--org "$ORGANIZATION"); fi
+          if [[ "$SCOPE" == "global" ]]; then args+=(--catalog data/global-organizations.json); fi
           pnpm jobs:sync "${args[@]}"
       - name: Save source health and publication report
         if: always()
