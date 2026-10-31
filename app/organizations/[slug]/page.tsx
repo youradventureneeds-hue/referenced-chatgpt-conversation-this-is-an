@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
+import { organizationIdentity } from "@/lib/organization-identity";
+import { OrganizationLogo } from "@/components/organization-logo";
 
 export const dynamic = "force-dynamic";
 
@@ -15,7 +17,7 @@ export default async function OrganizationShowcasePage({
     where: { slug },
     include: {
       jobs: {
-        where: { status: "PUBLISHED" },
+        where: { status: "PUBLISHED", reviewedByAdmin: true },
         select: {
           id: true,
           title: true,
@@ -31,6 +33,7 @@ export default async function OrganizationShowcasePage({
   if (!org) {
     notFound();
   }
+  const identity = organizationIdentity(org);
 
   return (
     <main style={{ padding: "4rem 2rem", maxWidth: "1200px", margin: "0 auto", fontFamily: "sans-serif" }}>
@@ -48,19 +51,23 @@ export default async function OrganizationShowcasePage({
           </span>
         </div>
         
-        <h1 style={{ fontSize: "3rem", fontWeight: "800", margin: "0 0 1rem 0", color: "#1a1a1a" }}>
+        <div className="organization-profile-heading">
+          <OrganizationLogo name={org.name} src={identity.logo} darkBackground={identity.darkBackground} large />
+        <h1 style={{ fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: "800", margin: "0", color: "#1a1a1a" }}>
           {org.name}
         </h1>
+        </div>
         
-        {org.website && (
-          <a href={org.website} target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", background: "#1a1a1a", color: "#fff", padding: "0.75rem 1.5rem", borderRadius: "8px", textDecoration: "none", fontWeight: "500" }}>
+        {identity.website && (
+          <a href={identity.website} target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", background: "#1a1a1a", color: "#fff", padding: "0.75rem 1.5rem", borderRadius: "8px", textDecoration: "none", fontWeight: "500", overflowWrap: "anywhere" }}>
             Visit Official Website ↗
+            <span style={{ display: "block", fontSize: "0.8rem", opacity: 0.85 }}>{new URL(identity.website).hostname.replace(/^www\./, "")}</span>
           </a>
         )}
       </header>
 
       {/* 2. Main Content Grid */}
-          <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr", gap: "3rem" }}>
+          <div className="organization-profile-grid">
         
         {/* Left Column: Deep Details */}
         <section>

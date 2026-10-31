@@ -7,6 +7,28 @@ It does not turn keyword matches, training courses, or navigation links into job
 Historical organizations and unverified sources are disabled in `data/job-sources.json`.
 The curated About paragraphs are never changed by this job importer.
 
+Transient HTTP 408/429/500/502/503/504 and network failures receive up to two
+retries with backoff. Forbidden requests are not retried. Verified JazzHR boards
+are followed through individual application links; shared YMCA boards are scoped
+to the named camp. Verified Paylocity boards can opt into `render: true` in the
+source registry. Chromium renders those public pages only after robots and HTTP
+checks succeed. It does not solve CAPTCHAs or override access blocks.
+
+For local browser-enabled sources, install Chromium with
+`pnpm exec playwright install chromium`. The cloud workflow installs Chromium and
+its Linux dependencies automatically.
+
+## Organization identity assets
+
+`data/organization-websites.json` fills the missing official website links from
+the researched directory sources. `data/organization-logos.json` records image
+provenance, local asset paths, and display backgrounds. Brand logos and website
+icons are stored under `public/organization-logos` to avoid runtime hotlinking.
+Some icons are cached website favicons rather than full wordmarks. Images were
+visually reviewed to remove accreditation and sponsor marks. North Star Camps
+(unverified identity) and the closed YMCA Camp Flaming Arrow use initials because
+an appropriate logo was not verified. No logo was invented for those records.
+
 ## Commands
 
 ```sh

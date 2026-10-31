@@ -1,96 +1,31 @@
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
-
+import { organizationIdentity } from "@/lib/organization-identity";
+import { OrganizationLogo } from "@/components/organization-logo";
 export const dynamic = "force-dynamic";
-
 export default async function OrganizationsPage() {
   const organizations = await prisma.organization.findMany({
-    include: {
-      _count: {
-        select: {
-          jobs: {
-            where: { status: "PUBLISHED", reviewedByAdmin: true },
-          },
-        },
-      },
-    },
-    orderBy: {
-      name: "asc",
-    },
+    include: { _count: { select: { jobs: { where: { status: "PUBLISHED", reviewedByAdmin: true } } } } },
+    orderBy: { name: "asc" },
   });
-
-  return (
-    <main className="container" style={{ padding: "4rem 1.5rem" }}>
-      <header style={{ marginBottom: "2.5rem" }}>
-        <p className="eyebrow">DIRECTORY</p>
-        <h1>Outdoor Organizations</h1>
-        <p className="muted">
-          Browse verified programmes, expedition operators, and wilderness schools.
-        </p>
-      </header>
-
-      <div className="grid">
-        {organizations.map((org) => (
-  <Link 
-    key={org.id} 
-    href={`/organizations/${org.slug}`} 
-    style={{ textDecoration: "none", color: "inherit", display: "block" }}
-  >
-    <article className="card">
-      
-      {org.logoUrl && (
-        <img 
-          src={org.logoUrl} 
-          alt={org.name} 
-          style={{ width: "100%", height: "200px", objectFit: "cover", borderRadius: "8px", marginBottom: "1rem" }} 
-        />
-      )}
-
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          marginBottom: "0.5rem",
-        }}
-      >
-        <span className="eyebrow">
-          {org.verified ? "✓ Verified Partner" : "Organization"}
-        </span>
-        <span>{org.country}</span>
-      </div>
-      
-      <h3 style={{ margin: "0" }}>
-        {org.name}
-      </h3>
-            <p className="muted" style={{ margin: "0.5rem 0 1rem" }}>
-              {org.description}
-            </p>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-              }}
-            >
-              <div className="tags">
-                <span>{org._count.jobs} open roles</span>
-              </div>
-              {org.website && (
-                <a
-                  href={org.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-link"
-                >
-                  Visit Website ↗
-                </a>
-              )}
-            </div>
-           
-           </article>
-      </Link>
-    ))}
-  </div>
-</main>
-  );
+  return <main className="section organization-directory">
+    <header style={{ marginBottom: "2.5rem" }}>
+      <p className="eyebrow">DIRECTORY</p><h1>Outdoor Organizations</h1>
+      <p className="muted">Explore {organizations.length} outdoor programmes, expedition operators, and wilderness schools.</p>
+    </header>
+    <div className="grid">{organizations.map(org => {
+      const identity = organizationIdentity(org);
+      return <article key={org.id} className="card organization-card">
+        <div className="organization-card-meta"><span className="eyebrow">{org.verified ? "✓ Verified Partner" : "Organization"}</span><span>{org.country}</span></div>
+        <Link href={`/organizations/${org.slug}`} className="organization-card-heading">
+          <OrganizationLogo name={org.name} src={identity.logo} darkBackground={identity.darkBackground} /><h3>{org.name}</h3>
+        </Link>
+        <p className="muted organization-description">{org.description}</p>
+        <div className="organization-card-footer">
+          <Link href={`/organizations/${org.slug}`} className="text-link">{org._count.jobs} open roles</Link>
+          {identity.website && <a href={identity.website} target="_blank" rel="noopener noreferrer" className="text-link" aria-label={`Visit ${org.name} website`}>Website ↗</a>}
+        </div>
+      </article>;
+    })}</div>
+  </main>;
 }

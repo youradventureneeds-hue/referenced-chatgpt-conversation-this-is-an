@@ -1,17 +1,92 @@
 {
-  "northwest-outward-bound-school": {"enabled":false,"reason":"School closed in 2024"},
-  "ymca-camp-flaming-arrow": {"enabled":false,"reason":"Camp closed in 2021"},
-  "north-star-camps": {"enabled":false,"reason":"Organization identity and official website require verification"},
-  "nols-national-outdoor-leadership-school": {"url":"https://www.nols.edu/about/our-team/employment/"},
-  "teton-science-schools": {"url":"https://teton-science-schools-inc.prismhr-hire.com/"},
-  "naturebridge": {"url":"https://naturebridge.org/careers"},
-  "appalachian-mountain-club-amc": {"url":"https://www.outdoors.org/get-involved/careers/"},
-  "chesapeake-bay-outward-bound-school": {"url":"https://www.outwardbound.org/cbobs/"},
-  "camp-canadensis": {"url":"https://www.canadensis.com/staff/"},
-  "camp-chen-a-wanda": {"url":"https://www.chenawanda.com/"},
-  "clearwater-camp-for-girls": {"url":"https://clearwatercamp.org/"},
-  "ymca-camp-carter": {"url":"https://ymcafw.org/camp-carter/"},
-  "ymca-camp-shady-brook": {"url":"https://campshadybrook.ppymca.org/"},
-  "ymca-camp-surf": {"url":"https://www.ymcasd.org/camps/overnight-camps/camp-surf"},
-  "ymca-camp-roger": {"url":"https://ymcautah.org/camp-roger"}
+  "northwest-outward-bound-school": {
+    "enabled": false,
+    "reason": "School closed in 2024"
+  },
+  "ymca-camp-flaming-arrow": {
+    "enabled": false,
+    "reason": "Camp closed in 2021"
+  },
+  "north-star-camps": {
+    "enabled": false,
+    "reason": "Organization identity and official website require verification"
+  },
+  "nols-national-outdoor-leadership-school": {
+    "url": "https://www.nols.edu/about/our-team/employment/"
+  },
+  "teton-science-schools": {
+    "url": "https://teton-science-schools-inc.prismhr-hire.com/"
+  },
+  "naturebridge": {
+    "url": "https://naturebridge.org/careers"
+  },
+  "appalachian-mountain-club-amc": {
+    "url": "https://www.outdoors.org/get-involved/careers/"
+  },
+  "chesapeake-bay-outward-bound-school": {
+    "url": "https://www.outwardbound.org/cbobs/"
+  },
+  "camp-canadensis": {
+    "url": "https://www.canadensis.com/staff/"
+  },
+  "camp-chen-a-wanda": {
+    "url": "https://www.chenawanda.com/"
+  },
+  "clearwater-camp-for-girls": {
+    "url": "https://clearwatercamp.org/"
+  },
+  "ymca-camp-carter": {
+    "url": "https://ymcafw.org/camp-carter/"
+  },
+  "ymca-camp-shady-brook": {
+    "url": "https://campshadybrook.ppymca.org/"
+  },
+  "ymca-camp-surf": {
+    "url": "https://www.ymcasd.org/camps/overnight-camps/camp-surf"
+  },
+  "ymca-camp-roger": {
+    "url": "https://ymcautah.org/camp-roger"
+  },
+  "nyc-outward-bound-schools": {
+    "url": "https://newyorkcityoutwardbound.applytojob.com/",
+    "evidenceUrl": "https://www.outwardbound.org/nycobs/connect/careers/"
+  },
+  "ymca-camp-erdman": {
+    "url": "https://ymcaofhonolulu.applytojob.com/",
+    "requireOrganizationMention": true,
+    "evidenceUrl": "https://www.ymcahonolulu.org/jobs"
+  },
+  "ymca-camp-chief-ouray": {
+    "url": "https://jobs.ymcarockies.org/",
+    "requireOrganizationMention": true,
+    "evidenceUrl": "https://www.campchiefouray.org/About/Work-at-CCO"
+  },
+  "ymca-camp-mason": {
+    "url": "https://campmason.org/aboutus/prospective-staff/",
+    "evidenceUrl": "https://campmason.org/aboutus/prospective-staff/"
+  },
+  "camp-towanda": {
+    "url": "https://www.worksummercamp.com/jobs.html",
+    "evidenceUrl": "https://www.worksummercamp.com/"
+  },
+  "voyageur-outward-bound-school": {
+    "url": "https://recruiting.paylocity.com/recruiting/jobs/All/741555b1-20a4-44bc-8995-43848db609cb/Voyageur-Outward-Bound-School",
+    "evidenceUrl": "https://www.outwardbound.org/vobs/connect/careers/",
+    "render": true
+  },
+  "outward-bound-california": {
+    "url": "https://recruiting.paylocity.com/recruiting/jobs/All/ab69fcbb-c95c-494f-a746-14f2f2eb9c74/Outward-Bound-California",
+    "evidenceUrl": "https://www.outwardbound.org/about-us/working-at-outward-bound/",
+    "render": true
+  },
+  "islandwood": {
+    "url": "https://islandwood.org/about-us-an-environmental-science-nonprofit/careers-and-culture/"
+  },
+  "indiahikes": {
+    "url": "https://indiahikes.com/careers"
+  },
+  "lake-owego-camp": {
+    "url": "https://www.lakeowego.com/work-at-camp/",
+    "evidenceUrl": "https://www.lakeowego.com/"
+  }
 }

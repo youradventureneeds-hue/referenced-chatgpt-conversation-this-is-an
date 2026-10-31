@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {extractStructured,extractHtmlVacancy,assess,plain,publicUrl,workType,employerMatches,discoverLinks,createClient,crawlOrganization,IMPORT_CHANNEL} from '../lib/job-scraper.mjs';
 import {persistCandidate,reconcileMissing} from '../lib/job-sync.mjs';
+import {renderHiringPage} from '../lib/job-browser.mjs';
 
 const org={id:'org-1',name:'Teton Science Schools',slug:'teton-science-schools',careersUrl:'https://example.com/careers'};
 const description='Teach outdoor science and support students through field investigations and environmental learning. This full-time position works with an experienced team of educators.';
@@ -43,6 +44,7 @@ test('HTML vacancies require a specific role, employer mention and an applicatio
 test('shared portals require the specific organization and reject unrelated employers',()=>{
  assert.equal(employerMatches(org,'A different science school'),false);
  assert.equal(employerMatches({name:'NOLS (National Outdoor Leadership School)'},'NOLS'),true);
+ assert.equal(employerMatches({name:'NYC Outward Bound Schools'},'New York City Outward Bound Schools'),true);
  const ymca={name:'YMCA Camp Orkila'};
  const value={'@type':'JobPosting',title:'Case Manager',description,hiringOrganization:{name:'YMCA of Greater Seattle'},jobLocation:{address:{addressCountry:'US'}},employmentType:'FULL_TIME'};
  assert.equal(extractStructured(jsonld(value),'https://example.com/job/1',ymca,true)[0].employerMatched,false);
@@ -66,12 +68,30 @@ test('uses stable public URLs and refuses private URLs and unrelated discovery l
  assert.deepEqual(links.vacancies,['https://example.com/job/42']);
 });
 
+test('JazzHR portals find role links and keep shared boards scoped to the camp',()=>{
+ const html='<ul><li class="list-group-item"><a href="/apply/123/Program-Instructor">Program Instructor</a><p>YMCA Camp Erdman</p></li><li class="list-group-item"><a href="/apply/456/Youth-Aide">Youth Aide</a><p>Other YMCA branch</p></li><li><a href="/apply/789/Resume-Bank">Resume Bank</a></li></ul>';
+ assert.deepEqual(discoverLinks(html,'https://ymcaofhonolulu.applytojob.com/',{org:{name:'YMCA Camp Erdman'},requireMention:true}).vacancies,['https://ymcaofhonolulu.applytojob.com/apply/123/Program-Instructor']);
+});
+
 test('honors robots exclusions and treats server failures as source errors',async()=>{
  let requests=0;
  const client=createClient({delay:0,fetchImpl:async url=>{requests++;return new Response('User-agent: *\nDisallow: /private');}});
  await assert.rejects(client.get('https://example.com/private/jobs'),/robots/);assert.equal(requests,1);
- const failed=createClient({delay:0,fetchImpl:async()=>new Response('unavailable',{status:503})});
+ const failed=createClient({delay:0,retryDelay:0,fetchImpl:async()=>new Response('unavailable',{status:503})});
  await assert.rejects(failed.get('https://example.com/jobs'),/Robots rules unavailable/);
+});
+
+test('retries transient failures but never repeatedly requests forbidden pages',async()=>{
+ let attempts=0;
+ const client=createClient({delay:0,retryDelay:0,fetchImpl:async()=>++attempts<3?new Response('unavailable',{status:503}):new Response('ok')});
+ assert.equal((await client.get('https://example.com/feed',{api:true})).text,'ok');assert.equal(attempts,3);
+ attempts=0;
+ const blocked=createClient({delay:0,retryDelay:0,fetchImpl:async()=>{attempts++;return new Response('forbidden',{status:403})}});
+ await assert.rejects(blocked.get('https://example.com/feed',{api:true}),/403/);assert.equal(attempts,1);
+});
+
+test('browser rendering cannot bypass a robots or HTTP access failure',async()=>{
+ await assert.rejects(renderHiringPage('https://example.com/jobs',{get:async()=>{throw Error('Disallowed by robots.txt')}}),/Disallowed by robots/);
 });
 
 test('an empty complete API feed is healthy and disabled sources make no requests',async()=>{

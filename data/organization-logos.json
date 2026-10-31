@@ -1,0 +1,914 @@
+{
+  "bikat-adventures": {
+    "src": "/organization-logos/bikat-adventures.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.bikatadventures.com/images/frontend/BikatLogo_New.png",
+    "website": "https://www.bikatadventures.com",
+    "checkedAt": "2026-10-31T19:41:09.807Z",
+    "darkBackground": false
+  },
+  "indiahikes": {
+    "src": "/organization-logos/indiahikes.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=indiahikes.com&sz=128",
+    "website": "https://indiahikes.com",
+    "checkedAt": "2026-10-31T19:41:10.189Z",
+    "darkBackground": false
+  },
+  "outward-bound-bharat": {
+    "src": "/organization-logos/outward-bound-bharat.webp",
+    "kind": "official-icon",
+    "sourceUrl": "https://static.wixstatic.com/media/1bfaf4_fb5b378adeab41c7b217c9a95b531c34%7Emv2.png/v1/fill/w_180%2Ch_180%2Clg_1%2Cusm_0.66_1.00_0.01/1bfaf4_fb5b378adeab41c7b217c9a95b531c34%7Emv2.png",
+    "website": "https://www.outwardboundindia.com",
+    "checkedAt": "2026-10-31T19:41:10.345Z",
+    "darkBackground": true
+  },
+  "philadelphia-outward-bound-school": {
+    "src": "/organization-logos/philadelphia-outward-bound-school.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=www.outwardbound.org&sz=128",
+    "website": "https://www.outwardbound.org/pobs",
+    "checkedAt": "2026-10-31T19:41:11.209Z",
+    "darkBackground": true
+  },
+  "outward-bound-hong-kong": {
+    "src": "/organization-logos/outward-bound-hong-kong.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=www.outwardbound.org.hk&sz=128",
+    "website": "https://www.outwardbound.org.hk",
+    "checkedAt": "2026-10-31T19:41:11.586Z",
+    "darkBackground": false
+  },
+  "camp-adventure": {
+    "src": "/organization-logos/camp-adventure.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.campadventure.de/images/logo-camp-adventure.png",
+    "website": "https://www.campadventure.de",
+    "checkedAt": "2026-10-31T19:41:11.728Z",
+    "darkBackground": false
+  },
+  "road-less-traveled": {
+    "src": "/organization-logos/road-less-traveled.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://images.squarespace-cdn.com/content/v1/5fbbf39e784a3304d84c528f/b633033f-feee-4dc1-a39c-4050c1eb6067/Blue+Logo.png",
+    "website": "https://www.roadlesstraveled.com",
+    "checkedAt": "2026-10-31T19:41:13.696Z",
+    "darkBackground": false
+  },
+  "outward-bound-international": {
+    "src": "/organization-logos/outward-bound-international.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.outwardbound.net/wp-content/themes/outward-bound/dist/images/header-logo-internation-blue.svg",
+    "website": "https://www.outwardbound.net",
+    "checkedAt": "2026-10-31T19:41:16.259Z",
+    "darkBackground": false
+  },
+  "americamp": {
+    "src": "/organization-logos/americamp.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://cdn.prod.website-files.com/684be759eec629b67fc069c4/684be759eec629b67fc06b1e_americamp-logo.svg",
+    "website": "https://www.americamp.co.uk/",
+    "checkedAt": "2026-10-31T19:42:05.102Z",
+    "darkBackground": false
+  },
+  "apogee-adventures": {
+    "src": "/organization-logos/apogee-adventures.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.apogeeadventures.com/wp-content/uploads/2024/10/aa_logo_white.svg",
+    "website": "https://www.apogeeadventures.com/",
+    "checkedAt": "2026-10-31T19:42:06.389Z",
+    "darkBackground": true
+  },
+  "bunac-work-america": {
+    "src": "/organization-logos/bunac-work-america.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://bunac.org/uploads/BUNAC_Logo_Alberta_Black_Simple_Tagline_RGB_52e17a9019.svg",
+    "website": "https://bunac.org/",
+    "checkedAt": "2026-10-31T19:42:06.606Z",
+    "darkBackground": false
+  },
+  "birch-trail-camp-for-girls": {
+    "src": "/organization-logos/birch-trail-camp-for-girls.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://birchtrail.com/wp-content/themes/birchtrail/images/logo.png",
+    "website": "https://birchtrail.com/",
+    "checkedAt": "2026-10-31T19:42:06.775Z",
+    "darkBackground": false
+  },
+  "appalachian-mountain-club-amc": {
+    "src": "/organization-logos/appalachian-mountain-club-amc.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://cdn.outdoors.org/wp-content/uploads/2023/05/12093347/logo-white-on-black.png",
+    "website": "https://www.outdoors.org/",
+    "checkedAt": "2026-10-31T19:42:07.626Z",
+    "darkBackground": true
+  },
+  "camp-canadensis": {
+    "src": "/organization-logos/camp-canadensis.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.canadensis.com/wp-content/uploads/2022/03/CampCanadensisLogo.png",
+    "website": "https://www.canadensis.com/",
+    "checkedAt": "2026-10-31T19:42:07.955Z",
+    "darkBackground": false
+  },
+  "avid4-adventure": {
+    "src": "/organization-logos/avid4-adventure.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://avid4.com/wp-content/uploads/2023/11/Multi-Sport-1-1.png",
+    "website": "https://avid4.com/",
+    "checkedAt": "2026-10-31T19:42:08.123Z",
+    "darkBackground": false
+  },
+  "camp-bryn-mawr": {
+    "src": "/organization-logos/camp-bryn-mawr.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.campbrynmawr.com/wp-content/uploads/2019/10/LBMC-logo.jpg",
+    "website": "https://www.campbrynmawr.com/",
+    "checkedAt": "2026-10-31T19:42:09.300Z",
+    "darkBackground": false
+  },
+  "camp-greylock": {
+    "src": "/organization-logos/camp-greylock.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=campgreylock.com&sz=128",
+    "website": "https://campgreylock.com/",
+    "checkedAt": "2026-10-31T19:42:10.015Z",
+    "darkBackground": true
+  },
+  "camp-chen-a-wanda": {
+    "src": "/organization-logos/camp-chen-a-wanda.webp",
+    "kind": "official-icon",
+    "sourceUrl": "https://www.chenawanda.com/apple-touch-icon-57x57.png",
+    "website": "https://www.chenawanda.com/",
+    "checkedAt": "2026-10-31T19:42:10.591Z",
+    "darkBackground": false
+  },
+  "camp-lenox": {
+    "src": "/organization-logos/camp-lenox.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://framerusercontent.com/images/nrzW3RGkTFP5gvQNwnxFd8vis.png",
+    "website": "https://camplenox.com/",
+    "checkedAt": "2026-10-31T19:42:10.609Z",
+    "darkBackground": true
+  },
+  "camp-danbee": {
+    "src": "/organization-logos/camp-danbee.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.campdanbee.com/wp-content/themes/CampDanbee/images/CD_Logo_Yellow_Blue.png",
+    "website": "https://www.campdanbee.com/",
+    "checkedAt": "2026-10-31T19:42:11.252Z",
+    "darkBackground": false
+  },
+  "camp-echo-lake": {
+    "src": "/organization-logos/camp-echo-lake.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://campecholake.com/wp-content/themes/CampEchoLake/images/logo.png",
+    "website": "https://campecholake.com/",
+    "checkedAt": "2026-10-31T19:42:11.833Z",
+    "darkBackground": true
+  },
+  "camp-lindenmere": {
+    "src": "/organization-logos/camp-lindenmere.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://camplindenmere.com/wp-content/uploads/2025/10/cropped-Camp-Lindenmere-Logo-Round-Transparent-2-4.png",
+    "website": "https://camplindenmere.com/",
+    "checkedAt": "2026-10-31T19:42:11.993Z",
+    "darkBackground": false
+  },
+  "camp-merrie-woode": {
+    "src": "/organization-logos/camp-merrie-woode.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=www.merriewoode.com&sz=128",
+    "website": "https://www.merriewoode.com/",
+    "checkedAt": "2026-10-31T19:42:13.082Z",
+    "darkBackground": false
+  },
+  "camp-nebagamon": {
+    "src": "/organization-logos/camp-nebagamon.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://i0.wp.com/campnebagamon.com/wp-content/uploads/2016/05/cropped-cnlogo512.png?fit=512%2C512&ssl=1",
+    "website": "https://campnebagamon.com/",
+    "checkedAt": "2026-10-31T19:42:13.104Z",
+    "darkBackground": false
+  },
+  "camp-mondamin": {
+    "src": "/organization-logos/camp-mondamin.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=www.mondamin.com&sz=128",
+    "website": "https://www.mondamin.com/",
+    "checkedAt": "2026-10-31T19:42:14.031Z",
+    "darkBackground": false
+  },
+  "camp-manito-wish-ymca": {
+    "src": "/organization-logos/camp-manito-wish-ymca.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://manito-wish.org/wp-content/uploads/2022/11/Manito-Wish_HeritageLogo-Black.svg",
+    "website": "https://manito-wish.org/",
+    "checkedAt": "2026-10-31T19:42:15.007Z",
+    "darkBackground": false
+  },
+  "camp-mah-kee-nac": {
+    "src": "/organization-logos/camp-mah-kee-nac.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://campmkn-media-offload.s3.amazonaws.com/wp-content/uploads/2026/01/19230344/New-Wide-Circle-1.png",
+    "website": "https://www.campmkn.com/",
+    "checkedAt": "2026-10-31T19:42:16.465Z",
+    "darkBackground": false
+  },
+  "camp-pinnacle": {
+    "src": "/organization-logos/camp-pinnacle.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://camppinnacle.com/wp-content/uploads/2026/01/2016-Full-Color-Logo-Square-No-Background.png",
+    "website": "https://camppinnacle.com/",
+    "checkedAt": "2026-10-31T19:42:16.909Z",
+    "darkBackground": false
+  },
+  "camp-romaca": {
+    "src": "/organization-logos/camp-romaca.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=www.romaca.com&sz=128",
+    "website": "https://www.romaca.com/",
+    "checkedAt": "2026-10-31T19:42:17.161Z",
+    "darkBackground": false
+  },
+  "camp-saginaw": {
+    "src": "/organization-logos/camp-saginaw.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=www.campsaginaw.com&sz=128",
+    "website": "https://www.campsaginaw.com/",
+    "checkedAt": "2026-10-31T19:42:18.269Z",
+    "darkBackground": false
+  },
+  "camp-nock-a-mixon": {
+    "src": "/organization-logos/camp-nock-a-mixon.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://campnockamixon.com/wp-content/uploads/2024/08/logo-2.png",
+    "website": "https://campnockamixon.com/",
+    "checkedAt": "2026-10-31T19:42:18.444Z",
+    "darkBackground": false
+  },
+  "camp-timber-tops": {
+    "src": "/organization-logos/camp-timber-tops.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=www.timbertops.com&sz=128",
+    "website": "https://www.timbertops.com/",
+    "checkedAt": "2026-10-31T19:42:19.559Z",
+    "darkBackground": false
+  },
+  "camp-starlight": {
+    "src": "/organization-logos/camp-starlight.webp",
+    "kind": "official-logo",
+    "sourceUrl": "http://www.campstarlight.com/images/ui/interior-logo.png",
+    "website": "https://www.campstarlight.com/",
+    "checkedAt": "2026-10-31T19:42:19.707Z",
+    "darkBackground": false
+  },
+  "camp-towanda": {
+    "src": "/organization-logos/camp-towanda.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.camptowanda.com/images/logo-2025.jpg",
+    "website": "https://www.camptowanda.com/",
+    "checkedAt": "2026-10-31T19:42:21.502Z",
+    "darkBackground": false
+  },
+  "camp-takajo": {
+    "src": "/organization-logos/camp-takajo.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://i0.wp.com/www.camptakajo.com/wp-content/uploads/2019/12/Takajo-Crest-Option-1.jpg?fit=1700%2C2200&ssl=1",
+    "website": "https://www.camptakajo.com/",
+    "checkedAt": "2026-10-31T19:42:21.967Z",
+    "darkBackground": false
+  },
+  "camp-walden": {
+    "src": "/organization-logos/camp-walden.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://campwalden.com/wp-content/uploads/2023/04/camp-walden-logo.svg",
+    "website": "https://campwalden.com/",
+    "checkedAt": "2026-10-31T19:42:22.184Z",
+    "darkBackground": false
+  },
+  "camp-vega": {
+    "src": "/organization-logos/camp-vega.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://campvega.com/wp-content/uploads/2026/10/Camp-Vega-logo.png",
+    "website": "https://campvega.com/",
+    "checkedAt": "2026-10-31T19:42:22.493Z",
+    "darkBackground": false
+  },
+  "camp-pontiac": {
+    "src": "/organization-logos/camp-pontiac.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://camppontiac.com/wp-content/uploads/2022/10/logo22.png",
+    "website": "https://camppontiac.com/",
+    "checkedAt": "2026-10-31T19:42:22.769Z",
+    "darkBackground": false
+  },
+  "chesapeake-bay-outward-bound-school": {
+    "src": "/organization-logos/chesapeake-bay-outward-bound-school.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=www.outwardbound.org&sz=128",
+    "website": "https://www.outwardbound.org/cbobs/",
+    "checkedAt": "2026-10-31T19:42:23.298Z",
+    "darkBackground": true
+  },
+  "cathleen-stone-island-outward-bound": {
+    "src": "/organization-logos/cathleen-stone-island-outward-bound.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=cathleenstoneisland.org&sz=128",
+    "website": "https://cathleenstoneisland.org/",
+    "checkedAt": "2026-10-31T19:42:23.441Z",
+    "darkBackground": true
+  },
+  "camp-watitoh": {
+    "src": "/organization-logos/camp-watitoh.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.campwatitoh.com/wp-content/uploads/2016/10/CW-logo-with-stroke.png",
+    "website": "https://www.campwatitoh.com/",
+    "checkedAt": "2026-10-31T19:42:24.215Z",
+    "darkBackground": false
+  },
+  "chewonki-foundation": {
+    "src": "/organization-logos/chewonki-foundation.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://chewonki.org/wp-content/uploads/2017/02/chewonki_newlogo_343_407-1-png.avif",
+    "website": "https://chewonki.org/",
+    "checkedAt": "2026-10-31T19:42:24.708Z",
+    "darkBackground": true
+  },
+  "camp-wayne-for-boys-girls": {
+    "src": "/organization-logos/camp-wayne-for-boys-girls.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.campwayne.com/wp-content/uploads/2018/10/CW-Logo.jpg",
+    "website": "https://www.campwayne.com/",
+    "checkedAt": "2026-10-31T19:42:25.123Z",
+    "darkBackground": false
+  },
+  "clearwater-camp-for-girls": {
+    "src": "/organization-logos/clearwater-camp-for-girls.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://clearwatercamp.org/wp-content/uploads/2019/01/green-logo-1.svg",
+    "website": "https://clearwatercamp.org/",
+    "checkedAt": "2026-10-31T19:42:25.208Z",
+    "darkBackground": false
+  },
+  "camp-weequahic": {
+    "src": "/organization-logos/camp-weequahic.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.weequahic.com/wp-content/uploads/2020/02/camp-weequahic-sleepaway-camp-logo.png",
+    "website": "https://www.weequahic.com/",
+    "checkedAt": "2026-10-31T19:42:26.025Z",
+    "darkBackground": false
+  },
+  "echo-hill-outdoor-school": {
+    "src": "/organization-logos/echo-hill-outdoor-school.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://images.squarespace-cdn.com/content/v1/5d25ffd677d9d40001274f8c/1562771443177-AZS8OS8GNNVUWT1DPHOD/WHITE+NO+BACKGROUND+EHOS+hi+res+logo+2018+copy+copy.png?format=1500w",
+    "website": "https://www.ehos.org/",
+    "checkedAt": "2026-10-31T19:42:26.616Z",
+    "darkBackground": true
+  },
+  "falling-creek-camp": {
+    "src": "/organization-logos/falling-creek-camp.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=fallingcreek.com&sz=128",
+    "website": "https://fallingcreek.com/",
+    "checkedAt": "2026-10-31T19:42:27.075Z",
+    "darkBackground": false
+  },
+  "florida-sea-base": {
+    "src": "/organization-logos/florida-sea-base.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://seabaseha.org/wp-content/uploads/2020/01/SeaBaseLogo.png",
+    "website": "https://seabaseha.org/",
+    "checkedAt": "2026-10-31T19:42:28.045Z",
+    "darkBackground": false
+  },
+  "farm-wilderness": {
+    "src": "/organization-logos/farm-wilderness.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=www.farmandwilderness.org&sz=128",
+    "website": "https://www.farmandwilderness.org/",
+    "checkedAt": "2026-10-31T19:42:28.061Z",
+    "darkBackground": false
+  },
+  "deer-hill-expeditions": {
+    "src": "/organization-logos/deer-hill-expeditions.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://deerhillexpeditions.com/wp-content/uploads/2021/02/Circle-Logo-200x200-01-1.jpg",
+    "website": "https://deerhillexpeditions.com/",
+    "checkedAt": "2026-10-31T19:42:28.063Z",
+    "darkBackground": false
+  },
+  "genesee-valley-outdoor-learning-center": {
+    "src": "/organization-logos/genesee-valley-outdoor-learning-center.webp",
+    "kind": "official-icon",
+    "sourceUrl": "https://images.squarespace-cdn.com/content/v1/665b9428ef496e2ae35971b0/1efa1bb6-b2e0-4636-ac8a-b23d81a5030f/favicon.ico?format=100w",
+    "website": "https://www.geneseevalley.org/",
+    "checkedAt": "2026-10-31T19:42:28.620Z",
+    "darkBackground": false
+  },
+  "geovisions": {
+    "src": "/organization-logos/geovisions.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.geovisions.com/wp-content/uploads/2024/01/GeoVisions-Logo.svg",
+    "website": "https://www.geovisions.com/",
+    "checkedAt": "2026-10-31T19:42:29.573Z",
+    "darkBackground": false
+  },
+  "great-smoky-mountains-institute-at-tremont": {
+    "src": "/organization-logos/great-smoky-mountains-institute-at-tremont.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://gsmit.org/wp-content/uploads/2017/12/GSMIT-Square-Large-Green.jpg",
+    "website": "https://gsmit.org/",
+    "checkedAt": "2026-10-31T19:42:30.112Z",
+    "darkBackground": false
+  },
+  "hurricane-island-outward-bound-school": {
+    "src": "/organization-logos/hurricane-island-outward-bound-school.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=www.outwardbound.org&sz=128",
+    "website": "https://www.outwardbound.org/hiobs/",
+    "checkedAt": "2026-10-31T19:42:30.148Z",
+    "darkBackground": true
+  },
+  "guided-discoveries-cimi-astrocamp": {
+    "src": "/organization-logos/guided-discoveries-cimi-astrocamp.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://guideddiscoveries.org/wp-content/uploads/2022/01/main-logo.png",
+    "website": "https://guideddiscoveries.org/",
+    "checkedAt": "2026-10-31T19:42:30.348Z",
+    "darkBackground": false
+  },
+  "coloma-outdoor-discovery-school": {
+    "src": "/organization-logos/coloma-outdoor-discovery-school.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www2.colomaresort.com/wp-content/uploads/2024/11/Logo.png",
+    "website": "https://colomaresort.com/outdoor-discovery-school/",
+    "checkedAt": "2026-10-31T19:42:30.429Z",
+    "darkBackground": false
+  },
+  "islandwood": {
+    "src": "/organization-logos/islandwood.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=islandwood.org&sz=128",
+    "website": "https://islandwood.org/",
+    "checkedAt": "2026-10-31T19:42:31.051Z",
+    "darkBackground": false
+  },
+  "greenheart-exchange": {
+    "src": "/organization-logos/greenheart-exchange.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://greenheart.org/wp-content/uploads/2025/06/greenheart_org_horizontal.svg",
+    "website": "https://greenheart.org/",
+    "checkedAt": "2026-10-31T19:42:31.062Z",
+    "darkBackground": false
+  },
+  "intrax": {
+    "src": "/organization-logos/intrax.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://cdn.prod.website-files.com/6112f2aa602ab801991d5569/617f73dc09b8437cda3246b2_Intrax_Logo.svg",
+    "website": "https://www.intraxinc.com/",
+    "checkedAt": "2026-10-31T19:42:31.109Z",
+    "darkBackground": false
+  },
+  "high-trails-outdoor-science-school": {
+    "src": "/organization-logos/high-trails-outdoor-science-school.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://dirtyclassroom.com/wp-content/uploads/2015/04/Logo-20151.png",
+    "website": "https://dirtyclassroom.com/",
+    "checkedAt": "2026-10-31T19:42:31.877Z",
+    "darkBackground": true
+  },
+  "naturebridge": {
+    "src": "/organization-logos/naturebridge.webp",
+    "kind": "official-icon",
+    "sourceUrl": "https://naturebridge.org/kalastatic/images/favicon/apple-touch-icon.png",
+    "website": "https://naturebridge.org/",
+    "checkedAt": "2026-10-31T19:42:32.646Z",
+    "darkBackground": true
+  },
+  "indian-head-camp-ihc": {
+    "src": "/organization-logos/indian-head-camp-ihc.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=www.campihc.com&sz=128",
+    "website": "https://www.campihc.com/",
+    "checkedAt": "2026-10-31T19:42:33.136Z",
+    "darkBackground": false
+  },
+  "nols-national-outdoor-leadership-school": {
+    "src": "/organization-logos/nols-national-outdoor-leadership-school.webp",
+    "kind": "official-icon",
+    "sourceUrl": "https://nolseduprod.wpenginepowered.com/nitropack_static/eOcQGdQXNmsMUhdHoCZASCVGMgoXPKkd/assets/images/optimized/rev-6cf854d/www.nols.edu/wp-content/uploads/2024/07/cropped-NOLS-Orange-Favicon-1-180x180.png",
+    "website": "https://www.nols.edu/",
+    "checkedAt": "2026-10-31T19:42:33.259Z",
+    "darkBackground": false
+  },
+  "mcdowell-environmental-center": {
+    "src": "/organization-logos/mcdowell-environmental-center.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://static.spacecrafted.com/f9ffe456e7d34f4787965495c9828a98/i/a5e4d5a1c6724054990cf545ee2408d7/1/5feFb8zhrk/Camp%20McDowell%20vector%20logo.png",
+    "website": "https://campmcdowell.org/",
+    "checkedAt": "2026-10-31T19:42:33.437Z",
+    "darkBackground": false
+  },
+  "northwest-outward-bound-school": {
+    "src": "/organization-logos/northwest-outward-bound-school.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=www.outwardbound.org&sz=128",
+    "website": "https://www.outwardbound.org/blog/obusa-celebrating-59-years-of-the-northwest-outward-bound-school/",
+    "checkedAt": "2026-10-31T19:42:33.459Z",
+    "darkBackground": true
+  },
+  "nyc-outward-bound-schools": {
+    "src": "/organization-logos/nyc-outward-bound-schools.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=www.outwardbound.org&sz=128",
+    "website": "https://www.outwardbound.org/nycobs/",
+    "checkedAt": "2026-10-31T19:42:33.476Z",
+    "darkBackground": true
+  },
+  "outward-bound-california": {
+    "src": "/organization-logos/outward-bound-california.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=www.outwardbound.org&sz=128",
+    "website": "https://www.outwardbound.org/obca/",
+    "checkedAt": "2026-10-31T19:42:33.499Z",
+    "darkBackground": true
+  },
+  "north-cascades-institute": {
+    "src": "/organization-logos/north-cascades-institute.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://ncascades.org/++theme++ncascades/images/logo-homepage.svg",
+    "website": "https://ncascades.org/",
+    "checkedAt": "2026-10-31T19:42:34.987Z",
+    "darkBackground": true
+  },
+  "keystone-science-school": {
+    "src": "/organization-logos/keystone-science-school.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://i0.wp.com/www.keystonescienceschool.org/wp-content/uploads/2026/01/50th_Logo_Website_years-1.png?fit=304%2C106&ssl=1",
+    "website": "https://www.keystonescienceschool.org/",
+    "checkedAt": "2026-10-31T19:42:35.324Z",
+    "darkBackground": false
+  },
+  "northern-tier-high-adventure": {
+    "src": "/organization-logos/northern-tier-high-adventure.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.ntier.org/wp-content/uploads/2018/10/logo-northern-tier-high-adventure-e1585848461887.png",
+    "website": "https://www.ntier.org/",
+    "checkedAt": "2026-10-31T19:42:35.808Z",
+    "darkBackground": false
+  },
+  "pathfinder-ranch": {
+    "src": "/organization-logos/pathfinder-ranch.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=pathfinderranch.com&sz=128",
+    "website": "https://pathfinderranch.com/",
+    "checkedAt": "2026-10-31T19:42:35.958Z",
+    "darkBackground": false
+  },
+  "philmont-scout-ranch": {
+    "src": "/organization-logos/philmont-scout-ranch.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.philmontscoutranch.org/wp-content/uploads/2018/10/logo-philmont-side.png",
+    "website": "https://www.philmontscoutranch.org/",
+    "checkedAt": "2026-10-31T19:42:36.885Z",
+    "darkBackground": false
+  },
+  "raquette-lake-camps": {
+    "src": "/organization-logos/raquette-lake-camps.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=raquettelake.com&sz=128",
+    "website": "https://raquettelake.com/",
+    "checkedAt": "2026-10-31T19:42:37.168Z",
+    "darkBackground": false
+  },
+  "rockbrook-camp": {
+    "src": "/organization-logos/rockbrook-camp.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=www.rockbrookcamp.com&sz=128",
+    "website": "https://www.rockbrookcamp.com/",
+    "checkedAt": "2026-10-31T19:42:37.210Z",
+    "darkBackground": false
+  },
+  "sanborn-western-camps": {
+    "src": "/organization-logos/sanborn-western-camps.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=www.sanbornwesterncamps.com&sz=128",
+    "website": "https://www.sanbornwesterncamps.com/",
+    "checkedAt": "2026-10-31T19:42:38.687Z",
+    "darkBackground": false
+  },
+  "sierra-nevada-journeys": {
+    "src": "/organization-logos/sierra-nevada-journeys.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://images.squarespace-cdn.com/content/v1/55774404e4b07f2c7dc881a0/b913cb35-f484-4884-bc86-88842fd161aa/BlueSNJ+Logo_beigebkgrnd2025V2.png?format=1500w",
+    "website": "https://www.sierranevadajourneys.org/",
+    "checkedAt": "2026-10-31T19:42:38.768Z",
+    "darkBackground": true
+  },
+  "pine-forest-camp": {
+    "src": "/organization-logos/pine-forest-camp.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.pineforestcamp.com/wp-content/themes/pine-forest-camp/img/pine-forest-camp-logo.png",
+    "website": "https://www.pineforestcamp.com/",
+    "checkedAt": "2026-10-31T19:42:39.403Z",
+    "darkBackground": false
+  },
+  "teton-science-schools": {
+    "src": "/organization-logos/teton-science-schools.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.tetonscience.org/wp-content/uploads/2023/02/Parent_Logo_Clr.png",
+    "website": "https://www.tetonscience.org/",
+    "checkedAt": "2026-10-31T19:42:40.377Z",
+    "darkBackground": false
+  },
+  "summit-bechtel-reserve": {
+    "src": "/organization-logos/summit-bechtel-reserve.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.summitbsa.org/wp-content/uploads/2016/01/summit-logo.png",
+    "website": "https://www.summitbsa.org/",
+    "checkedAt": "2026-10-31T19:42:40.424Z",
+    "darkBackground": false
+  },
+  "soar-success-oriented-achievement-realized": {
+    "src": "/organization-logos/soar-success-oriented-achievement-realized.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://soarnc.org/wp-content/uploads/2025/09/SOAR-Logo_RGB-Large.png",
+    "website": "https://soarnc.org/",
+    "checkedAt": "2026-10-31T19:42:40.651Z",
+    "darkBackground": false
+  },
+  "red-arrow-camp": {
+    "src": "/organization-logos/red-arrow-camp.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://redarrowcamp.com/wp-content/uploads/2019/01/cropped-RAC_logo_round-1.png",
+    "website": "https://redarrowcamp.com/",
+    "checkedAt": "2026-10-31T19:42:41.169Z",
+    "darkBackground": false
+  },
+  "voyageur-outward-bound-school": {
+    "src": "/organization-logos/voyageur-outward-bound-school.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=www.outwardbound.org&sz=128",
+    "website": "https://www.outwardbound.org/vobs/",
+    "checkedAt": "2026-10-31T19:42:41.202Z",
+    "darkBackground": true
+  },
+  "the-ecology-school": {
+    "src": "/organization-logos/the-ecology-school.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://images.squarespace-cdn.com/content/v1/5cf3c3890a3b190001ccb3da/81b83513-24c9-442e-a03f-d16749706737/the-ecology-school-at-river-bend-farm.png",
+    "website": "https://theecologyschool.org/",
+    "checkedAt": "2026-10-31T19:42:41.228Z",
+    "darkBackground": true
+  },
+  "united-work-and-travel": {
+    "src": "/organization-logos/united-work-and-travel.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://unitedworkandtravel.com/wp-content/uploads/2023/08/Logo-Header.png",
+    "website": "https://unitedworkandtravel.com/",
+    "checkedAt": "2026-10-31T19:42:41.688Z",
+    "darkBackground": true
+  },
+  "ymca-camp-campbell": {
+    "src": "/organization-logos/ymca-camp-campbell.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=www.ymcasv.org&sz=128",
+    "website": "https://www.ymcasv.org/camp-campbell/about",
+    "checkedAt": "2026-10-31T19:42:41.747Z",
+    "darkBackground": true
+  },
+  "tyler-hill-camp": {
+    "src": "/organization-logos/tyler-hill-camp.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.tylerhillcamp.com/wp-content/uploads/2016/10/THC-logo-full.png",
+    "website": "https://www.tylerhillcamp.com/",
+    "checkedAt": "2026-10-31T19:42:42.109Z",
+    "darkBackground": false
+  },
+  "ymca-camp-carter": {
+    "src": "/organization-logos/ymca-camp-carter.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://ymcafw.org/wp-content/uploads/2024/03/ymca_prpl_rgb_r_transparent.png",
+    "website": "https://ymcafw.org/camp-carter/about/",
+    "checkedAt": "2026-10-31T19:42:43.296Z",
+    "darkBackground": false
+  },
+  "ymca-camp-chingachgook": {
+    "src": "/organization-logos/ymca-camp-chingachgook.webp",
+    "kind": "official-icon",
+    "sourceUrl": "https://static.wixstatic.com/media/b56c38_1c8099aaf7554bda8f41de88f85bad03%7Emv2.png/v1/fill/w_180%2Ch_180%2Clg_1%2Cusm_0.66_1.00_0.01/b56c38_1c8099aaf7554bda8f41de88f85bad03%7Emv2.png",
+    "website": "https://www.lakegeorgecamp.org/",
+    "checkedAt": "2026-10-31T19:42:43.364Z",
+    "darkBackground": false
+  },
+  "ymca-camp-chief-ouray": {
+    "src": "/organization-logos/ymca-camp-chief-ouray.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=campchiefouray.org&sz=128",
+    "website": "https://campchiefouray.org/",
+    "checkedAt": "2026-10-31T19:42:43.433Z",
+    "darkBackground": true
+  },
+  "wilderness-awareness-school": {
+    "src": "/organization-logos/wilderness-awareness-school.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://wawareness.wpengine.com/wp-content/uploads/2020/05/logo-text.svg",
+    "website": "https://wildernessawareness.org/",
+    "checkedAt": "2026-10-31T19:42:43.725Z",
+    "darkBackground": false
+  },
+  "ymca-camp-erdman": {
+    "src": "/organization-logos/ymca-camp-erdman.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=www.ymcahonolulu.org&sz=128",
+    "website": "https://www.ymcahonolulu.org/programs/camps",
+    "checkedAt": "2026-10-31T19:42:44.219Z",
+    "darkBackground": true
+  },
+  "trackers-earth": {
+    "src": "/organization-logos/trackers-earth.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://trackerspdx.com/images/logo-trackers-brand.png",
+    "website": "https://trackerspdx.com/",
+    "checkedAt": "2026-10-31T19:42:44.350Z",
+    "darkBackground": false
+  },
+  "ymca-camp-grady-spruce": {
+    "src": "/organization-logos/ymca-camp-grady-spruce.webp",
+    "kind": "official-icon",
+    "sourceUrl": "https://ymcadallas.org/profiles/contrib/yusaopeny/assets/favicon/green/apple-touch-icon.png",
+    "website": "https://ymcadallas.org/camps/camp-grady-spruce",
+    "checkedAt": "2026-10-31T19:42:45.964Z",
+    "darkBackground": true
+  },
+  "ymca-camp-fitch": {
+    "src": "/organization-logos/ymca-camp-fitch.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://campfitchymca.org/wp-content/uploads/2022/11/white-logo.png",
+    "website": "https://campfitchymca.org/",
+    "checkedAt": "2026-10-31T19:42:46.245Z",
+    "darkBackground": true
+  },
+  "ymca-camp-greenville": {
+    "src": "/organization-logos/ymca-camp-greenville.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://images.squarespace-cdn.com/content/v1/5e7789dafb856c5ea0b9da6f/610044c9-5066-4e79-abf4-8869434267a3/YMCA_logo.png?format=1500w",
+    "website": "https://www.campgreenville.org/",
+    "checkedAt": "2026-10-31T19:42:46.276Z",
+    "darkBackground": false
+  },
+  "ymca-camp-cosby": {
+    "src": "/organization-logos/ymca-camp-cosby.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=campcosby.ymcabham.org&sz=128",
+    "website": "https://campcosby.ymcabham.org/",
+    "checkedAt": "2026-10-31T19:42:47.871Z",
+    "darkBackground": false
+  },
+  "ymca-camp-hanes": {
+    "src": "/organization-logos/ymca-camp-hanes.webp",
+    "kind": "official-icon",
+    "sourceUrl": "https://ymcanwnc.org/themes/custom/ynwc_carnation/img/favicons/apple-touch-icon.png",
+    "website": "https://ymcanwnc.org/locations/ymca-camp-hanes",
+    "checkedAt": "2026-10-31T19:42:47.881Z",
+    "darkBackground": false
+  },
+  "ymca-camp-harrison": {
+    "src": "/organization-logos/ymca-camp-harrison.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=www.ymcacharlotte.org&sz=128",
+    "website": "https://www.ymcacharlotte.org/locations/camp-harrison",
+    "checkedAt": "2026-10-31T19:42:47.889Z",
+    "darkBackground": true
+  },
+  "ymca-camp-letts": {
+    "src": "/organization-logos/ymca-camp-letts.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=campletts.org&sz=128",
+    "website": "https://campletts.org/",
+    "checkedAt": "2026-10-31T19:42:48.704Z",
+    "darkBackground": false
+  },
+  "ymca-camp-jewell": {
+    "src": "/organization-logos/ymca-camp-jewell.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://campjewell.org/wp-content/uploads/2024/11/jewell-site-icon.png",
+    "website": "https://campjewell.org/",
+    "checkedAt": "2026-10-31T19:42:49.272Z",
+    "darkBackground": false
+  },
+  "ymca-camp-ihduhapi": {
+    "src": "/organization-logos/ymca-camp-ihduhapi.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://d2o2hgyhrq7n36.cloudfront.net/themes/custom/openy_peony/build/assets/images/logo.svg",
+    "website": "https://www.ymcanorth.org/adventure/locations/day_camp_ihduhapi",
+    "checkedAt": "2026-10-31T19:42:50.012Z",
+    "darkBackground": true
+  },
+  "ymca-camp-kanata": {
+    "src": "/organization-logos/ymca-camp-kanata.webp",
+    "kind": "official-icon",
+    "sourceUrl": "https://www.campkanata.org/themes/custom/kanata/assets/favicon/apple-touch-icon.png",
+    "website": "https://www.campkanata.org/",
+    "checkedAt": "2026-10-31T19:42:50.472Z",
+    "darkBackground": true
+  },
+  "ymca-camp-mason": {
+    "src": "/organization-logos/ymca-camp-mason.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://campmason.org/yhdrlogo.png",
+    "website": "https://campmason.org/",
+    "checkedAt": "2026-10-31T19:42:50.779Z",
+    "darkBackground": true
+  },
+  "ymca-camp-roger": {
+    "src": "/organization-logos/ymca-camp-roger.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=ymcautah.org&sz=128",
+    "website": "https://ymcautah.org/camp-roger",
+    "checkedAt": "2026-10-31T19:42:50.852Z",
+    "darkBackground": false
+  },
+  "ymca-camp-orkila": {
+    "src": "/organization-logos/ymca-camp-orkila.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=www.seattleymca.org&sz=128",
+    "website": "https://www.seattleymca.org/",
+    "checkedAt": "2026-10-31T19:42:51.457Z",
+    "darkBackground": false
+  },
+  "ymca-camp-ockanickon": {
+    "src": "/organization-logos/ymca-camp-ockanickon.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://ycamp.org/wp-content/uploads/2016/04/ymca-logo.png",
+    "website": "https://ycamp.org/",
+    "checkedAt": "2026-10-31T19:42:51.713Z",
+    "darkBackground": true
+  },
+  "ymca-camp-surf": {
+    "src": "/organization-logos/ymca-camp-surf.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.ymcasd.org/wp-content/uploads/2024/08/CWB_Wordmark_Y_Logo_V1_grn_rgb-e1764794806188.png",
+    "website": "https://www.ymcasd.org/camps/overnight-camps/camp-surf",
+    "checkedAt": "2026-10-31T19:42:52.812Z",
+    "darkBackground": false
+  },
+  "ymca-camp-sloane": {
+    "src": "/organization-logos/ymca-camp-sloane.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=campsloane.org&sz=128",
+    "website": "https://campsloane.org/",
+    "checkedAt": "2026-10-31T19:42:52.872Z",
+    "darkBackground": true
+  },
+  "ymca-camp-shady-brook": {
+    "src": "/organization-logos/ymca-camp-shady-brook.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://campshadybrook.ppymca.org/wp-content/uploads/sites/2/2026/03/YMCACSBLogoWhite.svg",
+    "website": "https://campshadybrook.ppymca.org/",
+    "checkedAt": "2026-10-31T19:42:52.982Z",
+    "darkBackground": true
+  },
+  "ymca-camp-sea-gull-and-seafarer": {
+    "src": "/organization-logos/ymca-camp-sea-gull-and-seafarer.webp",
+    "kind": "official-icon",
+    "sourceUrl": "https://www.seagull-seafarer.org/themes/custom/sgsf/assets/favicon/apple-touch-icon.png",
+    "website": "https://www.seagull-seafarer.org/",
+    "checkedAt": "2026-10-31T19:42:53.319Z",
+    "darkBackground": true
+  },
+  "ymca-camp-widjiwagan": {
+    "src": "/organization-logos/ymca-camp-widjiwagan.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://d2o2hgyhrq7n36.cloudfront.net/themes/custom/openy_peony/build/assets/images/logo.svg",
+    "website": "https://www.ymcanorth.org/adventure/locations/camp_widjiwagan",
+    "checkedAt": "2026-10-31T19:42:53.761Z",
+    "darkBackground": true
+  },
+  "ymca-camp-thunderbird": {
+    "src": "/organization-logos/ymca-camp-thunderbird.webp",
+    "kind": "cached-website-icon",
+    "sourceUrl": "https://www.google.com/s2/favicons?domain=www.ymcacharlotte.org&sz=128",
+    "website": "https://www.ymcacharlotte.org/locations/camp-thunderbird",
+    "checkedAt": "2026-10-31T19:42:54.184Z",
+    "darkBackground": true
+  },
+  "ymca-camp-seymour": {
+    "src": "/organization-logos/ymca-camp-seymour.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://www.ymcapkc.org/themes/custom/ypkcoy/dist/img/logo-white.png",
+    "website": "https://www.ymcapkc.org/",
+    "checkedAt": "2026-10-31T19:42:54.551Z",
+    "darkBackground": true
+  },
+  "lake-owego-camp": {
+    "src": "/organization-logos/lake-owego-camp.webp",
+    "kind": "official-logo",
+    "sourceUrl": "https://lakeowego.com/images/LOC-logo.png",
+    "website": "https://www.lakeowego.com/",
+    "checkedAt": "2026-10-31T19:46:57.635Z",
+    "darkBackground": false
+  }
+}

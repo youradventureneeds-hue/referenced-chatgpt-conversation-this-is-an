@@ -41,6 +41,8 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm db:generate
       - run: pnpm test:jobs
+      - name: Install browser for public hiring portals
+        run: pnpm exec playwright install --with-deps chromium
       - name: Apply additive schema migrations before a write run
         if: github.event_name == 'schedule' || inputs.preview_only == false
         run: pnpm exec prisma migrate deploy
