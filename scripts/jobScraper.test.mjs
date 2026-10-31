@@ -36,6 +36,8 @@ test('HTML vacancies require a specific role, employer mention and an applicatio
  assert.equal(extractHtmlVacancy(html,'https://example.com/careers/educator',org).length,1);
  assert.equal(extractHtmlVacancy(html.replace('Field Educator','Careers and Opportunities'),'https://example.com/careers',org).length,0);
  assert.equal(extractHtmlVacancy(html.replace('Apply now','Learn more'),'https://example.com/careers/educator',org).length,0);
+ assert.equal(extractHtmlVacancy(html.replace('Field Educator','Become a Wilderness Medicine Instructor'),'https://example.com/employment/wilderness-medicine-instructor-training-courses/',org).length,0);
+ assert.equal(extractHtmlVacancy(html,'https://example.com/instructor-training/',org).length,0);
 });
 
 test('shared portals require the specific organization and reject unrelated employers',()=>{
