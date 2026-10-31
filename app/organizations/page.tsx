@@ -22,7 +22,7 @@ export default async function OrganizationsPage() {
         </Link>
         <p className="muted organization-description">{org.description}</p>
         <div className="organization-card-footer">
-          <Link href={`/organizations/${org.slug}`} className="text-link">{org._count.jobs} open roles</Link>
+          <Link href={`/organizations/${org.slug}#current-openings`} className="text-link">{org._count.jobs} open {org._count.jobs === 1 ? "role" : "roles"}</Link>
           {identity.website && <a href={identity.website} target="_blank" rel="noopener noreferrer" className="text-link" aria-label={`Visit ${org.name} website`}>Website ↗</a>}
         </div>
       </article>;

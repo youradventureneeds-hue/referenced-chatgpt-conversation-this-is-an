@@ -18,6 +18,7 @@ export default async function OrganizationShowcasePage({
     include: {
       jobs: {
         where: { status: "PUBLISHED", reviewedByAdmin: true },
+        orderBy: { createdAt: "desc" },
         select: {
           id: true,
           title: true,
@@ -86,32 +87,32 @@ export default async function OrganizationShowcasePage({
           </p>
 
           {/* CURRENT OPENINGS - NOW SAFELY IN THE WIDE LEFT COLUMN */}
-          <h2 style={{ fontSize: "1.5rem", borderBottom: "2px solid #f0f0f0", paddingBottom: "0.5rem", marginBottom: "1.5rem", marginTop: "3rem" }}>
+          <h2 id="current-openings" style={{ fontSize: "1.5rem", borderBottom: "2px solid #f0f0f0", paddingBottom: "0.5rem", marginBottom: "1.5rem", marginTop: "3rem" }}>
             Current Openings & Careers
           </h2>
-          
-          {org.openJobs && org.openJobs !== "No explicit job listings found on page." ? (
-            <div style={{ background: "#f8f9fa", padding: "1.5rem", borderRadius: "8px", border: "1px solid #e9ecef" }}>
-              <div style={{ lineHeight: "1.8", color: "#4a4a4a", margin: 0 }}>
-                {org.openJobs.split(' | ').map((job, idx) => (
-                   <span key={idx} style={{ display: 'block', marginBottom: '0.5rem' }}>• {job}</span>
+          {org.jobs.length > 0 ? (
+            <div className="organization-openings">
+              <p className="muted">{org.jobs.length} current {org.jobs.length === 1 ? "opening" : "openings"}</p>
+              <ul style={{ listStyle: "none", padding: 0, margin: "0 0 1.5rem" }}>
+                {org.jobs.map(job => (
+                  <li key={job.id} style={{ border: "1px solid #e9ecef", borderRadius: "8px", padding: "1rem", marginBottom: "0.75rem" }}>
+                    <Link href={`/jobs/${job.slug}`} className="text-link">{job.title} ↗</Link>
+                    <p className="muted" style={{ margin: "0.5rem 0 0", fontSize: "0.9rem" }}>
+                      {[job.region, job.country].filter(Boolean).join(", ")}
+                    </p>
+                  </li>
                 ))}
-              </div>
-              {org.careersUrl && (
-                <a href={org.careersUrl} target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", marginTop: "1rem", color: "#1a1a1a", textDecoration: "none", fontWeight: "600" }}>
-                  Apply on Official Careers Page ↗
-                </a>
-              )}
+              </ul>
             </div>
           ) : (
             <p style={{ lineHeight: "1.8", color: "#4a4a4a" }}>
-              No automated listings found right now.
-              {org.careersUrl && (
-                <a href={org.careersUrl} target="_blank" rel="noopener noreferrer" style={{ color: "#1a1a1a", textDecoration: "underline", marginLeft: "0.5rem", fontWeight: "500" }}>
-                  Check their careers portal manually ↗
-                </a>
-              )}
+              No current openings.
             </p>
+          )}
+          {org.careersUrl && (
+            <a href={org.careersUrl} target="_blank" rel="noopener noreferrer" className="text-link">
+              Visit the official careers page ↗
+            </a>
           )}
         </section>
 
