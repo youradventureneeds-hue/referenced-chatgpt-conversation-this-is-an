@@ -35,6 +35,17 @@ export default async function JobDetailPage({
     notFound();
   }
 
+  const importedSource = job.sourceChannel === "OFFICIAL_CAREERS_AUTO"
+    ? await prisma.opportunityIntake.findUnique({
+        where: { approvedJobId: job.id },
+        select: { sourceUrl: true, extraction: true },
+      })
+    : null;
+  const sourceUrl = importedSource?.sourceUrl && /^https?:\/\//i.test(importedSource.sourceUrl)
+    ? importedSource.sourceUrl : null;
+  const sourceMetadata = importedSource?.extraction as { scraper?: { lastSeenAt?: string } } | undefined;
+  const lastChecked = sourceMetadata?.scraper?.lastSeenAt;
+
   const formattedSalary =
     job.salaryMin && job.salaryMax
       ? `${job.salaryMin.toLocaleString()} - ${job.salaryMax.toLocaleString()} ${job.currency}`
@@ -61,7 +72,7 @@ export default async function JobDetailPage({
 
         <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", color: "#666" }}>
           <span>📍 {job.region ? `${job.region}, ${job.country}` : job.country}</span>
-          <span>💼 {job.workType.replace("_", " ")}</span>
+          <span>💼 {job.workType === "UNSPECIFIED" ? "Work type not specified" : job.workType.replace("_", " ")}</span>
           <span>💰 {formattedSalary}</span>
         </div>
       </header>
@@ -70,12 +81,18 @@ export default async function JobDetailPage({
         <div>
           <h2>About the Opportunity</h2>
           <p style={{ lineHeight: 1.7, marginTop: "1rem", whiteSpace: "pre-line" }}>
-            {job.description}
+            {sourceUrl ? job.description.split("\n\nOriginal vacancy:")[0] : job.description}
           </p>
+          {sourceUrl && <p className="muted">Imported from the employer’s official vacancy page.
+            {lastChecked && <> Last checked {new Date(lastChecked).toLocaleDateString("en-GB", { timeZone: "Asia/Kolkata" })}.</>}
+            {" "}<a className="text-link" href={sourceUrl} target="_blank" rel="noopener noreferrer">Read the full vacancy ↗</a>
+          </p>}
 
           <h3 style={{ marginTop: "2rem" }}>Visa & Work Eligibility</h3>
           <p style={{ lineHeight: 1.6, color: "#444" }}>
-            {job.visaSponsorship
+            {importedSource && !job.visaSponsorship
+              ? "Work authorization and sponsorship were not confirmed. Check the employer’s original listing."
+              : job.visaSponsorship
               ? `✓ Visa sponsorship available: ${job.visaEligibilityNote || "Check program requirements."}`
               : `✕ No sponsorship: ${job.visaEligibilityNote || "Candidates must hold valid work authorization."}`}
           </p>
@@ -99,12 +116,13 @@ export default async function JobDetailPage({
             </a>
           )}
 
-          <button
+          {sourceUrl ? <a className="button" href={sourceUrl} target="_blank" rel="noopener noreferrer"
+            style={{ width: "100%", justifyContent: "center", padding: "0.75rem 1rem" }}>Apply on employer’s website ↗</a> : <button
             className="button"
             style={{ width: "100%", textAlign: "center", padding: "0.75rem 1rem" }}
           >
             Apply for position
-          </button>
+          </button>}
         </aside>
       </section>
     </main>

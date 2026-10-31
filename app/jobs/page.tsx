@@ -27,6 +27,7 @@ export default async function JobsPage({
               { title: { contains: q, mode: "insensitive" } },
               { description: { contains: q, mode: "insensitive" } },
               { region: { contains: q, mode: "insensitive" } },
+              { organization: { name: { contains: q, mode: "insensitive" } } },
             ],
           }
         : {}),
@@ -48,11 +49,16 @@ export default async function JobsPage({
     },
   });
 
+  const countries = await prisma.job.findMany({
+    where: { status: "PUBLISHED", reviewedByAdmin: true },
+    select: { country: true }, distinct: ["country"], orderBy: { country: "asc" },
+  });
+
   const jobs = rawJobs.map((job) => ({
     id: job.id,
     title: job.title,
     slug: job.slug,
-    summary: job.description,
+    summary: job.description.split("\n\nOriginal vacancy:")[0],
     jobType: job.workType,
     sponsorshipAvailable: job.visaSponsorship,
     location: job.region ? `${job.region}, ${job.country}` : job.country,
@@ -79,14 +85,16 @@ export default async function JobsPage({
         />
         <select name="country" defaultValue={params?.country || "all"}>
           <option value="all">Any country</option>
-          <option value="India">India</option>
-          <option value="Germany">Germany</option>
+          {countries.map(({ country }) => <option key={country} value={country}>{country}</option>)}
         </select>
         <select name="type" defaultValue={params?.type || "all"}>
           <option value="all">Any role type</option>
           <option value="SEASONAL">Seasonal</option>
           <option value="GAP_YEAR">Gap Year</option>
           <option value="FULL_TIME">Full Time</option>
+          <option value="PART_TIME">Part Time</option>
+          <option value="INTERNSHIP">Internship</option>
+          <option value="VOLUNTEER">Volunteer</option>
         </select>
         <label style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
           <input type="checkbox" name="visa" defaultChecked={visaOnly} />

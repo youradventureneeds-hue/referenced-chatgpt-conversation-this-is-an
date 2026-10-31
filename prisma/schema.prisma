@@ -27,6 +27,7 @@ enum JobStatus {
 
 // 5. Work Types
 enum WorkType {
+  UNSPECIFIED
   FULL_TIME
   PART_TIME
   SEASONAL

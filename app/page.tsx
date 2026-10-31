@@ -31,7 +31,7 @@ export default async function Home() {
     id: job.id,
     title: job.title,
     slug: job.slug,
-    summary: job.description,
+    summary: job.description.split("\n\nOriginal vacancy:")[0],
     jobType: job.workType,
     sponsorshipAvailable: job.visaSponsorship,
     location: job.region ? `${job.region}, ${job.country}` : job.country,

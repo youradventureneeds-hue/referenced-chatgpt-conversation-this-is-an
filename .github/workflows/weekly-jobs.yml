@@ -1,0 +1,64 @@
+name: Weekly official job openings
+
+on:
+  schedule:
+    # Monday 08:00 Asia/Kolkata (UTC+05:30).
+    - cron: '30 2 * * 1'
+  workflow_dispatch:
+    inputs:
+      preview_only:
+        description: 'Preview without changing the website database'
+        type: boolean
+        default: true
+      organization:
+        description: 'Optional organization slug; leave blank for the whole directory'
+        type: string
+        default: ''
+
+permissions:
+  contents: read
+
+concurrency:
+  group: weekly-official-jobs
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      DIRECT_URL: ${{ secrets.DIRECT_URL || secrets.DATABASE_URL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.18.2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm db:generate
+      - run: pnpm test:jobs
+      - name: Apply additive schema migrations before a write run
+        if: github.event_name == 'schedule' || inputs.preview_only == false
+        run: pnpm exec prisma migrate deploy
+      - name: Collect and synchronize official vacancies
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          PREVIEW_ONLY: ${{ inputs.preview_only }}
+          ORGANIZATION: ${{ inputs.organization }}
+        shell: bash
+        run: |
+          args=(--report work/weekly-jobs-report.json)
+          if [[ "$EVENT_NAME" == "schedule" || "$PREVIEW_ONLY" == "false" ]]; then args+=(--write); fi
+          if [[ -n "$ORGANIZATION" ]]; then args+=(--org "$ORGANIZATION"); fi
+          pnpm jobs:sync "${args[@]}"
+      - name: Save source health and publication report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-jobs-report
+          path: work/weekly-jobs-report.json
+          retention-days: 30

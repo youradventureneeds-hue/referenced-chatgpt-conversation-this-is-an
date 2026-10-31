@@ -50,6 +50,12 @@ The collection pipeline accepts content from Instagram, YouTube, websites, newsl
 
 For production, scheduled source connectors should write raw material to `IntakeItem`. Replace `extractOpportunity()` in `lib/intake.ts` with an AI structured-output call validated against a Zod schema. Reviewers approve or reject from `/admin`; an approval transaction should create a `Job`, retain the source link, and mark the intake item approved. Source fetching must respect each platform's API, terms, permissions and rate limits—never scrape accounts or private newsletters without authorization.
 
+The weekly official-careers importer is an owner-authorized automatic publication path.
+It validates individual official vacancies, records evidence and lifecycle metadata in
+`OpportunityIntake`, and publishes accepted records with `sourceChannel=OFFICIAL_CAREERS_AUTO`.
+Missing locations or work types are explicitly unspecified. Ambiguous sources stay in review.
+The ordinary submission API remains a review-first path. See `docs/weekly-job-import.md`.
+
 ## Local setup
 
 1. Copy `.env.example` to `.env` and supply a PostgreSQL connection string.

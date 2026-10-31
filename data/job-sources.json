@@ -1,0 +1,17 @@
+{
+  "northwest-outward-bound-school": {"enabled":false,"reason":"School closed in 2024"},
+  "ymca-camp-flaming-arrow": {"enabled":false,"reason":"Camp closed in 2021"},
+  "north-star-camps": {"enabled":false,"reason":"Organization identity and official website require verification"},
+  "nols-national-outdoor-leadership-school": {"url":"https://www.nols.edu/about/our-team/employment/"},
+  "teton-science-schools": {"url":"https://teton-science-schools-inc.prismhr-hire.com/"},
+  "naturebridge": {"url":"https://naturebridge.org/careers"},
+  "appalachian-mountain-club-amc": {"url":"https://www.outdoors.org/get-involved/careers/"},
+  "chesapeake-bay-outward-bound-school": {"url":"https://www.outwardbound.org/cbobs/"},
+  "camp-canadensis": {"url":"https://www.canadensis.com/staff/"},
+  "camp-chen-a-wanda": {"url":"https://www.chenawanda.com/"},
+  "clearwater-camp-for-girls": {"url":"https://clearwatercamp.org/"},
+  "ymca-camp-carter": {"url":"https://ymcafw.org/camp-carter/"},
+  "ymca-camp-shady-brook": {"url":"https://campshadybrook.ppymca.org/"},
+  "ymca-camp-surf": {"url":"https://www.ymcasd.org/camps/overnight-camps/camp-surf"},
+  "ymca-camp-roger": {"url":"https://ymcautah.org/camp-roger"}
+}
