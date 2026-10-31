@@ -20,6 +20,11 @@ test('role navigation alone is never published as an opening',()=>{
  assert.equal(plain('<p>Field &amp; Science</p>'),'Field & Science');
 });
 
+test('informational career guides and general application pools require review',()=>{
+ for(const title of ['The Roles of a Trip Prep Specialist','Life as an Outdoor Instructor','General Application','Join our Talent Community'])assert.equal(assess({...candidate,title}).publishable,false);
+ assert.equal(assess({...candidate,title:'Trip Prep Specialist'}).publishable,true);
+});
+
 test('unknown metadata is explicitly unspecified rather than guessed',()=>{
  const [job]=extractStructured(jsonld({'@type':'JobPosting',title:'Field Educator',description,hiringOrganization:{name:org.name}}),'https://example.com/job/42',org);
  assert.equal(job.workType,'UNSPECIFIED');assert.equal(job.country,'Not specified');assert.equal(assess(job).publishable,true);
