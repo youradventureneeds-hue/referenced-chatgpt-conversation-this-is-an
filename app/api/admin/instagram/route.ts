@@ -42,7 +42,7 @@ export async function POST(request:Request){
   const organization=await prisma.organization.create({data:{...input,logoUrl:input.logoUrl||null,verified:false}});return json({id:organization.id});
  }
  if(body.action==='run')return json({run:await p.enqueue()});
- if(body.action==='process'){const {id}=z.object({id:z.string().max(100)}).parse(body);return json(await p.processBatch(id,3));}
+ if(body.action==='process'){const {id}=z.object({id:z.string().max(100)}).parse(body);return json(await p.processBatch(id,1));}
  return json({error:'Unknown action'},400);
  }catch(e){if(e instanceof z.ZodError)return json({error:e.issues[0]?.message||'Check the form fields'},400);if((e as {code?:string}).code==='P2002')return json({error:'That organization address already exists. Choose a different slug.'},409);return json({error:instagramSafeError(e)},400);}
 }
