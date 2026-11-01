@@ -21,5 +21,5 @@ try{
   console.log(JSON.stringify({initialized:true,sources:records.size}));
  }
  if(process.argv.includes('--enable'))await db.instagramSettings.update({where:{id:'main'},data:{enabled:true,nextRunAt:new Date()}});
- for(let n=0;n<6;n++){const result=await platform.tick();console.log(JSON.stringify({idle:result.idle,busy:result.busy,error:result.error,run:result.run?{id:result.run.id,status:result.run.status,accounts:result.run.accounts,media:result.run.media,queued:result.run.queued,duplicates:result.run.duplicates,errors:result.run.errors}:null}));if(result.idle||result.busy||result.error||result.stopped||result.run&&!['RUNNING','QUEUED'].includes(result.run.status))break;}
+ for(let n=0;n<6;n++){const result=await platform.tick();console.log(JSON.stringify({idle:result.idle,busy:result.busy,error:result.error,run:result.run?{id:result.run.id,status:result.run.status,accounts:result.run.accounts,media:result.run.media,queued:result.run.queued,duplicates:result.run.duplicates,errors:result.run.errors}:null}));if(result.error||result.stopped||result.run?.status==='FAILED')process.exitCode=1;if(result.idle||result.busy||result.error||result.stopped||result.run&&!['RUNNING','QUEUED'].includes(result.run.status))break;}
 }finally{await db.$disconnect();}

@@ -17,3 +17,5 @@ test('interrupted batches resume and reviewed posts do not create duplicate publ
  const p=createInstagramPlatform({db,encryptionKey:key,fetchImpl});await p.processBatch('r',1);assert.equal(run.nextIndex,1);assert.equal(run.status,'RUNNING');assert.equal(saved.length,1);assert.equal(saved[0].status,'NEEDS_REVIEW');assert.equal(settings.leaseUntil,null);
  await p.processBatch('r',1);assert.equal(run.status,'SUCCESS');assert.equal(run.nextIndex,2);assert.equal(run.duplicates,1);assert.equal(saved.length,1);assert.equal(run.queued,1);
 });
+
+test('Meta authorization failure prompts reconnection even without an expiry date',()=>{assert.equal(instagramConnectionStatus({tokenCiphertext:'present',lastError:'Instagram authorization expired or is invalid (Meta code 190)'}).expired,true);});
