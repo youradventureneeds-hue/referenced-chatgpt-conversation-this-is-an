@@ -10,7 +10,7 @@ Meta permits discovery of accessible public professional-account posts and reels
 
 ## Replace expired access yourself
 
-Open the panel's Meta Graph API Explorer link for app 1430683145936095. Generate a read token for the Facebook Page linked to @youradventureneeds, with instagram_basic, instagram_manage_insights, pages_show_list, and pages_read_engagement. Prefer a long-lived token following Meta's documented token exchange. Save it in Connection settings, including expiry when known. The server verifies the account identity and encrypts the token. Re-enable the schedule if authorization failure paused it. Tokens may expire or be revoked; the site cannot bypass Meta authorization. Do not send tokens through support messages or commits.
+Open the panel's Meta Graph API Explorer link for app 1430683145936095. Generate a read token for the Facebook Page linked to @youradventureneeds, with instagram_basic, instagram_manage_insights, pages_show_list, and pages_read_engagement. Use Meta’s Access Token Debugger to check expiry and, when available, Extend Access Token. Save the extended token and the expiry shown by Meta. Save it in Connection settings, including expiry when known. The server verifies the account identity and encrypts the token. Re-enable the schedule if authorization failure paused it. Tokens may expire or be revoked; the site cannot bypass Meta authorization. Do not send tokens through support messages or commits.
 
 ## Deployment and recovery
 

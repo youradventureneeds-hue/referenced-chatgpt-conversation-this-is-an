@@ -19,3 +19,4 @@ test('interrupted batches resume and reviewed posts do not create duplicate publ
 });
 
 test('Meta authorization failure prompts reconnection even without an expiry date',()=>{assert.equal(instagramConnectionStatus({tokenCiphertext:'present',lastError:'Instagram authorization expired or is invalid (Meta code 190)'}).expired,true);});
+test('a due manual run advances the scheduled interval instead of causing another immediate scan',async()=>{const stamp=new Date('2026-11-01T12:00:00Z');const s={id:'main',enabled:true,intervalHours:6,nextRunAt:new Date('2026-11-01T11:00:00Z')};const db={instagramSettings:{upsert:async()=>s,update:async({data})=>Object.assign(s,data),updateMany:async()=>({count:0})},instagramRun:{findFirst:async()=>({id:'pending',trigger:'MANUAL'})}};const p=createInstagramPlatform({db,encryptionKey:'',now:()=>stamp});assert.deepEqual(await p.tick(),{busy:true});assert.equal(s.nextRunAt.toISOString(),'2026-11-01T18:00:00.000Z');});
