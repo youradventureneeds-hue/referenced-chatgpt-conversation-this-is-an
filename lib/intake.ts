@@ -3,7 +3,7 @@ import { createHash } from "crypto";
 export const sourceTypes = ["INSTAGRAM", "YOUTUBE", "WEBSITE", "NEWSLETTER", "JOB_BOARD", "CREATOR_SUBMISSION", "EMPLOYER_SUBMISSION"] as const;
 export type SourceType = typeof sourceTypes[number];
 export type IntakeStatus = "RECEIVED" | "EXTRACTED" | "DUPLICATE" | "NEEDS_REVIEW" | "APPROVED" | "REJECTED";
-export type ExtractedOpportunity = { title: string; organization: string; location?: string; country?: string; jobType?: string; deadline?: string; eligibility?: string; confidence: number; summary: string };
+export type ExtractedOpportunity = { title: string; organization: string; organizationId?: string; organizationSlug?: string; location?: string; country?: string; jobType?: string; deadline?: string; eligibility?: string; confidence: number; summary: string; applicationUrl?: string; instagram?: { username: string; kind: string; expiresAt?: string|null; requiresVisualReview?: boolean } };
 export type IntakeItem = { id: string; sourceType: SourceType; sourceUrl?: string; rawText: string; status: IntakeStatus; fingerprint?: string; extraction?: ExtractedOpportunity; reviewNotes?: string; createdAt: string };
 
 // Replace this adapter with your chosen AI provider. Keeping it deterministic lets

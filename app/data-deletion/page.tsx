@@ -1,0 +1,8 @@
+import Link from "next/link";
+export const dynamic="force-dynamic";
+export default function DataDeletionPage(){const email=process.env.PUBLIC_SUPPORT_EMAIL || "youradventureneeds@gmail.com";return <main className="detail"><p className="eyebrow">DATA REQUESTS</p><h1 style={{fontSize:"clamp(2.5rem,6vw,4rem)",lineHeight:1.1}}>Remove Instagram data</h1>
+ <p>You can request removal of imported Instagram recruitment content and withdraw access to a connected account.</p>
+ <ol><li>To stop access to an account you connected, remove this app through your Meta or Facebook business-integration settings.</li><li>Request removal of stored content using the contact below. Include your Instagram username and the relevant post or story links, if available.</li><li>The administrator will verify the request, stop future collection for that account, remove its imported review records, and withdraw any affected published recruitment listings.</li></ol>
+ {email?<p>Send your request to <a className="text-link" href={`mailto:${email}`}>{email}</a>. Never include passwords or access tokens.</p>:<p>The public support contact is awaiting configuration. Instagram imports cannot be activated until that contact is published.</p>}
+ <p><Link href="/privacy" className="text-link">Read the Instagram privacy information →</Link></p>
+ </main>;}

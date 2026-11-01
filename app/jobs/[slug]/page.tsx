@@ -35,7 +35,7 @@ export default async function JobDetailPage({
     notFound();
   }
 
-  const importedSource = job.sourceChannel === "OFFICIAL_CAREERS_AUTO"
+  const importedSource = ["OFFICIAL_CAREERS_AUTO","INSTAGRAM"].includes(job.sourceChannel||"")
     ? await prisma.opportunityIntake.findUnique({
         where: { approvedJobId: job.id },
         select: { sourceUrl: true, extraction: true },
@@ -43,8 +43,9 @@ export default async function JobDetailPage({
     : null;
   const sourceUrl = importedSource?.sourceUrl && /^https?:\/\//i.test(importedSource.sourceUrl)
     ? importedSource.sourceUrl : null;
-  const sourceMetadata = importedSource?.extraction as { scraper?: { lastSeenAt?: string } } | undefined;
-  const lastChecked = sourceMetadata?.scraper?.lastSeenAt;
+  const sourceMetadata = importedSource?.extraction as { applicationUrl?: string; scraper?: { lastSeenAt?: string }; instagram?: {collectedAt?:string} } | undefined;
+  const lastChecked = sourceMetadata?.scraper?.lastSeenAt||sourceMetadata?.instagram?.collectedAt;
+  const applicationUrl=sourceMetadata?.applicationUrl&&/^https?:\/\//i.test(sourceMetadata.applicationUrl)?sourceMetadata.applicationUrl:sourceUrl;
 
   const formattedSalary =
     job.salaryMin && job.salaryMax
@@ -83,9 +84,9 @@ export default async function JobDetailPage({
           <p style={{ lineHeight: 1.7, marginTop: "1rem", whiteSpace: "pre-line" }}>
             {sourceUrl ? job.description.split("\n\nOriginal vacancy:")[0] : job.description}
           </p>
-          {sourceUrl && <p className="muted">Imported from the employer’s official vacancy page.
+          {sourceUrl && <p className="muted">{job.sourceChannel==="INSTAGRAM"?"Recruitment details reviewed from Instagram.":"Imported from the employer’s official vacancy page."}
             {lastChecked && <> Last checked {new Date(lastChecked).toLocaleDateString("en-GB", { timeZone: "Asia/Kolkata" })}.</>}
-            {" "}<a className="text-link" href={sourceUrl} target="_blank" rel="noopener noreferrer">Read the full vacancy ↗</a>
+            {" "}<a className="text-link" href={sourceUrl} target="_blank" rel="noopener noreferrer">{job.sourceChannel==="INSTAGRAM"?"View Instagram source ↗":"Read the full vacancy ↗"}</a>
           </p>}
 
           <h3 style={{ marginTop: "2rem" }}>Visa & Work Eligibility</h3>
@@ -116,8 +117,8 @@ export default async function JobDetailPage({
             </a>
           )}
 
-          {sourceUrl ? <a className="button" href={sourceUrl} target="_blank" rel="noopener noreferrer"
-            style={{ width: "100%", justifyContent: "center", padding: "0.75rem 1rem" }}>Apply on employer’s website ↗</a> : <button
+          {applicationUrl ? <a className="button" href={applicationUrl} target="_blank" rel="noopener noreferrer"
+            style={{ width: "100%", justifyContent: "center", padding: "0.75rem 1rem" }}>{job.sourceChannel==="INSTAGRAM"&&!sourceMetadata?.applicationUrl?"View recruitment source ↗":"Apply on employer’s website ↗"}</a> : <button
             className="button"
             style={{ width: "100%", textAlign: "center", padding: "0.75rem 1rem" }}
           >

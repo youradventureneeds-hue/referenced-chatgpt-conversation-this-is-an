@@ -1,0 +1,1972 @@
+{
+  "managed": [
+    {
+      "usernameEnv": "INSTAGRAM_USERNAME",
+      "organizationSlug": null
+    }
+  ],
+  "organizations": [
+    {
+      "username": "abisko.adventure",
+      "organizationSlug": "abisko-adventure",
+      "organizationSlugs": [
+        "abisko-adventure"
+      ],
+      "evidenceUrls": [
+        "https://www.abiskoadventure.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "active_ireland",
+      "organizationSlug": "active-ireland",
+      "organizationSlugs": [
+        "active-ireland"
+      ],
+      "evidenceUrls": [
+        "https://activeireland.ie/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "adventure.canada",
+      "organizationSlug": "adventure-canada",
+      "organizationSlugs": [
+        "adventure-canada"
+      ],
+      "evidenceUrls": [
+        "https://www.adventurecanada.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "adventure22_hub_nepal",
+      "organizationSlug": "adventure-hub-nepal",
+      "organizationSlugs": [
+        "adventure-hub-nepal"
+      ],
+      "evidenceUrls": [
+        "https://adventurehubnepal.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "adventurelapland",
+      "organizationSlug": "adventure-lapland",
+      "organizationSlugs": [
+        "adventure-lapland"
+      ],
+      "evidenceUrls": [
+        "https://adventurelapland.se/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "adventurespecialtiestrust",
+      "organizationSlug": "adventure-specialties-trust",
+      "organizationSlugs": [
+        "adventure-specialties-trust"
+      ],
+      "evidenceUrls": [
+        "https://www.adventurespecialties.co.nz/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "adventuretreks",
+      "organizationSlug": "adventure-treks",
+      "organizationSlugs": [
+        "adventure-treks"
+      ],
+      "evidenceUrls": [
+        "https://www.adventuretreks.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "adventurevikings",
+      "organizationSlug": "adventure-vikings",
+      "organizationSlugs": [
+        "adventure-vikings"
+      ],
+      "evidenceUrls": [
+        "https://adventurevikings.is/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "aliveoutdoorsinc",
+      "organizationSlug": "alive-outdoors",
+      "organizationSlugs": [
+        "alive-outdoors"
+      ],
+      "evidenceUrls": [
+        "https://www.aliveoutdoors.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "americamp",
+      "organizationSlug": "americamp",
+      "organizationSlugs": [
+        "americamp"
+      ],
+      "evidenceUrls": [
+        "https://www.americamp.co.uk/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "apogee.adventures",
+      "organizationSlug": "apogee-adventures",
+      "organizationSlugs": [
+        "apogee-adventures"
+      ],
+      "evidenceUrls": [
+        "https://www.apogeeadventures.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "appalachianmountainclub",
+      "organizationSlug": "appalachian-mountain-club-amc",
+      "organizationSlugs": [
+        "appalachian-mountain-club-amc"
+      ],
+      "evidenceUrls": [
+        "https://www.outdoors.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "arcticadventures",
+      "organizationSlug": "arctic-adventures",
+      "organizationSlugs": [
+        "arctic-adventures"
+      ],
+      "evidenceUrls": [
+        "https://adventures.is/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "arcticrangeadvt",
+      "organizationSlug": "arctic-range-adventure",
+      "organizationSlugs": [
+        "arctic-range-adventure"
+      ],
+      "evidenceUrls": [
+        "https://www.arcticrange.com/en"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "auroracentreyukon",
+      "organizationSlug": "arctic-range-adventure",
+      "organizationSlugs": [
+        "arctic-range-adventure"
+      ],
+      "evidenceUrls": [
+        "https://www.arcticrange.com/en"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "aventerra_ev",
+      "organizationSlug": "aventerra",
+      "organizationSlugs": [
+        "aventerra"
+      ],
+      "evidenceUrls": [
+        "https://www.aventerra.de/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "avid4adventure",
+      "organizationSlug": "avid4-adventure",
+      "organizationSlugs": [
+        "avid4-adventure"
+      ],
+      "evidenceUrls": [
+        "https://avid4.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "backroadstravel",
+      "organizationSlug": "backroads",
+      "organizationSlugs": [
+        "backroads"
+      ],
+      "evidenceUrls": [
+        "https://www.backroads.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "bikatadventures",
+      "organizationSlug": "bikat-adventures",
+      "organizationSlugs": [
+        "bikat-adventures"
+      ],
+      "evidenceUrls": [
+        "https://www.bikatadventures.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "bluemountainadventurecentre",
+      "organizationSlug": "blue-mountain-adventure-centre",
+      "organizationSlugs": [
+        "blue-mountain-adventure-centre"
+      ],
+      "evidenceUrls": [
+        "https://bluemountainadventure.org.nz/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "boyle_river_outdoors",
+      "organizationSlug": "boyle-river-outdoor-education-centre",
+      "organizationSlugs": [
+        "boyle-river-outdoor-education-centre"
+      ],
+      "evidenceUrls": [
+        "https://www.boyle.org.nz/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "broadreach",
+      "organizationSlug": "broadreach",
+      "organizationSlugs": [
+        "broadreach"
+      ],
+      "evidenceUrls": [
+        "https://www.gobroadreach.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "bunactravel",
+      "organizationSlug": "bunac-work-america",
+      "organizationSlugs": [
+        "bunac-work-america"
+      ],
+      "evidenceUrls": [
+        "https://bunac.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "butterfieldtravel",
+      "organizationSlug": "butterfield-and-robinson",
+      "organizationSlugs": [
+        "butterfield-and-robinson"
+      ],
+      "evidenceUrls": [
+        "https://www.butterfield.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "camp_echo_lake",
+      "organizationSlug": "camp-echo-lake",
+      "organizationSlugs": [
+        "camp-echo-lake"
+      ],
+      "evidenceUrls": [
+        "https://campecholake.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "camp_ihc",
+      "organizationSlug": "indian-head-camp-ihc",
+      "organizationSlugs": [
+        "indian-head-camp-ihc"
+      ],
+      "evidenceUrls": [
+        "https://www.campihc.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "camp_lindenmere",
+      "organizationSlug": "camp-lindenmere",
+      "organizationSlugs": [
+        "camp-lindenmere"
+      ],
+      "evidenceUrls": [
+        "https://camplindenmere.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "camp_nebagamon",
+      "organizationSlug": "camp-nebagamon",
+      "organizationSlugs": [
+        "camp-nebagamon"
+      ],
+      "evidenceUrls": [
+        "https://campnebagamon.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "camp_seafarer",
+      "organizationSlug": "ymca-camp-sea-gull-and-seafarer",
+      "organizationSlugs": [
+        "ymca-camp-sea-gull-and-seafarer"
+      ],
+      "evidenceUrls": [
+        "https://www.seagull-seafarer.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "camp_seagull",
+      "organizationSlug": "ymca-camp-sea-gull-and-seafarer",
+      "organizationSlugs": [
+        "ymca-camp-sea-gull-and-seafarer"
+      ],
+      "evidenceUrls": [
+        "https://www.seagull-seafarer.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "camp.arowhon",
+      "organizationSlug": "camp-arowhon",
+      "organizationSlugs": [
+        "camp-arowhon"
+      ],
+      "evidenceUrls": [
+        "https://camparowhon.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "camp.suisse",
+      "organizationSlug": "camp-suisse",
+      "organizationSlugs": [
+        "camp-suisse"
+      ],
+      "evidenceUrls": [
+        "https://www.campsuisse.com/front-page/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "campadventuregermany",
+      "organizationSlug": "camp-adventure",
+      "organizationSlugs": [
+        "camp-adventure"
+      ],
+      "evidenceUrls": [
+        "https://www.campadventure.de/en/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "campbirchtrail",
+      "organizationSlug": "birch-trail-camp-for-girls",
+      "organizationSlugs": [
+        "birch-trail-camp-for-girls"
+      ],
+      "evidenceUrls": [
+        "https://birchtrail.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "campbrynmawr",
+      "organizationSlug": "camp-bryn-mawr",
+      "organizationSlugs": [
+        "camp-bryn-mawr"
+      ],
+      "evidenceUrls": [
+        "https://www.campbrynmawr.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "campcanadensis",
+      "organizationSlug": "camp-canadensis",
+      "organizationSlugs": [
+        "camp-canadensis"
+      ],
+      "evidenceUrls": [
+        "https://www.canadensis.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "campchallenge",
+      "organizationSlug": "camp-challenge",
+      "organizationSlugs": [
+        "camp-challenge"
+      ],
+      "evidenceUrls": [
+        "https://www.camp-challenge.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "campchenawanda",
+      "organizationSlug": "camp-chen-a-wanda",
+      "organizationSlugs": [
+        "camp-chen-a-wanda"
+      ],
+      "evidenceUrls": [
+        "https://www.chenawanda.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "campfitchymca",
+      "organizationSlug": "ymca-camp-fitch",
+      "organizationSlugs": [
+        "ymca-camp-fitch"
+      ],
+      "evidenceUrls": [
+        "https://campfitchymca.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "campjewell",
+      "organizationSlug": "ymca-camp-jewell",
+      "organizationSlugs": [
+        "ymca-camp-jewell"
+      ],
+      "evidenceUrls": [
+        "https://campjewell.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "campkanata",
+      "organizationSlug": "ymca-camp-kanata",
+      "organizationSlugs": [
+        "ymca-camp-kanata"
+      ],
+      "evidenceUrls": [
+        "https://www.campkanata.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "camplenox",
+      "organizationSlug": "camp-lenox",
+      "organizationSlugs": [
+        "camp-lenox"
+      ],
+      "evidenceUrls": [
+        "https://camplenox.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "campmahkeenac",
+      "organizationSlug": "camp-mah-kee-nac",
+      "organizationSlugs": [
+        "camp-mah-kee-nac"
+      ],
+      "evidenceUrls": [
+        "https://www.campmkn.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "campmanitowish",
+      "organizationSlug": "camp-manito-wish-ymca",
+      "organizationSlugs": [
+        "camp-manito-wish-ymca"
+      ],
+      "evidenceUrls": [
+        "https://manito-wish.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "campmcdowell",
+      "organizationSlug": "mcdowell-environmental-center",
+      "organizationSlugs": [
+        "mcdowell-environmental-center"
+      ],
+      "evidenceUrls": [
+        "https://campmcdowell.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "campnockamixon",
+      "organizationSlug": "camp-nock-a-mixon",
+      "organizationSlugs": [
+        "camp-nock-a-mixon"
+      ],
+      "evidenceUrls": [
+        "https://campnockamixon.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "camppinnacle",
+      "organizationSlug": "camp-pinnacle",
+      "organizationSlugs": [
+        "camp-pinnacle"
+      ],
+      "evidenceUrls": [
+        "https://camppinnacle.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "camppontiac_12516",
+      "organizationSlug": "camp-pontiac",
+      "organizationSlugs": [
+        "camp-pontiac"
+      ],
+      "evidenceUrls": [
+        "https://camppontiac.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "campsint",
+      "organizationSlug": "camps-international",
+      "organizationSlugs": [
+        "camps-international"
+      ],
+      "evidenceUrls": [
+        "https://www.campsinternational.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "campsomerset",
+      "organizationSlug": "camp-somerset-queensland",
+      "organizationSlugs": [
+        "camp-somerset-queensland"
+      ],
+      "evidenceUrls": [
+        "https://www.campsomerset.org.au/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "campstarlight_official",
+      "organizationSlug": "camp-starlight",
+      "organizationSlugs": [
+        "camp-starlight"
+      ],
+      "evidenceUrls": [
+        "https://www.campstarlight.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "camptakajo",
+      "organizationSlug": "camp-takajo",
+      "organizationSlugs": [
+        "camp-takajo"
+      ],
+      "evidenceUrls": [
+        "https://www.camptakajo.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "camptamakwa",
+      "organizationSlug": "camp-tamakwa",
+      "organizationSlugs": [
+        "camp-tamakwa"
+      ],
+      "evidenceUrls": [
+        "https://tamakwa.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "camptowanda",
+      "organizationSlug": "camp-towanda",
+      "organizationSlugs": [
+        "camp-towanda"
+      ],
+      "evidenceUrls": [
+        "https://www.camptowanda.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "campvega",
+      "organizationSlug": "camp-vega",
+      "organizationSlugs": [
+        "camp-vega"
+      ],
+      "evidenceUrls": [
+        "https://campvega.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "campwaldeneao",
+      "organizationSlug": "camp-walden",
+      "organizationSlugs": [
+        "camp-walden"
+      ],
+      "evidenceUrls": [
+        "https://campwalden.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "campwatitoh",
+      "organizationSlug": "camp-watitoh",
+      "organizationSlugs": [
+        "camp-watitoh"
+      ],
+      "evidenceUrls": [
+        "https://www.campwatitoh.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "campwayneboys",
+      "organizationSlug": "camp-wayne-for-boys-girls",
+      "organizationSlugs": [
+        "camp-wayne-for-boys-girls"
+      ],
+      "evidenceUrls": [
+        "https://www.campwayne.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "campweequahic1953",
+      "organizationSlug": "camp-weequahic",
+      "organizationSlugs": [
+        "camp-weequahic"
+      ],
+      "evidenceUrls": [
+        "https://www.weequahic.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "cascadaexpediciones",
+      "organizationSlug": "cascada-expediciones-and-ecocamp-patagonia",
+      "organizationSlugs": [
+        "cascada-expediciones-and-ecocamp-patagonia"
+      ],
+      "evidenceUrls": [
+        "https://www.cascada.travel/en/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "chewonki",
+      "organizationSlug": "chewonki-foundation",
+      "organizationSlugs": [
+        "chewonki-foundation"
+      ],
+      "evidenceUrls": [
+        "https://chewonki.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "clearwater_camp",
+      "organizationSlug": "clearwater-camp-for-girls",
+      "organizationSlugs": [
+        "clearwater-camp-for-girls"
+      ],
+      "evidenceUrls": [
+        "https://clearwatercamp.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "clubyoungexplorers",
+      "organizationSlug": "young-explorers-club",
+      "organizationSlugs": [
+        "young-explorers-club"
+      ],
+      "evidenceUrls": [
+        "https://youngexplorersclub.ch/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "coastlinealgarve",
+      "organizationSlug": "coastline-algarve",
+      "organizationSlugs": [
+        "coastline-algarve"
+      ],
+      "evidenceUrls": [
+        "https://www.coastlinealgarve.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "coloma_resort",
+      "organizationSlug": "coloma-outdoor-discovery-school",
+      "organizationSlugs": [
+        "coloma-outdoor-discovery-school"
+      ],
+      "evidenceUrls": [
+        "https://colomaresort.com/outdoor-discovery-school/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "cumulusoutdoors",
+      "organizationSlug": "cumulus-outdoors",
+      "organizationSlugs": [
+        "cumulus-outdoors"
+      ],
+      "evidenceUrls": [
+        "https://www.cumulusoutdoors.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "deerhillexpeditions",
+      "organizationSlug": "deer-hill-expeditions",
+      "organizationSlugs": [
+        "deer-hill-expeditions"
+      ],
+      "evidenceUrls": [
+        "https://deerhillexpeditions.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "discover.adventure",
+      "organizationSlug": "discover-adventure",
+      "organizationSlugs": [
+        "discover-adventure"
+      ],
+      "evidenceUrls": [
+        "https://www.discoveradventure.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "echohilloutdoorschool",
+      "organizationSlug": "echo-hill-outdoor-school",
+      "organizationSlugs": [
+        "echo-hill-outdoor-school"
+      ],
+      "evidenceUrls": [
+        "https://www.ehos.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "ecofieldtrips_sg",
+      "organizationSlug": "eco-field-trips",
+      "organizationSlugs": [
+        "eco-field-trips"
+      ],
+      "evidenceUrls": [
+        "https://ecofieldtrips.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "evergreenalpineacademy1",
+      "organizationSlug": "evergreen-outdoor-center",
+      "organizationSlugs": [
+        "evergreen-outdoor-center"
+      ],
+      "evidenceUrls": [
+        "https://www.evergreen-hakuba.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "exploratravel",
+      "organizationSlug": "explora",
+      "organizationSlugs": [
+        "explora"
+      ],
+      "evidenceUrls": [
+        "https://www.explora.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "fabulous_crete_by_gs_tours",
+      "organizationSlug": "gs-tours-chania",
+      "organizationSlugs": [
+        "gs-tours-chania"
+      ],
+      "evidenceUrls": [
+        "https://www.gstours.gr/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "farmandwilderness",
+      "organizationSlug": "farm-wilderness",
+      "organizationSlugs": [
+        "farm-wilderness"
+      ],
+      "evidenceUrls": [
+        "https://www.farmandwilderness.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "fuze_ecoteer",
+      "organizationSlug": "fuze-ecoteer",
+      "organizationSlugs": [
+        "fuze-ecoteer"
+      ],
+      "evidenceUrls": [
+        "https://www.fuze-ecoteer.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "gadventures",
+      "organizationSlug": "g-adventures",
+      "organizationSlugs": [
+        "g-adventures"
+      ],
+      "evidenceUrls": [
+        "https://www.gadventures.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "geneseevalley_olc",
+      "organizationSlug": "genesee-valley-outdoor-learning-center",
+      "organizationSlugs": [
+        "genesee-valley-outdoor-learning-center"
+      ],
+      "evidenceUrls": [
+        "https://www.geneseevalley.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "goapetribe",
+      "organizationSlug": "go-ape",
+      "organizationSlugs": [
+        "go-ape"
+      ],
+      "evidenceUrls": [
+        "https://goape.co.uk/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "gondwanalodges",
+      "organizationSlug": "gondwana-collection-namibia",
+      "organizationSlugs": [
+        "gondwana-collection-namibia"
+      ],
+      "evidenceUrls": [
+        "https://gondwana-collection.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "greencampbali",
+      "organizationSlug": "green-camp-bali",
+      "organizationSlugs": [
+        "green-camp-bali"
+      ],
+      "evidenceUrls": [
+        "https://greencampbali.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "greenheartexchange",
+      "organizationSlug": "greenheart-exchange",
+      "organizationSlugs": [
+        "greenheart-exchange"
+      ],
+      "evidenceUrls": [
+        "https://greenheart.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "harrinivahotelsandsafaris",
+      "organizationSlug": "harriniva-hotels-and-safaris",
+      "organizationSlugs": [
+        "harriniva-hotels-and-safaris"
+      ],
+      "evidenceUrls": [
+        "https://harriniva.fi/en/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "highergroundaustralia",
+      "organizationSlug": "higher-ground-australia",
+      "organizationSlugs": [
+        "higher-ground-australia"
+      ],
+      "evidenceUrls": [
+        "https://www.higherground.com.au/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "hillaryoutdoors",
+      "organizationSlug": "hillary-outdoors",
+      "organizationSlugs": [
+        "hillary-outdoors"
+      ],
+      "evidenceUrls": [
+        "https://www.hillaryoutdoors.co.nz/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "himalayan_hikers",
+      "organizationSlug": "himalayan-hikers",
+      "organizationSlugs": [
+        "himalayan-hikers"
+      ],
+      "evidenceUrls": [
+        "https://himalayanhikers.in/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "horizonsunlimitednz",
+      "organizationSlug": "horizons-unlimited",
+      "organizationSlugs": [
+        "horizons-unlimited"
+      ],
+      "evidenceUrls": [
+        "https://www.horizons.co.nz/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "inka_expediciones",
+      "organizationSlug": "inka-expediciones",
+      "organizationSlugs": [
+        "inka-expediciones"
+      ],
+      "evidenceUrls": [
+        "https://inkaexpediciones.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "intraxusa",
+      "organizationSlug": "intrax",
+      "organizationSlugs": [
+        "intrax"
+      ],
+      "evidenceUrls": [
+        "https://www.intraxinc.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "intrepidtravel",
+      "organizationSlug": "intrepid-travel",
+      "organizationSlugs": [
+        "intrepid-travel"
+      ],
+      "evidenceUrls": [
+        "https://www.intrepidtravel.com/en"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "joyfulecotreks",
+      "organizationSlug": "joyful-eco-treks",
+      "organizationSlugs": [
+        "joyful-eco-treks"
+      ],
+      "evidenceUrls": [
+        "https://www.joyfulecotreks.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "jumpfoundation",
+      "organizationSlug": "jump-foundation",
+      "organizationSlugs": [
+        "jump-foundation"
+      ],
+      "evidenceUrls": [
+        "https://jumpfoundation.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "kandalore",
+      "organizationSlug": "camp-kandalore",
+      "organizationSlugs": [
+        "camp-kandalore"
+      ],
+      "evidenceUrls": [
+        "https://www.kandalore.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "keystonescienceschool",
+      "organizationSlug": "keystone-science-school",
+      "organizationSlugs": [
+        "keystone-science-school"
+      ],
+      "evidenceUrls": [
+        "https://www.keystonescienceschool.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "kokodayouthfoundation",
+      "organizationSlug": "kokoda-youth-foundation",
+      "organizationSlugs": [
+        "kokoda-youth-foundation"
+      ],
+      "evidenceUrls": [
+        "https://kokodayouthfoundation.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "lakegeorgecamp",
+      "organizationSlug": "ymca-camp-chingachgook",
+      "organizationSlugs": [
+        "ymca-camp-chingachgook"
+      ],
+      "evidenceUrls": [
+        "https://www.lakegeorgecamp.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "lakeowegocamp",
+      "organizationSlug": "lake-owego-camp",
+      "organizationSlugs": [
+        "lake-owego-camp"
+      ],
+      "evidenceUrls": [
+        "https://www.lakeowego.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "leselfes",
+      "organizationSlug": "les-elfes-international",
+      "organizationSlugs": [
+        "les-elfes-international"
+      ],
+      "evidenceUrls": [
+        "https://www.leselfes.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "lindbladexp",
+      "organizationSlug": "lindblad-expeditions",
+      "organizationSlugs": [
+        "lindblad-expeditions"
+      ],
+      "evidenceUrls": [
+        "https://world.expeditions.com/en"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "manoradventure",
+      "organizationSlug": "manor-adventure",
+      "organizationSlugs": [
+        "manor-adventure"
+      ],
+      "evidenceUrls": [
+        "https://manoradventure.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "moondanceadventures",
+      "organizationSlug": "moondance-adventures",
+      "organizationSlugs": [
+        "moondance-adventures"
+      ],
+      "evidenceUrls": [
+        "https://moondanceadventures.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "myuwt",
+      "organizationSlug": "united-work-and-travel",
+      "organizationSlugs": [
+        "united-work-and-travel"
+      ],
+      "evidenceUrls": [
+        "https://unitedworkandtravel.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "naturebridge",
+      "organizationSlug": "naturebridge",
+      "organizationSlugs": [
+        "naturebridge"
+      ],
+      "evidenceUrls": [
+        "https://naturebridge.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "naturemind_ed",
+      "organizationSlug": "naturemind-ed",
+      "organizationSlugs": [
+        "naturemind-ed"
+      ],
+      "evidenceUrls": [
+        "https://naturemind-ed.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "ncascades",
+      "organizationSlug": "north-cascades-institute",
+      "organizationSlugs": [
+        "north-cascades-institute"
+      ],
+      "evidenceUrls": [
+        "https://ncascades.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "newpa.inmersiones",
+      "organizationSlug": "newpa",
+      "organizationSlugs": [
+        "newpa"
+      ],
+      "evidenceUrls": [
+        "https://newpa.es/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "nolsedu",
+      "organizationSlug": "nols-national-outdoor-leadership-school",
+      "organizationSlugs": [
+        "nols-national-outdoor-leadership-school"
+      ],
+      "evidenceUrls": [
+        "https://www.nols.edu/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "nomadadventuregopeng",
+      "organizationSlug": "nomad-adventure",
+      "organizationSlugs": [
+        "nomad-adventure"
+      ],
+      "evidenceUrls": [
+        "https://nomadadventure.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "northern_tier",
+      "organizationSlug": "northern-tier-high-adventure",
+      "organizationSlugs": [
+        "northern-tier-high-adventure"
+      ],
+      "evidenceUrls": [
+        "https://www.ntier.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "officialcampdanbee",
+      "organizationSlug": "camp-danbee",
+      "organizationSlugs": [
+        "camp-danbee"
+      ],
+      "evidenceUrls": [
+        "https://www.campdanbee.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "oslobiketours",
+      "organizationSlug": "oslo-hiking-tours",
+      "organizationSlugs": [
+        "oslo-hiking-tours"
+      ],
+      "evidenceUrls": [
+        "https://www.oslohikingtours.no/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "outbackabisko",
+      "organizationSlug": "outback-abisko",
+      "organizationSlugs": [
+        "outback-abisko"
+      ],
+      "evidenceUrls": [
+        "https://outbackabisko.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "outdoorinterlaken",
+      "organizationSlug": "outdoor-switzerland",
+      "organizationSlugs": [
+        "outdoor-switzerland"
+      ],
+      "evidenceUrls": [
+        "https://www.outdoor.ch/en"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "outlookexpeds",
+      "organizationSlug": "outlook-expeditions",
+      "organizationSlugs": [
+        "outlook-expeditions"
+      ],
+      "evidenceUrls": [
+        "https://outlookexpeditions.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "outwardbound.sa",
+      "organizationSlug": "outward-bound-south-africa",
+      "organizationSlugs": [
+        "outward-bound-south-africa"
+      ],
+      "evidenceUrls": [
+        "https://outwardbound.co.za/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "outwardboundaustralia",
+      "organizationSlug": "outward-bound-australia",
+      "organizationSlugs": [
+        "outward-bound-australia"
+      ],
+      "evidenceUrls": [
+        "https://www.outwardbound.org.au/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "outwardboundbrasil",
+      "organizationSlug": "outward-bound-brasil",
+      "organizationSlugs": [
+        "outward-bound-brasil"
+      ],
+      "evidenceUrls": [
+        "https://outwardbound.org.br/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "outwardboundcanada",
+      "organizationSlug": "outward-bound-canada",
+      "organizationSlugs": [
+        "outward-bound-canada"
+      ],
+      "evidenceUrls": [
+        "https://www.outwardbound.ca/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "outwardboundcr",
+      "organizationSlug": "outward-bound-costa-rica",
+      "organizationSlugs": [
+        "outward-bound-costa-rica"
+      ],
+      "evidenceUrls": [
+        "https://outwardboundcostarica.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "outwardboundhimalaya",
+      "organizationSlug": "outward-bound-bharat",
+      "organizationSlugs": [
+        "outward-bound-bharat"
+      ],
+      "evidenceUrls": [
+        "https://www.outwardboundindia.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "outwardboundhongkong",
+      "organizationSlug": "outward-bound-hong-kong",
+      "organizationSlugs": [
+        "outward-bound-hong-kong"
+      ],
+      "evidenceUrls": [
+        "https://www.outwardbound.org.hk/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "outwardboundinternational",
+      "organizationSlug": "outward-bound-international",
+      "organizationSlugs": [
+        "outward-bound-international"
+      ],
+      "evidenceUrls": [
+        "https://www.outwardbound.net/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "outwardboundnz",
+      "organizationSlug": "outward-bound-new-zealand",
+      "organizationSlugs": [
+        "outward-bound-new-zealand"
+      ],
+      "evidenceUrls": [
+        "https://www.outwardbound.co.nz/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "outwardboundoman",
+      "organizationSlug": "outward-bound-oman",
+      "organizationSlugs": [
+        "outward-bound-oman"
+      ],
+      "evidenceUrls": [
+        "https://outwardboundoman.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "outwardboundsg",
+      "organizationSlug": "outward-bound-singapore",
+      "organizationSlugs": [
+        "outward-bound-singapore"
+      ],
+      "evidenceUrls": [
+        "https://obs.nyc.gov.sg/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "outwardbounduk",
+      "organizationSlug": "the-outward-bound-trust",
+      "organizationSlugs": [
+        "the-outward-bound-trust"
+      ],
+      "evidenceUrls": [
+        "https://www.outwardbound.org.uk/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "pacificdiscovery",
+      "organizationSlug": "pacific-discovery",
+      "organizationSlugs": [
+        "pacific-discovery"
+      ],
+      "evidenceUrls": [
+        "https://www.pacificdiscovery.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "philmontscoutranch",
+      "organizationSlug": "philmont-scout-ranch",
+      "organizationSlugs": [
+        "philmont-scout-ranch"
+      ],
+      "evidenceUrls": [
+        "https://www.philmontscoutranch.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "pineforestcamp",
+      "organizationSlug": "pine-forest-camp",
+      "organizationSlugs": [
+        "pine-forest-camp"
+      ],
+      "evidenceUrls": [
+        "https://www.pineforestcamp.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "redarrowcamp",
+      "organizationSlug": "red-arrow-camp",
+      "organizationSlugs": [
+        "red-arrow-camp"
+      ],
+      "evidenceUrls": [
+        "https://redarrowcamp.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "rideexpeditions",
+      "organizationSlug": "ride-expeditions",
+      "organizationSlugs": [
+        "ride-expeditions"
+      ],
+      "evidenceUrls": [
+        "https://rideexpeditions.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "rusticpathways",
+      "organizationSlug": "rustic-pathways",
+      "organizationSlugs": [
+        "rustic-pathways"
+      ],
+      "evidenceUrls": [
+        "https://rusticpathways.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "seabaseha",
+      "organizationSlug": "florida-sea-base",
+      "organizationSlugs": [
+        "florida-sea-base"
+      ],
+      "evidenceUrls": [
+        "https://seabaseha.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "seakayaknorway",
+      "organizationSlug": "njord-kayak-centre",
+      "organizationSlugs": [
+        "njord-kayak-centre"
+      ],
+      "evidenceUrls": [
+        "https://www.seakayaknorway.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "shamwariprivategamereserve",
+      "organizationSlug": "shamwari-private-game-reserve",
+      "organizationSlugs": [
+        "shamwari-private-game-reserve"
+      ],
+      "evidenceUrls": [
+        "https://www.shamwari.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "sierranevadajourneys",
+      "organizationSlug": "sierra-nevada-journeys",
+      "organizationSlugs": [
+        "sierra-nevada-journeys"
+      ],
+      "evidenceUrls": [
+        "https://www.sierranevadajourneys.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "simply.outdoor",
+      "organizationSlug": "simply-outdoor",
+      "organizationSlugs": [
+        "simply-outdoor"
+      ],
+      "evidenceUrls": [
+        "https://www.simply-outdoor.de/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "soaradhd",
+      "organizationSlug": "soar-success-oriented-achievement-realized",
+      "organizationSlugs": [
+        "soar-success-oriented-achievement-realized"
+      ],
+      "evidenceUrls": [
+        "https://soarnc.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "southboundadventures",
+      "organizationSlug": "southbound-adventures",
+      "organizationSlugs": [
+        "southbound-adventures"
+      ],
+      "evidenceUrls": [
+        "https://southbound.com.au/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "tanamakoon",
+      "organizationSlug": "camp-tanamakoon",
+      "organizationSlugs": [
+        "camp-tanamakoon"
+      ],
+      "evidenceUrls": [
+        "https://tanamakoon.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "tetonscience",
+      "organizationSlug": "teton-science-schools",
+      "organizationSlugs": [
+        "teton-science-schools"
+      ],
+      "evidenceUrls": [
+        "https://www.tetonscience.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "the.ynsw",
+      "organizationSlug": "the-y-nsw-outdoor-education",
+      "organizationSlugs": [
+        "the-y-nsw-outdoor-education"
+      ],
+      "evidenceUrls": [
+        "https://www.ymcansw.org.au/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "theadventurecentre",
+      "organizationSlug": "the-adventure-centre-uae",
+      "organizationSlugs": [
+        "the-adventure-centre-uae"
+      ],
+      "evidenceUrls": [
+        "https://theadventurecentre.ae/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "theecologyschool",
+      "organizationSlug": "the-ecology-school",
+      "organizationSlugs": [
+        "the-ecology-school"
+      ],
+      "evidenceUrls": [
+        "https://theecologyschool.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "themountaintribevn",
+      "organizationSlug": "the-mountain-tribe",
+      "organizationSlugs": [
+        "the-mountain-tribe"
+      ],
+      "evidenceUrls": [
+        "https://themountaintribe.vn/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "therlt",
+      "organizationSlug": "road-less-traveled",
+      "organizationSlugs": [
+        "road-less-traveled"
+      ],
+      "evidenceUrls": [
+        "https://www.theroadlesstraveled.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "trackersearth",
+      "organizationSlug": "trackers-earth",
+      "organizationSlugs": [
+        "trackers-earth"
+      ],
+      "evidenceUrls": [
+        "https://trackerspdx.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "treasureislandbeachclub",
+      "organizationSlug": "treasure-island-group",
+      "organizationSlugs": [
+        "treasure-island-group"
+      ],
+      "evidenceUrls": [
+        "https://www.treasureislandhk.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "treasureislandhk",
+      "organizationSlug": "treasure-island-group",
+      "organizationSlugs": [
+        "treasure-island-group"
+      ],
+      "evidenceUrls": [
+        "https://www.treasureislandhk.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "trekadviser",
+      "organizationSlug": "trekadviser",
+      "organizationSlugs": [
+        "trekadviser"
+      ],
+      "evidenceUrls": [
+        "https://www.trekadviser.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "treksandtrails",
+      "organizationSlug": "treks-and-trails-india",
+      "organizationSlugs": [
+        "treks-and-trails-india"
+      ],
+      "evidenceUrls": [
+        "https://www.treksandtrails.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "trektravel",
+      "organizationSlug": "trek-travel",
+      "organizationSlugs": [
+        "trek-travel"
+      ],
+      "evidenceUrls": [
+        "https://trektravel.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "trekwithalpaca",
+      "organizationSlug": "alpaca-expeditions",
+      "organizationSlugs": [
+        "alpaca-expeditions"
+      ],
+      "evidenceUrls": [
+        "https://www.alpacaexpeditions.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "tremontinstitute",
+      "organizationSlug": "great-smoky-mountains-institute-at-tremont",
+      "organizationSlugs": [
+        "great-smoky-mountains-institute-at-tremont"
+      ],
+      "evidenceUrls": [
+        "https://gsmit.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "trolltungaactive",
+      "organizationSlug": "trolltunga-active",
+      "organizationSlugs": [
+        "trolltunga-active"
+      ],
+      "evidenceUrls": [
+        "https://www.trolltunga-active.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "tylerhillcamp18469",
+      "organizationSlug": "tyler-hill-camp",
+      "organizationSlugs": [
+        "tyler-hill-camp"
+      ],
+      "evidenceUrls": [
+        "https://www.tylerhillcamp.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "ucpa",
+      "organizationSlug": "ucpa",
+      "organizationSlugs": [
+        "ucpa"
+      ],
+      "evidenceUrls": [
+        "https://www.ucpa.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "uksasailing",
+      "organizationSlug": "uksa",
+      "organizationSlugs": [
+        "uksa"
+      ],
+      "evidenceUrls": [
+        "https://uksa.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "uniqueadventureintl",
+      "organizationSlug": "unique-adventure-international",
+      "organizationSlugs": [
+        "unique-adventure-international"
+      ],
+      "evidenceUrls": [
+        "https://uniquetreks.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "uteguiden",
+      "organizationSlug": "uteguiden",
+      "organizationSlugs": [
+        "uteguiden"
+      ],
+      "evidenceUrls": [
+        "https://uteguiden.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "weareworldchallenge",
+      "organizationSlug": "world-challenge",
+      "organizationSlugs": [
+        "world-challenge"
+      ],
+      "evidenceUrls": [
+        "https://weareworldchallenge.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "wilderness_awareness",
+      "organizationSlug": "wilderness-awareness-school",
+      "organizationSlugs": [
+        "wilderness-awareness-school"
+      ],
+      "evidenceUrls": [
+        "https://wildernessawareness.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "wildernessadventures1973",
+      "organizationSlug": "wilderness-adventures",
+      "organizationSlugs": [
+        "wilderness-adventures"
+      ],
+      "evidenceUrls": [
+        "https://www.wildernessadventures.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "wildernessadventureva",
+      "organizationSlug": "wilderness-adventure-at-eagle-landing",
+      "organizationSlugs": [
+        "wilderness-adventure-at-eagle-landing"
+      ],
+      "evidenceUrls": [
+        "https://www.wilderness-adventure.com/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "wildsocietyorg",
+      "organizationSlug": "wild-society",
+      "organizationSlugs": [
+        "wild-society"
+      ],
+      "evidenceUrls": [
+        "https://www.wildsociety.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "ymca_north",
+      "organizationSlug": null,
+      "organizationSlugs": [
+        "ymca-camp-ihduhapi",
+        "ymca-camp-widjiwagan"
+      ],
+      "evidenceUrls": [
+        "https://www.ymcanorth.org/adventure/locations/day_camp_ihduhapi",
+        "https://www.ymcanorth.org/adventure/locations/camp_widjiwagan"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "ymcacampcosby",
+      "organizationSlug": "ymca-camp-cosby",
+      "organizationSlugs": [
+        "ymca-camp-cosby"
+      ],
+      "evidenceUrls": [
+        "https://campcosby.ymcabham.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "ymcacampgradyspruce",
+      "organizationSlug": "ymca-camp-grady-spruce",
+      "organizationSlugs": [
+        "ymca-camp-grady-spruce"
+      ],
+      "evidenceUrls": [
+        "https://ymcadallas.org/camps/camp-grady-spruce"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "ymcacampgreenville",
+      "organizationSlug": "ymca-camp-greenville",
+      "organizationSlugs": [
+        "ymca-camp-greenville"
+      ],
+      "evidenceUrls": [
+        "https://www.campgreenville.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "ymcacampsurf",
+      "organizationSlug": "ymca-camp-surf",
+      "organizationSlugs": [
+        "ymca-camp-surf"
+      ],
+      "evidenceUrls": [
+        "https://www.ymcasd.org/camps/overnight-camps/camp-surf"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "ymcacharlotte",
+      "organizationSlug": null,
+      "organizationSlugs": [
+        "ymca-camp-harrison",
+        "ymca-camp-thunderbird"
+      ],
+      "evidenceUrls": [
+        "https://www.ymcacharlotte.org/locations/camp-harrison",
+        "https://www.ymcacharlotte.org/locations/camp-thunderbird"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "ymcafortworth",
+      "organizationSlug": "ymca-camp-carter",
+      "organizationSlugs": [
+        "ymca-camp-carter"
+      ],
+      "evidenceUrls": [
+        "https://ymcafw.org/camp-carter/about/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "ymcagta",
+      "organizationSlug": "ymca-camp-pine-crest",
+      "organizationSlugs": [
+        "ymca-camp-pine-crest"
+      ],
+      "evidenceUrls": [
+        "https://www.ymcagta.org/camp-pine-crest"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "ymcahbb",
+      "organizationSlug": "ymca-wanakita",
+      "organizationSlugs": [
+        "ymca-wanakita"
+      ],
+      "evidenceUrls": [
+        "https://www.ymcahbb.ca/camps/ymca-wanakita"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "ymcaofnwnc",
+      "organizationSlug": "ymca-camp-hanes",
+      "organizationSlugs": [
+        "ymca-camp-hanes"
+      ],
+      "evidenceUrls": [
+        "https://ymcanwnc.org/locations/ymca-camp-hanes"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "ymcaofthepines",
+      "organizationSlug": "ymca-camp-ockanickon",
+      "organizationSlugs": [
+        "ymca-camp-ockanickon"
+      ],
+      "evidenceUrls": [
+        "https://ycamp.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "ymcapkc",
+      "organizationSlug": "ymca-camp-seymour",
+      "organizationSlugs": [
+        "ymca-camp-seymour"
+      ],
+      "evidenceUrls": [
+        "https://www.ymcapkc.org/"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "ymcasandiego",
+      "organizationSlug": "ymca-camp-surf",
+      "organizationSlugs": [
+        "ymca-camp-surf"
+      ],
+      "evidenceUrls": [
+        "https://www.ymcasd.org/camps/overnight-camps/camp-surf"
+      ],
+      "enabled": true
+    },
+    {
+      "username": "ymcaseattle",
+      "organizationSlug": "ymca-camp-orkila",
+      "organizationSlugs": [
+        "ymca-camp-orkila"
+      ],
+      "evidenceUrls": [
+        "https://www.seattleymca.org/"
+      ],
+      "enabled": true
+    }
+  ]
+}

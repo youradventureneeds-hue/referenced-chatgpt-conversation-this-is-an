@@ -1,15 +1,17 @@
 import { prisma } from "@/lib/prisma";
 import { extractOpportunity, fingerprint, sourceTypes } from "@/lib/intake";
 import { z } from "zod";
+import {adminDenied} from "@/lib/admin-access";
 
 const intakeSchema = z.object({
   sourceType: z.enum(sourceTypes),
-  sourceUrl: z.string().url().optional(),
+  sourceUrl: z.string().url().refine(value=>{const u=new URL(value);return ["http:","https:"].includes(u.protocol)&&!u.username&&!u.password;}).optional(),
   submittedByEmail: z.string().email().optional(),
   rawText: z.string().min(30).max(15000),
 });
 
-export async function GET() {
+export async function GET(request: Request) {
+  const denied=adminDenied(request);if(denied)return denied;
   const items = await prisma.opportunityIntake.findMany({ orderBy: { createdAt: "desc" }, take: 100 });
   return Response.json({ data: items, meta: { humanReviewRequired: true } });
 }

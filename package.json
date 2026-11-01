@@ -16,7 +16,11 @@
     "db:about": "node scripts/updateOrganizationAbout.mjs",
     "db:global": "node scripts/importGlobalOrganizations.mjs",
     "jobs:sync": "node scripts/syncJobs.mjs",
-    "test:jobs": "node --test scripts/jobScraper.test.mjs"
+    "test:jobs": "node --test scripts/jobScraper.test.mjs",
+    "instagram:sync": "node scripts/syncInstagram.mjs",
+    "instagram:discover": "node scripts/discoverInstagramSources.mjs",
+    "test:instagram": "node --test scripts/instagram.test.mjs",
+    "test:admin": "node --test scripts/adminAccess.test.mjs"
   },
   "dependencies": {
     "@prisma/client": "^6.19.3",
