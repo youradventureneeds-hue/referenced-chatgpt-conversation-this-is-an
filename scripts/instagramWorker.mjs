@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import {PrismaClient} from '@prisma/client';
 import {PrismaPg} from '@prisma/adapter-pg';
 import {createInstagramPlatform,encryptInstagramToken} from '../lib/instagram-platform.mjs';
-const db=new PrismaClient({adapter:new PrismaPg({connectionString:process.env.DATABASE_URL})});
+const db=new PrismaClient({adapter:new PrismaPg({connectionString:process.env.DATABASE_URL,max:2,idleTimeoutMillis:10000,connectionTimeoutMillis:15000})});
 const encryptionKey=process.env.INSTAGRAM_ENCRYPTION_KEY;
 if(!encryptionKey||Buffer.from(encryptionKey,'base64url').length!==32)throw Error('Configure INSTAGRAM_ENCRYPTION_KEY');
 const platform=createInstagramPlatform({db,encryptionKey});
