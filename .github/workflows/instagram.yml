@@ -1,15 +1,13 @@
 name: Instagram recruitment collection
 on:
+  schedule:
+    - cron: '*/15 * * * *'
   workflow_dispatch:
     inputs:
-      preview_only:
-        description: 'Preview without saving recruitment leads'
+      initialize:
+        description: 'Seed initial sources and connection, preserving website edits'
         type: boolean
-        default: true
-      username:
-        description: 'Optional configured organization username'
-        type: string
-        default: ''
+        default: false
 permissions:
   contents: read
 concurrency:
@@ -22,13 +20,11 @@ jobs:
     env:
       DATABASE_URL: ${{ secrets.DATABASE_URL }}
       DIRECT_URL: ${{ secrets.DIRECT_URL || secrets.DATABASE_URL }}
+      INSTAGRAM_ENCRYPTION_KEY: ${{ secrets.INSTAGRAM_ENCRYPTION_KEY }}
       INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
       INSTAGRAM_ACCOUNT_ID: ${{ secrets.INSTAGRAM_ACCOUNT_ID }}
       INSTAGRAM_USERNAME: ${{ secrets.INSTAGRAM_USERNAME }}
       INSTAGRAM_API_VERSION: ${{ secrets.INSTAGRAM_API_VERSION }}
-      ADMIN_REVIEW_KEY: ${{ secrets.ADMIN_REVIEW_KEY }}
-      PUBLIC_SUPPORT_EMAIL: ${{ vars.PUBLIC_SUPPORT_EMAIL }}
-      INSTAGRAM_EXCLUDED_USERNAMES: ${{ secrets.INSTAGRAM_EXCLUDED_USERNAMES }}
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
@@ -41,25 +37,12 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm db:generate
       - run: pnpm test:instagram
-      - run: pnpm test:admin
-      - uses: actions/cache@v4
-        with:
-          path: work/instagram-cursor.json
-          key: instagram-cursor-${{ github.run_id }}
-          restore-keys: instagram-cursor-
-      - name: Collect authorized Instagram content
+      - run: node --test scripts/instagramPlatform.test.mjs
+      - name: Run website-managed collector
         env:
-          PREVIEW_ONLY: ${{ inputs.preview_only }}
-          TARGET_USERNAME: ${{ inputs.username }}
+          INITIALIZE: ${{ inputs.initialize }}
         shell: bash
         run: |
-          args=(--report work/instagram-report.json)
-          if [[ "$PREVIEW_ONLY" == "false" ]]; then args+=(--write); fi
-          if [[ -n "$TARGET_USERNAME" ]]; then args+=(--username "$TARGET_USERNAME"); fi
-          pnpm instagram:sync "${args[@]}"
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: instagram-run-status
-          path: work/instagram-report.json
-          retention-days: 7
+          args=()
+          if [[ "$INITIALIZE" == "true" ]]; then args+=(--initialize); fi
+          node scripts/instagramWorker.mjs "${args[@]}"

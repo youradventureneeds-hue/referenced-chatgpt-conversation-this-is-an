@@ -76,3 +76,7 @@ The weekly GitHub Actions workflow is prepared in `.github/workflows/weekly-jobs
 It requires activation in GitHub and a `DATABASE_URL` repository secret before it runs.
 See [the operating guide](docs/weekly-job-import.md) for publication rules, source
 coverage, closure handling, activation, and the Monday 08:00 India-time schedule.
+
+## Website Instagram controls
+
+Manage collection, employer sources, connection updates, and scan history at `/admin/instagram`. Review and publish leads at `/admin`. See [the administrator guide](docs/instagram-admin.md). The cloud worker checks due work every 15 minutes; the scan interval defaults to six hours with India sources.

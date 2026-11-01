@@ -1,3 +1,5 @@
+> Website-managed collection is now available at `/admin/instagram`. See [the admin guide](instagram-admin.md) for the active scheduled worker and self-service connection updates. The CLI sections below describe the optional legacy research tool, not the scheduled website worker.
+
 # Instagram recruitment collection
 
 ## Current state
@@ -70,8 +72,7 @@ bounded batch. `--write` saves only review leads and first checks that anonymous
 review API access is refused, the administrator key works, and the privacy contact
 has actually been published. No lead is automatically published as a job.
 
-The cloud workflow is **Instagram recruitment collection**. Start with its preview
-input, then a write run. It rotates a maximum of 25 external sources per write run
+The legacy CLI can preview or write leads. It rotates a maximum of 25 external sources per write run
 using a non-sensitive cursor cache and requests the latest 25 media per edge.
 Once authorization is tested, enable a roughly six-hour cloud schedule to sample
 active stories before they expire. A weekly-only schedule cannot cover stories.

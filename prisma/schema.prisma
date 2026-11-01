@@ -116,6 +116,7 @@ model Organization {
 
   members OrganizationMember[]
   jobs    Job[]
+  instagramSources InstagramSource[]
 
   @@map("organizations")
 }
@@ -205,4 +206,62 @@ model Application {
 
   @@unique([jobId, userId])
   @@map("applications")
+}
+
+model InstagramSettings {
+  id String @id @default("main")
+  username String @default("")
+  accountId String @default("")
+  apiVersion String @default("v26.0")
+  tokenCiphertext String?
+  tokenExpiresAt DateTime?
+  enabled Boolean @default(false)
+  country String @default("India")
+  intervalHours Int @default(6)
+  nextRunAt DateTime?
+  lastHeartbeatAt DateTime?
+  lastSuccessAt DateTime?
+  lastError String?
+  leaseId String?
+  leaseUntil DateTime?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@map("instagram_settings")
+}
+
+model InstagramSource {
+  id String @id @default(cuid())
+  username String @unique
+  employerName String
+  country String
+  organizationId String?
+  organization Organization? @relation(fields:[organizationId],references:[id],onDelete:SetNull)
+  evidenceUrl String?
+  enabled Boolean @default(true)
+  lastCheckedAt DateTime?
+  lastError String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@map("instagram_sources")
+}
+
+model InstagramRun {
+  id String @id @default(cuid())
+  trigger String
+  status String @default("QUEUED")
+  sourceSnapshot Json @default("[]")
+  nextIndex Int @default(0)
+  accounts Int @default(0)
+  media Int @default(0)
+  leads Int @default(0)
+  queued Int @default(0)
+  duplicates Int @default(0)
+  errors Int @default(0)
+  details Json @default("[]")
+  errorSummary String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  completedAt DateTime?
+  @@index([status,createdAt])
+  @@map("instagram_runs")
 }
