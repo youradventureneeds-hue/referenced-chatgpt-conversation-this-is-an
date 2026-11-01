@@ -35,7 +35,7 @@ export default async function JobDetailPage({
     notFound();
   }
 
-  const importedSource = ["OFFICIAL_CAREERS_AUTO","INSTAGRAM"].includes(job.sourceChannel||"")
+  const importedSource = ["OFFICIAL_CAREERS_AUTO","INSTAGRAM","WEBSITE"].includes(job.sourceChannel||"")
     ? await prisma.opportunityIntake.findUnique({
         where: { approvedJobId: job.id },
         select: { sourceUrl: true, extraction: true },
@@ -43,13 +43,13 @@ export default async function JobDetailPage({
     : null;
   const sourceUrl = importedSource?.sourceUrl && /^https?:\/\//i.test(importedSource.sourceUrl)
     ? importedSource.sourceUrl : null;
-  const sourceMetadata = importedSource?.extraction as { applicationUrl?: string; scraper?: { lastSeenAt?: string }; instagram?: {collectedAt?:string} } | undefined;
-  const lastChecked = sourceMetadata?.scraper?.lastSeenAt||sourceMetadata?.instagram?.collectedAt;
+  const sourceMetadata = importedSource?.extraction as { applicationUrl?: string; scraper?: { lastSeenAt?: string }; instagram?: {collectedAt?:string}; verification?:{checkedAt?:string}; compensation?:{period?:string} } | undefined;
+  const lastChecked = sourceMetadata?.verification?.checkedAt||sourceMetadata?.scraper?.lastSeenAt||sourceMetadata?.instagram?.collectedAt;
   const applicationUrl=sourceMetadata?.applicationUrl&&/^https?:\/\//i.test(sourceMetadata.applicationUrl)?sourceMetadata.applicationUrl:sourceUrl;
 
   const formattedSalary =
     job.salaryMin && job.salaryMax
-      ? `${job.salaryMin.toLocaleString()} - ${job.salaryMax.toLocaleString()} ${job.currency}`
+      ? `${job.salaryMin.toLocaleString()}${job.salaryMin===job.salaryMax?"":` - ${job.salaryMax.toLocaleString()}`} ${job.currency}${sourceMetadata?.compensation?.period==="MONTH"?" / month":""}`
       : "Stipend / Package details on request";
 
   return (
@@ -66,7 +66,7 @@ export default async function JobDetailPage({
             {job.organization.verified ? "✓ Verified Organization" : "Organization"}
           </span>
           <span>·</span>
-          <span>{job.organization.name}</span>
+          <Link href={`/organizations/${job.organization.slug}`} className="text-link">{job.organization.name}</Link>
         </div>
 
         <h1 style={{ fontSize: "2.5rem", lineHeight: 1.15, marginBottom: "1rem" }}>{job.title}</h1>
@@ -84,7 +84,7 @@ export default async function JobDetailPage({
           <p style={{ lineHeight: 1.7, marginTop: "1rem", whiteSpace: "pre-line" }}>
             {sourceUrl ? job.description.split("\n\nOriginal vacancy:")[0] : job.description}
           </p>
-          {sourceUrl && <p className="muted">{job.sourceChannel==="INSTAGRAM"?"Recruitment details reviewed from Instagram.":"Imported from the employer’s official vacancy page."}
+          {sourceUrl && <p className="muted">{job.sourceChannel==="INSTAGRAM"?(sourceMetadata?.verification?.checkedAt?"Recruitment details reviewed from Instagram and checked against the employer’s careers page.":"Recruitment details reviewed from Instagram."):"Checked against the employer’s official careers page."}
             {lastChecked && <> Last checked {new Date(lastChecked).toLocaleDateString("en-GB", { timeZone: "Asia/Kolkata" })}.</>}
             {" "}<a className="text-link" href={sourceUrl} target="_blank" rel="noopener noreferrer">{job.sourceChannel==="INSTAGRAM"?"View Instagram source ↗":"Read the full vacancy ↗"}</a>
           </p>}
@@ -104,6 +104,7 @@ export default async function JobDetailPage({
           <p style={{ fontSize: "0.95rem", color: "#555", margin: "0.75rem 0 1.25rem" }}>
             {job.organization.description}
           </p>
+          <p><Link href={`/organizations/${job.organization.slug}#current-openings`} className="text-link">View organization and current openings ↗</Link></p>
 
           {job.organization.website && (
             <a

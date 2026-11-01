@@ -1,0 +1,138 @@
+{
+  "organizations": [
+    {
+      "name": "Indiahikes",
+      "slug": "indiahikes",
+      "country": "India",
+      "region": "Indian trekking regions",
+      "website": "https://indiahikes.com",
+      "careersUrl": "https://indiahikes.com/careers"
+    },
+    {
+      "name": "Trailblazers",
+      "slug": "trailblazers",
+      "country": "India",
+      "region": "Thane, Maharashtra",
+      "website": "https://www.trailblazersindia.com/",
+      "careersUrl": "https://www.trailblazersindia.com/career",
+      "description": "Trailblazers provides outdoor education and experiential travel programmes for schools, families, and other groups. Based in Thane, India, the organisation combines curriculum linked journeys, camps, nature exploration, and facilitated activities. Its educators help participants learn through direct experience while supporting programme planning, safety, logistics, and reflection. Employment opportunities include outdoor instruction, camp education, travel coordination, and operational support across programmes.",
+      "logoSource": "https://www.trailblazersindia.com/assets/new_frontend/images/logo.png"
+    },
+    {
+      "name": "Trek India",
+      "slug": "trek-india",
+      "country": "India",
+      "region": "Mumbai and Pune, Maharashtra",
+      "website": "https://www.trekindia.co.in/",
+      "careersUrl": "https://www.trekindia.co.in/careers",
+      "description": "Trek India organizes trekking, camping, cycling, and adventure experiences in India, with activities around Mumbai, Pune, and the Sahyadri region. Its programmes include weekend treks, cycling events, and outdoor activities led by group leaders. The organisation advertises opportunities for trek leaders, adventure event leaders, and cycling leaders, commonly on a part time or freelance basis, with travel during group departures.",
+      "logoSource": "https://vl-prod-static.b-cdn.net/system/images/000/899/862/80b1b39e010235355ea30680e8a90a66/450gt/TI_Final_Logo_PNG_1_.png"
+    },
+    {
+      "name": "Frogman",
+      "slug": "frogman",
+      "country": "India",
+      "region": "Havelock Island (Swaraj Dweep), Andaman",
+      "website": "https://frogman.in/",
+      "careersUrl": "https://frogman.in/careers/",
+      "description": "Frogman operates a scuba diving centre on Havelock Island, also known as Swaraj Dweep, in the Andaman Islands. The organisation offers introductory dives, certification courses, guided diving, and other island experiences. Its team supports guests through instruction, dive supervision, safety checks, and equipment care. Advertised employment includes scuba diving instructors and divemasters, alongside separately described volunteer opportunities supporting the centre.",
+      "logoSource": "https://frogman.in/wp-content/uploads/2025/12/Frogman_Logo_2025_cropped-3.png"
+    }
+  ],
+  "jobs": [
+    {
+      "organizationSlug": "indiahikes",
+      "key": "assistant-trek-leader-internship",
+      "title": "Assistant Trek Leader (ATL) Internship",
+      "workType": "INTERNSHIP",
+      "region": "Indian trekking regions",
+      "salaryMin": 20000,
+      "salaryMax": 20000,
+      "currency": "INR",
+      "salaryPeriod": "MONTH",
+      "sourceUrl": "https://www.instagram.com/reel/Deeh77pSVz0/",
+      "sourceType": "INSTAGRAM",
+      "applicationUrl": "https://indiahikes.com/careers",
+      "description": "Build practical trek leadership skills through a three-month internship with Indiahikes. Training includes safety preparation, supporting experienced leaders, and progressively taking responsibility for groups. The stipend is ₹20,000 per month, with food and accommodation provided during the internship. Applicants must be at least 22 and meet the employer’s trekking, English/Hindi communication, and fitness requirements. Successful interns may progress to regular trek-leading employment. Read the current careers page and complete its First Introduction application form."
+    },
+    {
+      "organizationSlug": "trailblazers",
+      "key": "outdoor-education-instructor",
+      "title": "Outdoor Education Instructor",
+      "workType": "FULL_TIME",
+      "region": "Thane, Maharashtra; travel for programmes",
+      "sourceUrl": "https://www.instagram.com/p/DXRiYViDTj9/",
+      "sourceType": "INSTAGRAM",
+      "applicationUrl": "https://www.trailblazersindia.com/career",
+      "description": "Deliver educational outdoor experiences with Trailblazers, combining field instruction, destination research, group facilitation, and programme preparation. This is a full-time role based from the Thane office, with travel for activities and educational journeys. Review the employer’s subject knowledge, qualifications, age criteria, and other requirements before applying. Email careers@trailblazersindia.com with the subject “Application for Outdoor Instructor”. Salary is not stated."
+    },
+    {
+      "organizationSlug": "trailblazers",
+      "key": "outdoor-educator",
+      "title": "Outdoor Educator",
+      "workType": "FULL_TIME",
+      "region": "Thane/Mumbai, Maharashtra; programme travel",
+      "sourceUrl": "https://www.instagram.com/p/DTumz4JDf20/",
+      "sourceType": "INSTAGRAM",
+      "applicationUrl": "https://www.trailblazersindia.com/career",
+      "description": "Support outdoor camps and experiential programmes through activity facilitation, advance preparation, logistics, and documentation. Trailblazers also includes programme research and content work within this full-time position. The team operates from the Thane/Mumbai area and delivers programmes requiring travel. Review the current careers page for responsibilities and eligibility, then use its application process. Salary is not stated."
+    },
+    {
+      "organizationSlug": "trek-india",
+      "key": "trek-leader-sahyadri",
+      "title": "Trek Leader (Sahyadri Treks)",
+      "workType": "PART_TIME",
+      "region": "Mumbai–Pune / Sahyadri, Maharashtra",
+      "sourceUrl": "https://www.instagram.com/p/DUI9P9zjBGX/",
+      "sourceType": "INSTAGRAM",
+      "applicationUrl": "https://www.trekindia.co.in/careers",
+      "description": "Lead weekend trekking groups around Mumbai, Pune, and the Sahyadri region. Trek India describes this as part-time or freelance work. Payment is agreed with the employer; event travel and stay costs are covered. First-aid and mountaineering training are preferred. Apply through the official careers page."
+    },
+    {
+      "organizationSlug": "trek-india",
+      "key": "adventure-event-leader",
+      "title": "Event Leader (Adventure Activities)",
+      "workType": "PART_TIME",
+      "region": "Mumbai–Pune, Maharashtra",
+      "sourceUrl": "https://www.trekindia.co.in/careers",
+      "sourceType": "WEBSITE",
+      "applicationUrl": "https://www.trekindia.co.in/careers",
+      "description": "Support adventure events involving activities such as rappelling, rafting, paragliding, and camping in the Mumbai–Pune region. Trek India lists part-time or freelance arrangements, with remuneration agreed individually. Confirm the activity-specific skills and safety duties with the employer. Apply through its careers page."
+    },
+    {
+      "organizationSlug": "trek-india",
+      "key": "cycling-event-leader",
+      "title": "Cycling Event Leader",
+      "workType": "PART_TIME",
+      "region": "Mumbai, Maharashtra",
+      "sourceUrl": "https://www.trekindia.co.in/careers",
+      "sourceType": "WEBSITE",
+      "applicationUrl": "https://www.trekindia.co.in/careers",
+      "description": "Help lead Trek India’s weekend rides and overnight cycling events in Mumbai. The employer describes its recruitment as mainly weekend work, with payment by agreement and event travel and stay expenses covered. Confirm the cycling duties, schedule, and eligibility through the official careers application process."
+    },
+    {
+      "organizationSlug": "frogman",
+      "key": "scuba-diving-instructor",
+      "title": "Scuba Diving Instructor",
+      "workType": "FULL_TIME",
+      "region": "Havelock Island (Swaraj Dweep), Andaman",
+      "sourceUrl": "https://www.instagram.com/p/DcQxDG-Dfrt/",
+      "sourceType": "INSTAGRAM",
+      "applicationUrl": "https://frogman.in/careers/scuba-diving-instructor-job-havelock/",
+      "deadline": "2026-12-31",
+      "description": "Teach scuba courses and supervise guided dives with Frogman on Havelock Island. Applicants need active instructor certification from a recognised agency, strong guest communication, and consistent safety practice. This is a paid, full-time position requiring at least a one-year commitment. Monthly salary depends on experience and is discussed with the employer. The official listing requests applications by 31 December 2026; apply through its form or published WhatsApp contact."
+    },
+    {
+      "organizationSlug": "frogman",
+      "key": "divemaster",
+      "title": "Divemaster",
+      "workType": "FULL_TIME",
+      "region": "Havelock Island (Swaraj Dweep), Andaman",
+      "sourceUrl": "https://www.instagram.com/p/DcQxDG-Dfrt/",
+      "sourceType": "INSTAGRAM",
+      "applicationUrl": "https://frogman.in/careers/divemaster-job-havelock/",
+      "deadline": "2026-12-31",
+      "description": "Guide certified divers and assist Frogman’s diving courses and introductory activities on Havelock Island. Active divemaster certification from a recognised agency is required. The role is paid and full-time, with at least a one-year commitment. A fixed monthly salary is agreed according to experience. The employer lists a 31 December 2026 application deadline. Use the official job page to submit your details and CV."
+    }
+  ]
+}
