@@ -84,8 +84,45 @@ model User {
   candidateApplications CandidateApplication[]
   forumMember ForumMember?
   forumReports ForumReport[]
+  passwordResets PasswordReset[]
+  candidateDocuments CandidateDocument[]
 
   @@map("users")
+}
+
+model PasswordReset {
+  id        String   @id @default(cuid())
+  tokenHash String   @unique
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt DateTime
+  usedAt    DateTime?
+  createdAt DateTime @default(now())
+  @@index([userId])
+  @@map("password_resets")
+}
+
+model CandidateDocument {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  kind      String
+  filename  String
+  mimeType  String
+  size      Int
+  content   Bytes
+  createdAt DateTime @default(now())
+  @@index([userId, kind])
+  @@map("candidate_documents")
+}
+
+model AccountEmailSettings {
+  id                 String   @id @default("main")
+  sender             String
+  passwordCiphertext String
+  verifiedAt         DateTime
+  updatedAt          DateTime @updatedAt
+  @@map("account_email_settings")
 }
 
 // 8. Candidate Profile

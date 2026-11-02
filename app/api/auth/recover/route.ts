@@ -5,7 +5,7 @@ import {recoveryMatches,hashPassword,secretHash,issueSession} from '@/lib/employ
 import {employerJson,sameEmployerOrigin,sessionResponse,authLimit,employerBody} from '@/lib/employer-server';
 export async function POST(request:Request){
  if(!sameEmployerOrigin(request))return employerJson({error:'Invalid request origin.'},403);
- try{const parsed=employerRecovery.safeParse(await employerBody(request));if(!parsed.success)return employerJson({error:parsed.error.issues[0]?.message||'Check your recovery details.'},400);const input=parsed.data;
+ try{const parsed=employerRecovery.safeParse(await employerBody(request));if(!parsed.success)return employerJson({error:parsed.error.issues[0]?.message||'Check your recovery details.'},400);const input=parsed.data;if(input.role==='CANDIDATE')return employerJson({error:'Use Forgot your password to request an email reset link.'},400);
  if(!await authLimit(request,input.email,'recover'))return employerJson({error:'Too many attempts. Please try again later.'},429);
  const user=await prisma.user.findUnique({where:{email:input.email},select:{id:true,role:true,recoveryHash:true}});if(!user||user.role!==input.role||!recoveryMatches(input.recoveryCode,user.recoveryHash))return employerJson({error:'Email or recovery code is incorrect.'},401);
  const passwordHash=await hashPassword(input.password),recoveryCode=randomBytes(32).toString('base64url');

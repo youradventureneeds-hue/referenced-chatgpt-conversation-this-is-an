@@ -1,0 +1,19 @@
+'use client';
+import {useCallback,useEffect,useState} from 'react';
+export type CandidateDocument={id:string;kind:string;filename:string;size:number;createdAt:string};
+export async function uploadCandidateDocument(file:File,kind:'CV'|'CERTIFICATION'){
+ if(file.size>3*1024*1024)throw Error(`${file.name}: each document must be no larger than 3 MB.`);
+ const body=new FormData();body.set('kind',kind);body.set('file',file);
+ const response=await fetch('/api/candidate/documents',{method:'POST',body});let data;
+ try{data=await response.json();}catch{throw Error('The upload failed. Try a document smaller than 3 MB.');}
+ if(!response.ok)throw Error(data.error||'Could not upload the document.');return data.document as CandidateDocument;
+}
+export function CandidateUploadFields(){return <><label>Upload your CV · optional<input type="file" name="cv" accept=".pdf,application/pdf"/></label><small>PDF, up to 3 MB. You can add or replace it later.</small><label>Upload certifications · optional<input type="file" name="certificates" accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png" multiple/></label><small>PDF, JPG, or PNG; up to 3 MB each, 10 certifications and 20 MB total. Documents remain private to your account.</small></>;}
+export function CandidateDocuments(){
+ const [documents,setDocuments]=useState<CandidateDocument[]>([]),[busy,setBusy]=useState(false),[error,setError]=useState(''),[notice,setNotice]=useState('');
+ const load=useCallback(async()=>{const r=await fetch('/api/candidate/documents',{cache:'no-store'});const d=await r.json();if(!r.ok)throw Error(d.error||'Could not load documents.');setDocuments(d.documents);},[]);
+ useEffect(()=>{load().catch(e=>setError(e.message));},[load]);
+ async function upload(e:React.FormEvent<HTMLFormElement>){e.preventDefault();const form=e.currentTarget,f=new FormData(form);setBusy(true);setError('');setNotice('');try{const cv=f.get('cv');const certs=f.getAll('certificates').filter((v):v is File=>v instanceof File&&v.size>0);if(certs.length>10)throw Error('Select up to 10 certifications.');if(!(cv instanceof File&&cv.size)&&!certs.length)throw Error('Choose a CV or certification to upload.');if(cv instanceof File&&cv.size)await uploadCandidateDocument(cv,'CV');for(const file of certs)await uploadCandidateDocument(file,'CERTIFICATION');form.reset();setNotice('Your documents are saved privately.');}catch(e){setError((e as Error).message);}finally{await load().catch(()=>{});setBusy(false);}}
+ async function remove(id:string){setBusy(true);setError('');setNotice('');try{const r=await fetch('/api/candidate/documents/'+id,{method:'DELETE'});if(!r.ok)throw Error('Could not remove the document.');await load();setNotice('Document removed.');}catch(e){setError((e as Error).message);}finally{setBusy(false);}}
+ return <article className="card employer-job-form"><p className="eyebrow">PRIVATE DOCUMENTS</p><h2>Your CV and certifications.</h2><p>Keep one current CV and your certification files here. Uploading a new CV replaces the previous file. Documents are not sent to employers automatically.</p>{error&&<p className="employer-error" role="alert">{error}</p>}{notice&&<p className="employer-notice" role="status">{notice}</p>}<form onSubmit={upload}><fieldset disabled={busy} className="candidate-upload-fields"><CandidateUploadFields/><button>{busy?'Uploading…':'Upload documents'}</button></fieldset></form>{documents.length?<ul className="candidate-document-list">{documents.map(doc=><li key={doc.id}><div><strong>{doc.kind==='CV'?'CV':'Certification'}</strong><br/><a href={'/api/candidate/documents/'+doc.id}>{doc.filename}</a><small> · {Math.max(1,Math.round(doc.size/1024))} KB · {new Date(doc.createdAt).toLocaleDateString()}</small></div><button className="secondary" disabled={busy} onClick={()=>remove(doc.id)}>Remove</button></li>)}</ul>:<p>No documents uploaded yet.</p>}</article>;
+}

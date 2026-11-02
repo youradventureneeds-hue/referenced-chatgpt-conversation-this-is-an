@@ -6,6 +6,7 @@ on:
       - 'components/**'
       - 'lib/employer*'
       - 'lib/candidate*'
+      - 'lib/account-mail.mjs'
       - 'lib/forum*'
       - 'lib/intake.ts'
       - 'prisma/**'

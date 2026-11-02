@@ -1,6 +1,6 @@
 import fs from 'node:fs';import assert from 'node:assert/strict';import {randomBytes} from 'node:crypto';import {PrismaClient} from '@prisma/client';import {PrismaPg} from '@prisma/adapter-pg';
 if(process.env.EMPLOYER_ALLOW_ISOLATED_DB_TEST!=='1')throw Error('Set EMPLOYER_ALLOW_ISOLATED_DB_TEST=1 to create and remove an isolated test schema.');
-if(fs.existsSync('.env'))process.loadEnvFile('.env');const url=new URL(process.env.DATABASE_URL);if(url.hostname.endsWith('.pooler.supabase.com')&&url.port==='5432')url.port='6543';url.searchParams.set('pgbouncer','true');process.env.DATABASE_URL=url.href;process.env.NODE_ENV='production';process.env.ADMIN_REVIEW_KEY=randomBytes(32).toString('base64url');
+if(fs.existsSync('.env'))process.loadEnvFile('.env');const url=new URL(process.env.DATABASE_URL);if(url.hostname.endsWith('.pooler.supabase.com')&&url.port==='5432')url.port='6543';url.searchParams.set('pgbouncer','true');process.env.DATABASE_URL=url.href;process.env.NODE_ENV='production';process.env.INSTAGRAM_ENCRYPTION_KEY=randomBytes(32).toString('base64url');process.env.ADMIN_REVIEW_KEY=randomBytes(32).toString('base64url');
 const schema='employer_check_'+randomBytes(6).toString('hex');process.env.EMPLOYER_TEST_SCHEMA=schema;const rootDb=new PrismaClient({adapter:new PrismaPg({connectionString:url.href,max:1})});let db;let assertions=0;
 function check(value,message){assert.ok(value,message);assertions++;}
 try{

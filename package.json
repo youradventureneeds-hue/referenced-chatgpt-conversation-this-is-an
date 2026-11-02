@@ -23,15 +23,16 @@
     "test:admin": "node --test scripts/adminAccess.test.mjs",
     "test:employers": "node --test scripts/employerAuth.test.mjs",
     "test:employers:integration": "node --import ./scripts/testing/employer-loader.mjs scripts/employerPortal.integration.mjs",
-    "test:candidates": "node --test scripts/candidateAuth.test.mjs",
+    "test:candidates": "node --test scripts/candidateAuth.test.mjs scripts/candidateDocuments.test.mjs",
     "test:forum": "node --test scripts/forum.test.mjs"
   },
   "dependencies": {
-    "@prisma/client": "^6.19.3",
     "@prisma/adapter-pg": "^6.19.3",
+    "@prisma/client": "^6.19.3",
     "bcryptjs": "^2.4.3",
     "cheerio": "^1.1.2",
     "next": "^15.1.0",
+    "nodemailer": "^10.3.1",
     "playwright": "^1.64.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
