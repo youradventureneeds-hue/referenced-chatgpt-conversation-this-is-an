@@ -1,0 +1,2 @@
+import {forum,forumActor,forumJson,forumFailure,forumBody,forumId,replyCreate} from '@/lib/forum-server';
+export async function POST(request:Request,{params}:{params:Promise<{id:string}>}){try{const actor=await forumActor(request,'replies',120);const id=forumId.parse((await params).id);return forumJson(await forum.createReply(actor,id,replyCreate.parse(await forumBody(request))),201);}catch(e){return forumFailure(e);}}

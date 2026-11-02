@@ -23,7 +23,8 @@
     "test:admin": "node --test scripts/adminAccess.test.mjs",
     "test:employers": "node --test scripts/employerAuth.test.mjs",
     "test:employers:integration": "node --import ./scripts/testing/employer-loader.mjs scripts/employerPortal.integration.mjs",
-    "test:candidates": "node --test scripts/candidateAuth.test.mjs"
+    "test:candidates": "node --test scripts/candidateAuth.test.mjs",
+    "test:forum": "node --test scripts/forum.test.mjs"
   },
   "dependencies": {
     "@prisma/client": "^6.19.3",

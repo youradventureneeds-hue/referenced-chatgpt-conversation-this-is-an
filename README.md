@@ -88,3 +88,7 @@ Employers register at `/employers`, submit vacancies and track decisions at `/da
 ## Candidate workspace
 
 Job seekers register at `/candidates` and manage a private profile, CV link, bookmarks, and candidate-reported application tracker at `/candidate/dashboard`. My account provides entry to either account type. Actual applications remain with the employer; saving or tracking a job sends nothing. See [the candidate portal guide](docs/candidate-portal.md).
+
+## Community forum
+
+Public discussions live at `/forum`. Candidate and employer accounts can choose a separate public handle and post ideas or replies. Live streaming brings new activity into open discussions automatically. Site-owner reports, locks, hiding/restoration, and suspensions are managed at `/admin/forum`. Existing private account profiles remain private. See [the community guide](docs/community-forum.md).

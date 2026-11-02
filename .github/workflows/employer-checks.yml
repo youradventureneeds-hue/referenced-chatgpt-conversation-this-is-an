@@ -1,4 +1,4 @@
-name: Candidate and employer portal checks
+name: Account and community checks
 on:
   push:
     paths:
@@ -6,10 +6,12 @@ on:
       - 'components/**'
       - 'lib/employer*'
       - 'lib/candidate*'
+      - 'lib/forum*'
       - 'lib/intake.ts'
       - 'prisma/**'
       - 'scripts/employer*'
       - 'scripts/candidate*'
+      - 'scripts/forum*'
       - 'scripts/testing/**'
       - 'package.json'
       - 'pnpm-lock.yaml'
@@ -53,6 +55,7 @@ jobs:
       - run: pnpm test:candidates
       - run: pnpm test:employers
       - run: pnpm test:admin
+      - run: pnpm test:forum
       - run: mkdir -p work
       - run: pnpm exec prisma migrate diff --from-empty --to-schema-datamodel prisma/schema.prisma --script --output work/employer-check-schema.sql
       - run: pnpm test:employers:integration
