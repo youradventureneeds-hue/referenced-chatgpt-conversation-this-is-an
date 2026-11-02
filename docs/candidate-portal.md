@@ -18,7 +18,7 @@ Candidate and employer accounts share the password hashing, opaque database-sess
 
 Candidate sessions last seven days. Recovery codes are shown once, stored as digests, replaced after recovery, and invalidate that user's old sessions. Password recovery does not change account role. Recovery and sign-out affect the relevant account; candidate actions do not authorize employer APIs or private admin review. Email verification and automated email notifications are not configured.
 
-All profile changes, bookmarks, and tracker mutations require same-origin authenticated requests. Writes bind the user ID from the session rather than trusting form fields. Candidates cannot read or modify another person's data. After sign-in from a job, only a validated local `/jobs/<slug>` path is allowed as the return destination. Employers and administrators receive no candidate-profile browsing feature in this release. Account-removal requests use the published support contact.
+All profile changes, bookmarks, and tracker mutations require same-origin authenticated requests. Writes bind the user ID from the session rather than trusting form fields. Candidates cannot read or modify another person's data. After sign-in from a job or discussion, return destinations are restricted to validated local `/jobs/<slug>`, `/forum`, or `/forum/<id>` paths. Employers and administrators receive no candidate-profile browsing feature in this release. Account-removal requests use the published support contact.
 
 ## Deployment and tests
 
