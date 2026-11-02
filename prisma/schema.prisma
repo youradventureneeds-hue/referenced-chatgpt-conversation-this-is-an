@@ -189,6 +189,8 @@ model Job {
   slug                String       @unique
   description         String
   workType            WorkType     @default(FULL_TIME)
+  category            String       @default("OTHER")
+  categoryManual      Boolean      @default(false)
   status              JobStatus    @default(DRAFT)
   
   // Location & Visa fields
@@ -214,6 +216,7 @@ model Job {
   savedBy SavedJob[]
   candidateApplications CandidateApplication[]
 
+  @@index([category, status, reviewedByAdmin])
   @@map("jobs")
 }
 

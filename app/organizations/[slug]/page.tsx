@@ -1,3 +1,4 @@
+import {jobCategoryLabel} from '@/lib/job-categories.mjs';
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
@@ -24,6 +25,7 @@ export default async function OrganizationShowcasePage({
           title: true,
           slug: true,
           workType: true,
+          category: true,
           country: true,
           region: true,
         },
@@ -98,7 +100,7 @@ export default async function OrganizationShowcasePage({
                   <li key={job.id} style={{ border: "1px solid #e9ecef", borderRadius: "8px", padding: "1rem", marginBottom: "0.75rem" }}>
                     <Link href={`/jobs/${job.slug}`} className="text-link">{job.title} ↗</Link>
                     <p className="muted" style={{ margin: "0.5rem 0 0", fontSize: "0.9rem" }}>
-                      {[job.region, job.country].filter(Boolean).join(", ")}
+                      {[job.region, job.country].filter(Boolean).join(", ")} · {jobCategoryLabel(job.category)}
                     </p>
                   </li>
                 ))}

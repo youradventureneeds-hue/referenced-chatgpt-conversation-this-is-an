@@ -51,6 +51,7 @@ async function main() {
     update: {},
     create: {
       organizationId: bikat.id,
+      category:"TREKKING_GUIDING",
       title: "Himalayan Trek Leader Apprentice",
       slug: "himalayan-trek-leader-apprentice-2026",
       description: "6-month experiential apprenticeship leading expeditions, managing trail safety, and learning mountain navigation in Garhwal and Ladakh.",
@@ -74,6 +75,7 @@ async function main() {
     update: {},
     create: {
       organizationId: outwardBound.id,
+      category:"OUTDOOR_EDUCATION",
       title: "Outdoor Education & Wilderness Fellowship",
       slug: "outdoor-education-fellowship-gap-year",
       description: "Structured gap-year fellowship focusing on youth development, backcountry logistics, ERCA/ropes course instruction, and wilderness first response.",

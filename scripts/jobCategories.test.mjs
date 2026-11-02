@@ -1,0 +1,8 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {JOB_CATEGORIES,isJobCategory,inferJobCategory,jobCategoryLabel} from '../lib/job-categories.mjs';
+test('recognizes outdoor roles and keeps work type separate from job function',()=>{
+ const cases=[['Outdoor Educator','OUTDOOR_EDUCATION'],['Outdoor Instructor','OUTDOOR_EDUCATION'],['Seasonal Outdoor Pursuits Instructors and Assistant Instructors','OUTDOOR_EDUCATION'],['Field Biology Instructor and Program Leader','OUTDOOR_EDUCATION'],['Camp Counsellor','CAMPS'],['Camp Counselor','CAMPS'],['Camp Educator Jobs','CAMPS'],['Assistant Trek Leader Internship','TREKKING_GUIDING'],['Travel Tour Guide','TREKKING_GUIDING'],['Challenge Course Instructor','ADVENTURE_INSTRUCTION'],['Seasonal Ski Instructor','ADVENTURE_INSTRUCTION'],['PADI Scuba Instructor','WATER_SPORTS'],['Divemaster','WATER_SPORTS'],['Canoe and Backpack Instructor','WATER_SPORTS'],['Seasonal Steward','CONSERVATION'],['Outdoor Education Program Manager','MANAGEMENT'],['Camp Director','MANAGEMENT'],['Logistics Coordinator','MANAGEMENT'],['Chef De Partie','OPERATIONS_SUPPORT'],['Campus Cleaner','OPERATIONS_SUPPORT'],['Business Development Executive | Outdoor Education','OPERATIONS_SUPPORT'],['Intern','OTHER'],['','OTHER']];
+ for(const [title,category] of cases)assert.equal(inferJobCategory(title),category,title);
+});
+test('rejects prototype names and unknown categories and uses a safe display fallback',()=>{for(const value of ['__proto__','constructor','UNKNOWN',null,{},'CAMPS '])assert.equal(isJobCategory(value),false);assert.equal(jobCategoryLabel('__proto__'),JOB_CATEGORIES.OTHER);assert.equal(isJobCategory('CAMPS'),true);});

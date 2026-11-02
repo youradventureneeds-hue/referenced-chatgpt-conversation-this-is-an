@@ -33,6 +33,8 @@ export default async function Home() {
     slug: job.slug,
     summary: job.description.split("\n\nOriginal vacancy:")[0],
     jobType: job.workType,
+    category:job.category,
+    country:job.country,
     sponsorshipAvailable: job.visaSponsorship,
     location: job.region ? `${job.region}, ${job.country}` : job.country,
     organization: {
@@ -98,7 +100,6 @@ export default async function Home() {
             <p className="text-muted">No published opportunities found.</p>
           ) : (
             jobs.map((job) => (
-              // @ts-expect-error adapter mapped for UI props
               <JobCard key={job.id} job={job} />
             ))
           )}

@@ -1,11 +1,13 @@
 "use client";
 import {useEffect,useState} from "react";
+import {JOB_CATEGORIES,isJobCategory,inferJobCategory,jobCategoryLabel} from '@/lib/job-categories.mjs';
 import type {IntakeItem} from "@/lib/intake";
 function ReviewCard({item,onReviewed}:{item:IntakeItem;onReviewed:(next:IntakeItem)=>void}) {
  const data=item.extraction;const [title,setTitle]=useState(data?.title||"");const [organization,setOrganization]=useState(data?.organization||"");const [country,setCountry]=useState(data?.country||"Not specified");const [jobType,setJobType]=useState(data?.jobType||"UNSPECIFIED");const [summary,setSummary]=useState(data?.summary||"");const [applicationUrl,setApplicationUrl]=useState(data?.applicationUrl||"");const [createOrganization,setCreateOrganization]=useState(false);const [reviewNotes,setReviewNotes]=useState("");const [verified,setVerified]=useState(false);const [busy,setBusy]=useState(false);const [error,setError]=useState("");
+ const [category,setCategory]=useState(data?.categoryManual&&isJobCategory(data.category)?data.category!:'AUTO');
  const expired=Boolean(data?.instagram?.expiresAt&&new Date(data.instagram.expiresAt)<new Date());
  let source:string|undefined;try{const url=new URL(item.sourceUrl||"");if(["https:","http:"].includes(url.protocol)&&!url.username&&!url.password)source=url.href;}catch{}
- async function review(status:"APPROVED"|"REJECTED") {setBusy(true);setError("");try{const r=await fetch(`/api/admin/intake/${item.id}`,{method:"PATCH",headers:{"Content-Type":"application/json"},body:JSON.stringify({status,title,organization,country,jobType,summary,applicationUrl:applicationUrl||undefined,verified,createOrganization,reviewNotes:reviewNotes||undefined})});const result=await r.json();if(!r.ok){setError(result.error||"Review failed");return;}onReviewed(result.data);}catch{setError("Could not save review. Please try again.");}finally{setBusy(false);}}
+ async function review(status:"APPROVED"|"REJECTED") {setBusy(true);setError("");try{const r=await fetch(`/api/admin/intake/${item.id}`,{method:"PATCH",headers:{"Content-Type":"application/json"},body:JSON.stringify({status,category,title,organization,country,jobType,summary,applicationUrl:applicationUrl||undefined,verified,createOrganization,reviewNotes:reviewNotes||undefined})});const result=await r.json();if(!r.ok){setError(result.error||"Review failed");return;}onReviewed(result.data);}catch{setError("Could not save review. Please try again.");}finally{setBusy(false);}}
  const inputStyle={display:"block",width:"100%",padding:"10px",margin:"5px 0 14px",border:"1px solid #ded8cd",borderRadius:6};
  return <article className="intake-card" style={{display:"block"}}><p className="eyebrow">{item.sourceType.replaceAll("_"," ")}{data?.instagram?` · ${data.instagram.kind}`:""}</p>
   {source&&<p><a href={source} target="_blank" rel="noopener noreferrer" className="text-link">View original source ↗</a></p>}
@@ -14,6 +16,7 @@ function ReviewCard({item,onReviewed}:{item:IntakeItem;onReviewed:(next:IntakeIt
   <label>Job title<input style={inputStyle} value={title} onChange={e=>setTitle(e.target.value)}/></label>
   <label>Organization name in the directory<input style={inputStyle} value={organization} onChange={e=>setOrganization(e.target.value)}/></label>
   <label>Job country<input style={inputStyle} value={country} onChange={e=>setCountry(e.target.value)}/></label>
+  <label>Job category<select style={inputStyle} value={category} onChange={e=>setCategory(e.target.value)}><option value="AUTO">Automatic: {jobCategoryLabel(inferJobCategory(title))}</option>{Object.entries(JOB_CATEGORIES).map(([key,label])=><option key={key} value={key}>{label}</option>)}</select></label>
   <label>Work type<select style={inputStyle} value={jobType} onChange={e=>setJobType(e.target.value)}>{["UNSPECIFIED","FULL_TIME","PART_TIME","SEASONAL","INTERNSHIP","VOLUNTEER","GAP_YEAR"].map(type=><option key={type} value={type}>{type==="UNSPECIFIED"?"Not specified":type.replaceAll("_"," ")}</option>)}</select></label>
   <label>Verified job summary<textarea rows={4} style={inputStyle} value={summary} onChange={e=>setSummary(e.target.value)}/></label>
   <label>Official application URL, if available<input type="url" style={inputStyle} value={applicationUrl} onChange={e=>setApplicationUrl(e.target.value)}/></label>

@@ -1,3 +1,4 @@
+import {jobCategoryLabel} from '@/lib/job-categories.mjs';
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
@@ -74,6 +75,7 @@ export default async function JobDetailPage({
 
         <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", color: "#666" }}>
           <span>📍 {job.region ? `${job.region}, ${job.country}` : job.country}</span>
+          <Link className="text-link" href={'/jobs?category='+job.category}>{jobCategoryLabel(job.category)}</Link>
           <span>💼 {job.workType === "UNSPECIFIED" ? "Work type not specified" : job.workType.replace("_", " ")}</span>
           <span>💰 {formattedSalary}</span>
         </div>

@@ -1,3 +1,4 @@
+import {inferJobCategory} from '../lib/job-categories.mjs';
 import fs from 'node:fs';
 import {createHash} from 'node:crypto';
 import {PrismaClient} from '@prisma/client';
@@ -24,11 +25,11 @@ try{
    const org=organizations.get(job.organizationSlug);const slug=report.jobs[index].slug;
    const bySlug=await tx.job.findUnique({where:{slug}});if(bySlug&&bySlug.organizationId!==org.id)throw Error('Job slug belongs to another employer');
    const existing=bySlug||await tx.job.findFirst({where:{organizationId:org.id,title:{equals:job.title,mode:'insensitive'}}});
-   const fields={organizationId:org.id,title:job.title,slug:existing?.slug||slug,description:job.description,workType:job.workType,status:'PUBLISHED',country:'India',region:job.region,salaryMin:job.salaryMin??null,salaryMax:job.salaryMax??null,currency:job.currency||'INR',isUnpaid:false,visaSponsorship:false,visaEligibilityNote:'Work authorization and sponsorship were not confirmed. Check with the employer.',sourceChannel:job.sourceType,reviewedByAdmin:true};
+   const fields={category:existing?.categoryManual?existing.category:inferJobCategory(job.title),organizationId:org.id,title:job.title,slug:existing?.slug||slug,description:job.description,workType:job.workType,status:'PUBLISHED',country:'India',region:job.region,salaryMin:job.salaryMin??null,salaryMax:job.salaryMax??null,currency:job.currency||'INR',isUnpaid:false,visaSponsorship:false,visaEligibilityNote:'Work authorization and sponsorship were not confirmed. Check with the employer.',sourceChannel:job.sourceType,reviewedByAdmin:true};
    const saved=existing?await tx.job.update({where:{id:existing.id},data:fields}):await tx.job.create({data:fields});
    const priorIntake=await tx.opportunityIntake.findUnique({where:{approvedJobId:saved.id}});
    const fingerprint=priorIntake?.fingerprint||'reviewed-india:'+createHash('sha256').update(org.id+'\n'+job.key).digest('hex');
-   const extraction={title:job.title,organization:org.name,organizationId:org.id,organizationSlug:org.slug,country:'India',location:job.region,jobType:job.workType,summary:job.description,applicationUrl:job.applicationUrl,confidence:1,issues:[],deadline:job.deadline||null,compensation:{period:job.salaryPeriod||null},verification:{officialUrl:job.applicationUrl,checkedAt:now.toISOString(),publicationAuthorization:'Site owner explicitly requested publication of these researched jobs'},...(job.sourceType==='INSTAGRAM'?{instagram:{collectedAt:now.toISOString(),permalink:job.sourceUrl}}:{})};
+   const extraction={category:saved.category,categoryManual:saved.categoryManual===true,title:job.title,organization:org.name,organizationId:org.id,organizationSlug:org.slug,country:'India',location:job.region,jobType:job.workType,summary:job.description,applicationUrl:job.applicationUrl,confidence:1,issues:[],deadline:job.deadline||null,compensation:{period:job.salaryPeriod||null},verification:{officialUrl:job.applicationUrl,checkedAt:now.toISOString(),publicationAuthorization:'Site owner explicitly requested publication of these researched jobs'},...(job.sourceType==='INSTAGRAM'?{instagram:{collectedAt:now.toISOString(),permalink:job.sourceUrl}}:{})};
    const intake={sourceType:job.sourceType,sourceUrl:job.sourceUrl,rawText:job.description,extraction,status:'APPROVED',approvedJobId:saved.id,reviewedAt:now,reviewNotes:'Researched Instagram recruitment and current official careers evidence. Publication requested by the site owner. Paid courses, unverified office roles and volunteering excluded.'};
    await tx.opportunityIntake.upsert({where:{fingerprint},create:{...intake,fingerprint},update:intake});
    report.jobs[index].id=saved.id;report.jobs[index].slug=saved.slug;

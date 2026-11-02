@@ -1,3 +1,4 @@
+import {inferJobCategory} from '@/lib/job-categories.mjs';
 import {createHash} from 'node:crypto';
 import {prisma} from '@/lib/prisma';
 import {employerJob} from '@/lib/employer-validation';
@@ -21,7 +22,7 @@ export async function POST(request:Request){
  const organization=org?.name||input.organizationName;
  const key='employer:'+createHash('sha256').update(JSON.stringify([user.id,organization.toLowerCase(),input.title.toLowerCase(),input.country.toLowerCase(),input.location||'',input.jobType,input.summary,input.applicationUrl])).digest('hex');
  const existing=await prisma.opportunityIntake.findUnique({where:{fingerprint:key},select:{id:true,status:true}});if(existing)return employerJson({submission:existing,duplicate:true});
- const extraction={title:input.title,organization,organizationId:org?.id||null,organizationSlug:org?.slug||null,country:input.country,location:input.location||'',jobType:input.jobType,summary:input.summary,applicationUrl:input.applicationUrl,eligibility:input.eligibility||'',confidence:0.8,issues:['Employer identity and vacancy require administrator verification.'],employer:{contactName:user.name,email:user.email,emailVerified:false,organizationWebsite:org?.website||input.organizationWebsite,organizationCountry:org?.country||input.organizationCountry,organizationDescription:org?.description||input.organizationDescription||''}};
+ const extraction={category:input.category==='AUTO'?inferJobCategory(input.title):input.category,categoryManual:input.category!=='AUTO',title:input.title,organization,organizationId:org?.id||null,organizationSlug:org?.slug||null,country:input.country,location:input.location||'',jobType:input.jobType,summary:input.summary,applicationUrl:input.applicationUrl,eligibility:input.eligibility||'',confidence:0.8,issues:['Employer identity and vacancy require administrator verification.'],employer:{contactName:user.name,email:user.email,emailVerified:false,organizationWebsite:org?.website||input.organizationWebsite,organizationCountry:org?.country||input.organizationCountry,organizationDescription:org?.description||input.organizationDescription||''}};
  const item=await prisma.opportunityIntake.create({data:{employerUserId:user.id,submittedByEmail:user.email,sourceType:'EMPLOYER_SUBMISSION',sourceUrl:input.applicationUrl||null,fingerprint:key,rawText:input.summary,extraction,status:'NEEDS_REVIEW'},select:{id:true,status:true}});
  return employerJson({submission:item},201);
  }catch(e){if((e as {code?:string}).code==='P2002')return employerJson({error:'This job was already submitted. Refresh your submissions to see its status.'},409);return employerJson({error:'Could not submit this job. Please try again.'},400);}

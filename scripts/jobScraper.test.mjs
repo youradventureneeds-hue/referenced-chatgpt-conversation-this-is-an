@@ -135,6 +135,14 @@ test('repeat imports update a stable job instead of creating duplicates',async()
  assert.equal([...state.jobs.values()][0].sourceChannel,IMPORT_CHANNEL);
 });
 
+test('official imports categorize new jobs and preserve manual category choices on refresh',async()=>{
+ const {db,state}=memoryStore();await persistCandidate(db,org,candidate);const job=[...state.jobs.values()][0];assert.equal(job.category,'OUTDOOR_EDUCATION');
+ job.category='OPERATIONS_SUPPORT';job.categoryManual=true;
+ await persistCandidate(db,org,{...candidate,title:'Scuba Diving Instructor'});assert.equal([...state.jobs.values()][0].category,'OPERATIONS_SUPPORT');
+ const updated=[...state.jobs.values()][0];updated.categoryManual=false;
+ await persistCandidate(db,org,{...candidate,title:'Scuba Diving Instructor'});assert.equal([...state.jobs.values()][0].category,'WATER_SPORTS');
+});
+
 test('uncertain records go to review and explicit rejections stay rejected',async()=>{
  const {db,state}=memoryStore();
  assert.equal((await persistCandidate(db,org,{...candidate,country:undefined})).action,'needs_review');assert.equal(state.jobs.size,0);
