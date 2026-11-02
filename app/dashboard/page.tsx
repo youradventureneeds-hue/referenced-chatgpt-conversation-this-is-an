@@ -1,2 +1,8 @@
-import Link from "next/link";
-export default function Dashboard() { return <main className="section"><p className="eyebrow">ACCOUNT HUB</p><h1>Build your Great Indian Outdoors profile.</h1><div className="grid"><article className="card"><h2>Candidate account</h2><p>Save roles, maintain skills and citizenship information, and submit applications.</p><Link className="button" href="/api/auth/register">Create candidate account</Link></article><article className="card"><h2>Employer account</h2><p>Claim an organization, publish openings and manage candidates in one place.</p><Link className="button" href="/api/auth/register">Create employer account</Link></article><article className="card"><h2>Admin workspace</h2><p>Review organizations, moderate listings and monitor platform activity.</p><Link href="/admin">Open admin preview →</Link></article></div></main>; }
+import {cookies} from 'next/headers';
+import {redirect} from 'next/navigation';
+import {prisma} from '@/lib/prisma';
+import {EMPLOYER_COOKIE,employerForToken} from '@/lib/employer-auth.mjs';
+import {EmployerDashboard} from '@/components/employer-dashboard';
+import '@/components/employer.css';
+export const dynamic='force-dynamic';
+export default async function Dashboard(){const user=await employerForToken(prisma,(await cookies()).get(EMPLOYER_COOKIE)?.value);if(!user)redirect('/employers?mode=login');const organizations=await prisma.organization.findMany({select:{id:true,name:true,website:true,country:true,description:true},orderBy:{name:'asc'}});return <main className="section employer-section"><EmployerDashboard user={user} organizations={organizations}/></main>;}

@@ -35,7 +35,7 @@ export default async function JobDetailPage({
     notFound();
   }
 
-  const importedSource = ["OFFICIAL_CAREERS_AUTO","INSTAGRAM","WEBSITE"].includes(job.sourceChannel||"")
+  const importedSource = ["OFFICIAL_CAREERS_AUTO","INSTAGRAM","WEBSITE","EMPLOYER_SUBMISSION"].includes(job.sourceChannel||"")
     ? await prisma.opportunityIntake.findUnique({
         where: { approvedJobId: job.id },
         select: { sourceUrl: true, extraction: true },
@@ -84,7 +84,7 @@ export default async function JobDetailPage({
           <p style={{ lineHeight: 1.7, marginTop: "1rem", whiteSpace: "pre-line" }}>
             {sourceUrl ? job.description.split("\n\nOriginal vacancy:")[0] : job.description}
           </p>
-          {sourceUrl && <p className="muted">{job.sourceChannel==="INSTAGRAM"?(sourceMetadata?.verification?.checkedAt?"Recruitment details reviewed from Instagram and checked against the employer’s careers page.":"Recruitment details reviewed from Instagram."):"Checked against the employer’s official careers page."}
+          {sourceUrl && <p className="muted">{job.sourceChannel==="INSTAGRAM"?(sourceMetadata?.verification?.checkedAt?"Recruitment details reviewed from Instagram and checked against the employer’s careers page.":"Recruitment details reviewed from Instagram."):job.sourceChannel==="EMPLOYER_SUBMISSION"?"Submitted by an employer and approved by the site owner.":"Checked against the employer’s official careers page."}
             {lastChecked && <> Last checked {new Date(lastChecked).toLocaleDateString("en-GB", { timeZone: "Asia/Kolkata" })}.</>}
             {" "}<a className="text-link" href={sourceUrl} target="_blank" rel="noopener noreferrer">{job.sourceChannel==="INSTAGRAM"?"View Instagram source ↗":"Read the full vacancy ↗"}</a>
           </p>}

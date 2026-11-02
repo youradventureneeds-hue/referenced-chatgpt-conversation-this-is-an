@@ -12,7 +12,7 @@ const intakeSchema = z.object({
 
 export async function GET(request: Request) {
   const denied=adminDenied(request);if(denied)return denied;
-  const items = await prisma.opportunityIntake.findMany({ orderBy: { createdAt: "desc" }, take: 100 });
+  const items = await prisma.opportunityIntake.findMany({ where:{status:"NEEDS_REVIEW"}, orderBy: { createdAt: "desc" }, take: 100 });
   return Response.json({ data: items, meta: { humanReviewRequired: true } });
 }
 

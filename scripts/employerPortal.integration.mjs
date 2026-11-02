@@ -1,0 +1,51 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {randomBytes} from 'node:crypto';import {PrismaClient} from '@prisma/client';import {PrismaPg} from '@prisma/adapter-pg';
+if(process.env.EMPLOYER_ALLOW_ISOLATED_DB_TEST!=='1')throw Error('Set EMPLOYER_ALLOW_ISOLATED_DB_TEST=1 to create and remove an isolated test schema.');
+if(fs.existsSync('.env'))process.loadEnvFile('.env');const url=new URL(process.env.DATABASE_URL);if(url.hostname.endsWith('.pooler.supabase.com')&&url.port==='5432')url.port='6543';url.searchParams.set('pgbouncer','true');process.env.DATABASE_URL=url.href;process.env.NODE_ENV='production';process.env.ADMIN_REVIEW_KEY=randomBytes(32).toString('base64url');
+const schema='employer_check_'+randomBytes(6).toString('hex');process.env.EMPLOYER_TEST_SCHEMA=schema;const rootDb=new PrismaClient({adapter:new PrismaPg({connectionString:url.href,max:1})});let db;let assertions=0;
+function check(value,message){assert.ok(value,message);assertions++;}
+try{
+ await rootDb.$executeRawUnsafe('CREATE SCHEMA "'+schema+'"');
+ const sql=fs.readFileSync('work/employer-check-schema.sql','utf8').replace(/CREATE SCHEMA IF NOT EXISTS "public";/,'');
+ await rootDb.$transaction(async tx=>{await tx.$executeRawUnsafe('SET LOCAL search_path TO "'+schema+'"');for(const stmt of sql.split(';').map(s=>s.trim()).filter(s=>s&&s.replace(/--[^\n]*/g,'').trim()))await tx.$executeRawUnsafe(stmt);},{timeout:120000});
+ db=(await import('./testing/employer-db.mjs')).prisma;
+ const routes={register:await import('../app/api/auth/register/route.ts'),login:await import('../app/api/auth/login/route.ts'),recover:await import('../app/api/auth/recover/route.ts'),logout:await import('../app/api/auth/logout/route.ts'),jobs:await import('../app/api/employer/jobs/route.ts'),review:await import('../app/api/admin/intake/[id]/route.ts')};
+ const base='https://employer-check.local';
+ async function call(name,method,body,cookie,extra={}){const headers={'Content-Type':'application/json',Origin:base,...extra};if(cookie)headers.Cookie=cookie;const request=new Request(base+'/api/'+name,{method,headers,body:body?JSON.stringify(body):undefined});const response=await routes[name][method](request,name==='review'?{params:Promise.resolve({id:body.id})}:undefined);const data=await response.json();return {status:response.status,data,cookie:response.headers.get('set-cookie')?.split(';')[0],setCookie:response.headers.get('set-cookie')||''};}
+ const password='A unique test employer password 2026';
+ const email='one-'+schema+'@example.test',email2='two-'+schema+'@example.test';
+ let a=await call('register','POST',{name:'Fixture Employer One',email,password,role:'ADMIN'});check(a.status===400,'Registration cannot request an admin role');
+ a=await call('register','POST',{name:'Fixture Employer One',email:email.toUpperCase(),password});check(a.status===201,'Employer registration persists');const aCookie=a.cookie,recovery=a.data.recoveryCode;const id=a.data.user.id;check(a.data.user.email===email,'Email is normalized');check(a.setCookie.includes('HttpOnly')&&a.setCookie.includes('Secure')&&a.setCookie.includes('SameSite=strict'),'Session cookie is protected');check(!JSON.stringify(a.data).includes('passwordHash'),'Registration does not serialize password digests');
+ const stored=await db.user.findUnique({where:{id}});check(stored.role==='EMPLOYER'&&stored.passwordHash!==password&&stored.recoveryHash!==recovery,'Only password and recovery digests are stored');
+ const b=await call('register','POST',{name:'Fixture Employer Two',email:email2,password});check(b.status===201,'Independent second employer can register');
+ check((await call('register','POST',{name:'Duplicate',email,password})).status===409,'Duplicate registration is rejected');
+ check((await call('jobs','GET')).status===401,'Anonymous users cannot see submissions');
+ check((await call('login','POST',{email,password:'wrong-password'})).status===401,'Incorrect credentials fail');
+ const loggedIn=await call('login','POST',{email,password});check(loggedIn.status===200,'Correct credentials sign in');
+ const about=Array.from({length:60},()=> 'outdoor').join(' ');
+ const org=await db.organization.create({data:{name:'Fixture Outdoor School',slug:'fixture-outdoor-school',country:'India',website:'https://example.test',description:about}});
+ const job={organizationId:org.id,organizationName:'Forged name ignored',organizationWebsite:'https://example.test',organizationCountry:'India',title:'Fixture Outdoor Instructor',country:'India',location:'Fixture region',jobType:'FULL_TIME',summary:'Lead outdoor education sessions for visiting school groups. Provide safety briefings and support the delivery of supervised adventure activities.',applicationUrl:'https://example.test/careers/apply',eligibility:'Relevant instructor qualification required.'};
+ check((await call('jobs','POST',job,aCookie,{Origin:'https://untrusted.example'})).status===403,'Cross-origin mutation fails');
+ const submitted=await call('jobs','POST',{...job,employerUserId:b.data.user.id,status:'APPROVED'},aCookie);check(submitted.status===201,'Employer can submit an opening');
+ const intakeId=submitted.data.submission.id;
+ const record=await db.opportunityIntake.findUnique({where:{id:intakeId}});check(record.status==='NEEDS_REVIEW'&&record.employerUserId===id&&record.extraction.organization===org.name,'Server binds owner, organization, and review status');check(await db.job.count()===0,'Submission creates no public job');check(await db.organizationMember.count()===0,'Submission never grants organization control');
+ const duplicate=await call('jobs','POST',job,aCookie);check(duplicate.status===200&&duplicate.data.duplicate&&duplicate.data.submission.id===intakeId,'Repeated submission is idempotent');
+ check((await call('jobs','GET',null,b.cookie)).data.submissions.length===0,'Employers cannot see another employer’s submissions');
+ check((await call('review','PATCH',{id:intakeId,status:'APPROVED',verified:true},aCookie)).status===401,'Employer session does not authorize admin review');
+ const admin={Authorization:'Bearer '+process.env.ADMIN_REVIEW_KEY};
+ check((await call('review','PATCH',{id:intakeId,status:'APPROVED'},null,admin)).status===400,'Approval requires explicit verification');
+ const approvals=await Promise.all([1,2].map(()=>call('review','PATCH',{id:intakeId,status:'APPROVED',verified:true},null,admin)));check(approvals.filter(v=>v.status===200).length===1&&approvals.filter(v=>v.status===409).length===1,'Concurrent approval publishes only once');check(await db.job.count({where:{status:'PUBLISHED',reviewedByAdmin:true}})===1,'Only approved jobs publish');
+ const own=await call('jobs','GET',null,aCookie);check(own.data.submissions[0].jobUrl?.startsWith('/jobs/'),'Employer sees their approved job link');
+ check((await call('review','PATCH',{id:intakeId,status:'REJECTED'},null,admin)).status===409,'Reviewed publication cannot be accidentally rejected afterward');
+ const newJob={...job,organizationId:undefined,organizationName:'Fixture New Camp',organizationDescription:about,title:'Fixture Camp Counsellor'};
+ const pendingNew=await call('jobs','POST',newJob,aCookie);check(pendingNew.status===201&&await db.organization.count()===1,'Unknown organizations stay private before approval');
+ check((await call('review','PATCH',{id:pendingNew.data.submission.id,status:'APPROVED',verified:true},null,admin)).status===400,'New organization creation needs explicit admin confirmation');
+ check((await call('review','PATCH',{id:pendingNew.data.submission.id,status:'REJECTED',reviewNotes:'Please confirm the seasonal dates.'},null,admin)).status===200,'Admin can reject with feedback');
+ check((await call('jobs','GET',null,aCookie)).data.submissions.some(v=>v.reviewNotes==='Please confirm the seasonal dates.'),'Feedback is visible to the submitting employer');
+ const newApproved=await call('jobs','POST',{...newJob,title:'Fixture Camp Trip Guide'},aCookie);
+ const newApproval=await call('review','PATCH',{id:newApproved.data.submission.id,status:'APPROVED',verified:true,createOrganization:true},null,admin);check(newApproval.status===200&&await db.organization.count()===2&&await db.job.count()===2,'Verified new employer page and job publish atomically');
+ check((await call('logout','POST',null,loggedIn.cookie)).status===200&&(await call('jobs','GET',null,loggedIn.cookie)).status===401,'Sign-out revokes its database session');
+ const recovered=await call('recover','POST',{email,recoveryCode:recovery,password:'A different long test password 2026'});check(recovered.status===200,'Recovery code resets password');check((await call('jobs','GET',null,aCookie)).status===401,'Recovery revokes existing sessions');check((await call('recover','POST',{email,recoveryCode:recovery,password})).status===401,'Old recovery code cannot be reused');check((await call('login','POST',{email,password})).status===401,'Old password stops working');check((await call('login','POST',{email,password:'A different long test password 2026'})).status===200,'Replacement password works');
+ const {consumeEmployerLimit,secretHash}=await import('../lib/employer-auth.mjs');const results=await Promise.all(Array.from({length:12},()=>consumeEmployerLimit(db,'fixture','limit',4,1000,new Date('2026-11-02T10:00:00Z'))));check(results.filter(Boolean).length===4,'Concurrent requests obey the persistent rate limit');check(await consumeEmployerLimit(db,'fixture','limit',4,1000,new Date('2026-11-02T10:00:02Z')),'Rate limit resets after its window');
+ await db.employerSession.updateMany({where:{tokenHash:secretHash(recovered.cookie.split('=')[1])},data:{expiresAt:new Date('2020-01-01')}});check((await call('jobs','GET',null,recovered.cookie)).status===401,'Expired sessions are rejected');
+ console.log(JSON.stringify({isolatedIntegrationPassed:true,assertions,publicJobsInFixture:await db.job.count(),testSchemaOnly:true}));
+}catch(e){console.error(JSON.stringify({testFailed:true,assertions,code:e.code,message:String(e.message).replace(/postgres(?:ql)?:\/\/\S+/g,'[database URL]').slice(0,1200)}));process.exitCode=1;}finally{if(db)await db.$disconnect();if(/^employer_check_[a-f0-9]{12}$/.test(schema))await rootDb.$executeRawUnsafe('DROP SCHEMA IF EXISTS "'+schema+'" CASCADE');await rootDb.$disconnect();}

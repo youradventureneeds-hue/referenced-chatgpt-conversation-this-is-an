@@ -80,3 +80,7 @@ coverage, closure handling, activation, and the Monday 08:00 India-time schedule
 ## Website Instagram controls
 
 Manage collection, employer sources, connection updates, and scan history at `/admin/instagram`. Review and publish leads at `/admin`. See [the administrator guide](docs/instagram-admin.md). The cloud worker checks due work every 15 minutes; the scan interval defaults to six hours with India sources.
+
+## Employer submissions
+
+Employers register at `/employers`, submit vacancies and track decisions at `/dashboard`, and receive approval or feedback through the private admin review workflow. New organizations require explicit administrator approval before publication. See [the employer portal guide](docs/employer-portal.md) for account recovery, moderation, deployment, and integration tests.

@@ -70,12 +70,16 @@ model User {
   email         String         @unique
   name          String?
   role          Role           @default(CANDIDATE)
+  passwordHash  String?
+  recoveryHash  String?
   createdAt     DateTime       @default(now())
   updatedAt     DateTime       @updatedAt
 
   candidateProfile CandidateProfile?
   memberships      OrganizationMember[]
   applications     Application[]
+  employerSessions EmployerSession[]
+  employerIntakes OpportunityIntake[]
 
   @@map("users")
 }
@@ -177,6 +181,8 @@ model OpportunityIntake {
   sourceType       IntakeSourceType
   sourceUrl        String?
   submittedByEmail String?
+  employerUserId   String?
+  employerUser     User? @relation(fields:[employerUserId],references:[id],onDelete:SetNull)
   rawText          String           @db.Text
   fingerprint      String           @unique
   extraction       Json
@@ -188,7 +194,26 @@ model OpportunityIntake {
   updatedAt        DateTime         @updatedAt
 
   @@index([status, createdAt])
+  @@index([employerUserId, createdAt])
   @@map("opportunity_intakes")
+}
+
+model EmployerSession {
+  tokenHash String @id
+  userId String
+  user User @relation(fields:[userId],references:[id],onDelete:Cascade)
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  @@index([userId])
+  @@index([expiresAt])
+  @@map("employer_sessions")
+}
+
+model EmployerRateLimit {
+  key String @id
+  count Int @default(0)
+  resetAt DateTime
+  @@map("employer_rate_limits")
 }
 
 // 12. Candidate Applications

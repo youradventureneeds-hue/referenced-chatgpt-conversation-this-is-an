@@ -1,0 +1,56 @@
+name: Employer portal checks
+on:
+  push:
+    paths:
+      - 'app/**'
+      - 'components/**'
+      - 'lib/employer*'
+      - 'lib/intake.ts'
+      - 'prisma/**'
+      - 'scripts/employer*'
+      - 'scripts/testing/**'
+      - 'package.json'
+      - 'pnpm-lock.yaml'
+      - '.github/workflows/employer-checks.yml'
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: employer-ci-only
+          POSTGRES_DB: employer_checks
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    env:
+      DATABASE_URL: postgresql://postgres:employer-ci-only@localhost:5432/employer_checks
+      DIRECT_URL: postgresql://postgres:employer-ci-only@localhost:5432/employer_checks
+      EMPLOYER_ALLOW_ISOLATED_DB_TEST: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.18.2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm db:generate
+      - run: pnpm test:employers
+      - run: pnpm test:admin
+      - run: mkdir -p work
+      - run: pnpm exec prisma migrate diff --from-empty --to-schema-datamodel prisma/schema.prisma --script --output work/employer-check-schema.sql
+      - run: pnpm test:employers:integration
+      - run: pnpm build
