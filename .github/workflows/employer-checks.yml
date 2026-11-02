@@ -1,13 +1,15 @@
-name: Employer portal checks
+name: Candidate and employer portal checks
 on:
   push:
     paths:
       - 'app/**'
       - 'components/**'
       - 'lib/employer*'
+      - 'lib/candidate*'
       - 'lib/intake.ts'
       - 'prisma/**'
       - 'scripts/employer*'
+      - 'scripts/candidate*'
       - 'scripts/testing/**'
       - 'package.json'
       - 'pnpm-lock.yaml'
@@ -48,6 +50,7 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm db:generate
+      - run: pnpm test:candidates
       - run: pnpm test:employers
       - run: pnpm test:admin
       - run: mkdir -p work

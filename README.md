@@ -84,3 +84,7 @@ Manage collection, employer sources, connection updates, and scan history at `/a
 ## Employer submissions
 
 Employers register at `/employers`, submit vacancies and track decisions at `/dashboard`, and receive approval or feedback through the private admin review workflow. New organizations require explicit administrator approval before publication. See [the employer portal guide](docs/employer-portal.md) for account recovery, moderation, deployment, and integration tests.
+
+## Candidate workspace
+
+Job seekers register at `/candidates` and manage a private profile, CV link, bookmarks, and candidate-reported application tracker at `/candidate/dashboard`. My account provides entry to either account type. Actual applications remain with the employer; saving or tracking a job sends nothing. See [the candidate portal guide](docs/candidate-portal.md).

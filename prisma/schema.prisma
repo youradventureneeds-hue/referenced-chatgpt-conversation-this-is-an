@@ -80,6 +80,8 @@ model User {
   applications     Application[]
   employerSessions EmployerSession[]
   employerIntakes OpportunityIntake[]
+  savedJobs SavedJob[]
+  candidateApplications CandidateApplication[]
 
   @@map("users")
 }
@@ -170,6 +172,8 @@ model Job {
   updatedAt           DateTime     @updatedAt
 
   applications        Application[]
+  savedBy SavedJob[]
+  candidateApplications CandidateApplication[]
 
   @@map("jobs")
 }
@@ -214,6 +218,42 @@ model EmployerRateLimit {
   count Int @default(0)
   resetAt DateTime
   @@map("employer_rate_limits")
+}
+
+model SavedJob {
+  id String @id @default(cuid())
+  userId String
+  user User @relation(fields:[userId],references:[id],onDelete:Cascade)
+  jobId String?
+  job Job? @relation(fields:[jobId],references:[id],onDelete:SetNull)
+  jobTitle String
+  organizationName String
+  jobCountry String
+  createdAt DateTime @default(now())
+  @@unique([userId,jobId])
+  @@index([userId,createdAt])
+  @@index([jobId])
+  @@map("saved_jobs")
+}
+
+model CandidateApplication {
+  id String @id @default(cuid())
+  userId String
+  user User @relation(fields:[userId],references:[id],onDelete:Cascade)
+  jobId String?
+  job Job? @relation(fields:[jobId],references:[id],onDelete:SetNull)
+  jobTitle String
+  organizationName String
+  jobCountry String
+  status String @default("PLANNED")
+  appliedAt DateTime?
+  notes String? @db.Text
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@unique([userId,jobId])
+  @@index([userId,createdAt])
+  @@index([jobId])
+  @@map("candidate_applications")
 }
 
 // 12. Candidate Applications

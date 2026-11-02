@@ -1,8 +1,8 @@
 import {z} from 'zod';
 export const employerEmail=z.string().trim().email().max(254).transform(v=>v.toLowerCase());
 export const employerPassword=z.string().min(12,'Use at least 12 characters for your password.').max(128).refine(v=>Buffer.byteLength(v)<=256);
-export const employerRegistration=z.object({name:z.string().trim().min(2).max(100),email:employerEmail,password:employerPassword,role:z.literal('EMPLOYER').optional()});
-export const employerLogin=z.object({email:employerEmail,password:z.string().min(1).max(128)});
-export const employerRecovery=z.object({email:employerEmail,recoveryCode:z.string().min(1).max(100),password:employerPassword});
+export const employerRegistration=z.object({name:z.string().trim().min(2).max(100),email:employerEmail,password:employerPassword,role:z.enum(['EMPLOYER','CANDIDATE']).default('EMPLOYER')});
+export const employerLogin=z.object({email:employerEmail,password:z.string().min(1).max(128),role:z.enum(['EMPLOYER','CANDIDATE']).default('EMPLOYER')});
+export const employerRecovery=z.object({email:employerEmail,recoveryCode:z.string().min(1).max(100),password:employerPassword,role:z.enum(['EMPLOYER','CANDIDATE']).default('EMPLOYER')});
 export const employerUrl=z.string().url().max(1000).refine(v=>{const u=new URL(v);return ['https:','http:'].includes(u.protocol)&&!u.username&&!u.password;},'Enter a valid website URL.');
 export const employerJob=z.object({organizationId:z.string().max(100).optional(),organizationName:z.string().trim().min(2).max(150),organizationWebsite:employerUrl,organizationCountry:z.string().trim().min(2).max(80),organizationDescription:z.string().trim().max(3000).optional(),title:z.string().trim().min(4).max(180),country:z.string().trim().min(2).max(80),location:z.string().trim().max(150).optional(),jobType:z.enum(['FULL_TIME','PART_TIME','SEASONAL','INTERNSHIP','VOLUNTEER','GAP_YEAR','UNSPECIFIED']),summary:z.string().trim().min(80,'Describe the role in at least 80 characters.').max(15000),applicationUrl:employerUrl,eligibility:z.string().trim().max(1000).optional()});

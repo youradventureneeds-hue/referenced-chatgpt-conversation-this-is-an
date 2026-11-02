@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
+import {CandidateJobActions} from "@/components/candidate-job-actions";
 
 export const dynamic = "force-dynamic";
 
@@ -31,7 +32,7 @@ export default async function JobDetailPage({
   });
 
   // Trigger Next.js 404 screen if no matching published job is found
-  if (!job || job.status !== "PUBLISHED") {
+  if (!job || job.status !== "PUBLISHED" || !job.reviewedByAdmin) {
     notFound();
   }
 
@@ -78,7 +79,7 @@ export default async function JobDetailPage({
         </div>
       </header>
 
-      <section style={{ display: "grid", gap: "2rem", gridTemplateColumns: "2fr 1fr" }}>
+      <section className="candidate-job-detail-grid" style={{ display: "grid", gap: "2rem", gridTemplateColumns: "2fr 1fr" }}>
         <div>
           <h2>About the Opportunity</h2>
           <p style={{ lineHeight: 1.7, marginTop: "1rem", whiteSpace: "pre-line" }}>
@@ -119,12 +120,8 @@ export default async function JobDetailPage({
           )}
 
           {applicationUrl ? <a className="button" href={applicationUrl} target="_blank" rel="noopener noreferrer"
-            style={{ width: "100%", justifyContent: "center", padding: "0.75rem 1rem" }}>{job.sourceChannel==="INSTAGRAM"&&!sourceMetadata?.applicationUrl?"View recruitment source ↗":"Apply on employer’s website ↗"}</a> : <button
-            className="button"
-            style={{ width: "100%", textAlign: "center", padding: "0.75rem 1rem" }}
-          >
-            Apply for position
-          </button>}
+            style={{ width: "100%", justifyContent: "center", padding: "0.75rem 1rem" }}>{job.sourceChannel==="INSTAGRAM"&&!sourceMetadata?.applicationUrl?"View recruitment source ↗":"Apply on employer’s website ↗"}</a> : <p>Application instructions have not been supplied. Contact the organization through its website to confirm how to apply.</p>}
+          <CandidateJobActions jobId={job.id} slug={job.slug}/>
         </aside>
       </section>
     </main>
