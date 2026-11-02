@@ -120,7 +120,7 @@ export default async function JobDetailPage({
           )}
 
           {applicationUrl ? <a className="button" href={applicationUrl} target="_blank" rel="noopener noreferrer"
-            style={{ width: "100%", justifyContent: "center", padding: "0.75rem 1rem" }}>{job.sourceChannel==="INSTAGRAM"&&!sourceMetadata?.applicationUrl?"View recruitment source ↗":"Apply on employer’s website ↗"}</a> : <p>Application instructions have not been supplied. Contact the organization through its website to confirm how to apply.</p>}
+            style={{ width: "100%", justifyContent: "center", padding: "0.75rem 1rem" }}>{job.sourceChannel==="INSTAGRAM"&&!sourceMetadata?.applicationUrl?"View recruitment source ↗":"Apply on employer’s website ↗"}</a> : <p>See the job description for application instructions, or contact the organization through its website.</p>}
           <CandidateJobActions jobId={job.id} slug={job.slug}/>
         </aside>
       </section>
