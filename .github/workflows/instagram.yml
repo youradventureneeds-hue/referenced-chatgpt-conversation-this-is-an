@@ -1,7 +1,7 @@
 name: Instagram recruitment collection
 on:
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '7,22,37,52 * * * *'
   workflow_dispatch:
     inputs:
       initialize:
@@ -37,7 +37,7 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm db:generate
       - run: pnpm test:instagram
-      - run: node --test scripts/instagramPlatform.test.mjs
+      - run: node --test scripts/instagramPlatform.test.mjs scripts/instagramAccess.test.mjs
       - name: Run website-managed collector
         env:
           INITIALIZE: ${{ inputs.initialize }}
@@ -46,3 +46,4 @@ jobs:
           args=()
           if [[ "$INITIALIZE" == "true" ]]; then args+=(--initialize); fi
           node scripts/instagramWorker.mjs "${args[@]}"
+

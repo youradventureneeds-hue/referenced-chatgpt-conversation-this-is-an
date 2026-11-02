@@ -21,7 +21,7 @@ export async function POST(request:Request){
  try{
  const body=await request.json();const p=platform();await p.settings();
  if(body.action==='connect'){
-  const input=z.object({username:z.string().max(30),accountId:z.string().regex(/^\d+$/),apiVersion:z.string().regex(/^v\d{1,3}\.\d{1,2}$/),token:z.string().min(30).max(4096),expiresAt:z.string().max(40).optional()}).parse(body);
+  const input=z.object({username:z.string().max(30),accountId:z.string().regex(/^\d+$/),apiVersion:z.string().regex(/^v\d{1,3}\.\d{1,2}$/),token:z.string().min(30).max(4096),resume:z.boolean().optional()}).parse(body);
   return json(await p.connect(input));
  }
  if(body.action==='settings'){
